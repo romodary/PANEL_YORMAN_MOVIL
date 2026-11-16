@@ -2481,6 +2481,9 @@ video {
 .border-cyan-500\/20 {
   border-color: rgb(6 182 212 / 0.2);
 }
+.border-cyan-700\/30 {
+  border-color: rgb(14 116 144 / 0.3);
+}
 .border-emerald-400\/25 {
   border-color: rgb(52 211 153 / 0.25);
 }
@@ -2555,6 +2558,9 @@ video {
 }
 .border-green-500\/30 {
   border-color: rgb(34 197 94 / 0.3);
+}
+.border-indigo-700\/30 {
+  border-color: rgb(67 56 202 / 0.3);
 }
 .border-neutral-700 {
   --tw-border-opacity: 1;
@@ -2776,6 +2782,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
 }
+.bg-cyan-900\/30 {
+  background-color: rgb(22 78 99 / 0.3);
+}
 .bg-emerald-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(52 211 153 / var(--tw-bg-opacity, 1));
@@ -2899,6 +2908,9 @@ video {
 }
 .bg-green-500\/10 {
   background-color: rgb(34 197 94 / 0.1);
+}
+.bg-indigo-900\/30 {
+  background-color: rgb(49 46 129 / 0.3);
 }
 .bg-neutral-800 {
   --tw-bg-opacity: 1;
@@ -3575,6 +3587,14 @@ video {
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity, 1));
 }
+.text-indigo-300 {
+  --tw-text-opacity: 1;
+  color: rgb(165 180 252 / var(--tw-text-opacity, 1));
+}
+.text-indigo-400 {
+  --tw-text-opacity: 1;
+  color: rgb(129 140 248 / var(--tw-text-opacity, 1));
+}
 .text-ink-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity, 1));
@@ -4121,6 +4141,9 @@ html, body {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
 }
+.hover\:bg-cyan-800\/40:hover {
+  background-color: rgb(21 94 117 / 0.4);
+}
 .hover\:bg-emerald-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
@@ -4160,6 +4183,9 @@ html, body {
 }
 .hover\:bg-gray-800\/60:hover {
   background-color: rgb(31 41 55 / 0.6);
+}
+.hover\:bg-indigo-800\/40:hover {
+  background-color: rgb(55 48 163 / 0.4);
 }
 .hover\:bg-neutral-700:hover {
   --tw-bg-opacity: 1;
@@ -4371,6 +4397,9 @@ html, body {
 .active\:bg-amber-700\/40:active {
   background-color: rgb(180 83 9 / 0.4);
 }
+.active\:bg-cyan-700\/40:active {
+  background-color: rgb(14 116 144 / 0.4);
+}
 .active\:bg-emerald-700\/40:active {
   background-color: rgb(4 120 87 / 0.4);
 }
@@ -4384,6 +4413,9 @@ html, body {
 .active\:bg-green-900:active {
   --tw-bg-opacity: 1;
   background-color: rgb(20 83 45 / var(--tw-bg-opacity, 1));
+}
+.active\:bg-indigo-700\/40:active {
+  background-color: rgb(67 56 202 / 0.4);
 }
 .active\:bg-orange-900:active {
   --tw-bg-opacity: 1;

